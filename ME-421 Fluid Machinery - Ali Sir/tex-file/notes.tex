@@ -7,6 +7,10 @@
 \usepackage{tikz}
 \usepackage{forest}
 \usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
 
 \forestset{
   my box/.style={
@@ -183,10 +187,160 @@ From continuity $eq^n$,
 
 From $eq^n$ (12) \& (13),
 
-\fbox{\begin{minipage}{0.5\textwidth}
-\textcolor{red}{$$ Q_1 = \frac{1}{2} Q (1+cos\theta)$$
-$$ Q_2 = \frac{1}{2} Q (1-cos\theta) $$}
-\end{minipage}}
+
+$$Q_1 = \frac{1}{2} Q (1+cos\theta)$$ 
+  \begin{equation}
+     Q_2 = \frac{1}{2} Q (1-cos\theta) \label{eq:eq14} 
+  \end{equation}
+
 \pagebreak
+
+\section{Lecture 3}
+\hfill Date: 12/06/2023
+
+\subsubsection*{Problem}
+A jet of water with a velocity of 35 $m/s$ strikes a plat inclined of 30°, cross sectional area if jet 25 $cm^2$. Find the force exerted by the jet on the plate. Calculate the components of force and find the ratio in which the discharge gets divided after striking the plate. 
+
+\subsubsection*{Solution:}
+Given, 
+\begin{align*}
+  \text{velocity, } v &= 35 \, \text{m/s}\\
+  \text{angle, } \theta &= 30^\circ \\
+  \text{cross-sectional area, } a &= 25 \, \text{cm}^2 \\
+  \\
+  \text{Volumetric flow rate, } Q &= a \times v \\
+  &= 0.0025 \times 35 \, \text{m}^3/\text{s} \\
+  &= 0.0875 \, \text{m}^3/\text{s} \\ 
+  \\
+  \text{Force, } F &= \rho Q v \sin\theta \\
+  &= 1000 \times 0.0875 \times 35 \times \sin(30^\circ) = 1531.25 \, \text{N} \\
+  \\
+  F_x &= F \sin\theta = 765.6 \, \text{N} \\
+  F_y &= F \cos\theta = 1326.1 \, \text{N} \\
+  \\
+  Q_1 &= \frac{Q}{2} (1 + \cos\theta) = 0.0816 \, \text{m}^3/\text{s}\\
+  Q_2 &= \frac{Q}{2} (1 - \cos\theta) = 0.00586 \, \text{m}^3/\text{s}\\
+  \therefore \frac{Q_1}{Q_2} &= 13.92\\
+\end{align*} 
+
+\subsection{Thrust on moving flat plate normal to the direction of jet}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{img/Thrust_on_moving_flat_plate_normal_to_the_direction_of_jet.jpg}
+  \caption{Thrust on moving flat plate normal to the direction of jet}
+  \label{fig:Thrust_on_moving_flat_plate}
+\end{figure}
+
+Let, the flat plate moves with a velocity $u$ in the direction of the jet and the velocity of jet is $v$. The effective velocity with which the jet strike the plate = $v-u$. The mass of the fluid striking the plate per second = $\rho a (v-u)$, where $a$ is the area of the jet. \\
+Thrust exerted on the plate in the direction of the jet is, 
+\begin{align*}
+  F &= \rho a (v-u) [(v-u) - 0]
+  % F &= \rho a (v-u)^2
+\end{align*}
+\begin{equation}
+    F = \rho a (v-u)^2 \label{eq:eq15}
+\end{equation}
+
+\begin{equation}
+    \text{work done per second} = F \times u = \rho a (v-u)^{2} \times u \label{eq:eq16}
+\end{equation}
+
+However, this is not practically feasible, because the distance between the nozzle at the plate is go on increasing. If a series of plates were so arranged that each plate appeared successively before the jet in the same position and always moving with a velocity $u$ to the direction of the jet. Then mass of the fluid striking the plate = $\rho a v$.
+
+*note : \textcolor{red}{ [ The whole flow of the nozzle is utilized by the plate. ]}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{img/radial_plate.jpg} 
+  \caption{Thrust on Successive moving plat normal to the direction of jet}
+  \label{fig:Successive_moving_plate}
+\end{figure} 
+
+
+The thrust on the plate,
+\begin{align*}
+  F &= \rho a v [(v-u) - 0] \\
+  &= \rho a v (v-u)\\
+\end{align*}
+
+Work done per second = $F \times u$
+\begin{equation}
+  = \rho a v (v-u) u \label{eq:eq17}
+\end{equation}
+
+\begin{align*}
+  \text{Now, the input power} &= \text{K.E. of the jet} \\
+  &= \frac{1}{2} m v^2 \\
+  &= \frac{1}{2} \rho a v \times v^2 
+\end{align*}
+\begin{equation}
+  \therefore \text{Input power} = \frac{1}{2} \rho a v^3 \label{eq:eq18}
+\end{equation}
+
+The efficiency of the the wheel,
+$$\eta = \frac{\rho a v (v-u) u}{\frac{1}{2} \rho a v^3}$$
+\begin{equation}
+  \eta = \frac{2u (v-u)}{v^2} \label{eq:eq19}
+\end{equation}
+
+\checkmark Generally $u$ is changed, $v$ is not changed significantly.\\
+
+For a given jet velocity, efficiency will be maximum, if,
+
+
+\begin{align*}
+  \frac{d\eta}{du} &= 0 \\
+  \frac{d}{du} \left[\frac{2u(v-u)}{v^2}\right] &= 0 \\
+  2v - 4u &= 0 \\
+  u &= \frac{v}{2}
+\end{align*}
+
+For the maximum efficiency of wheel, the peripheral speed of the wheel is equal to half of the jet velocity. \\
+
+The max efficiency is given by - 
+$$\eta_{max} = \frac{2 \frac{v}{2} (v - \frac{v}{2})}{v^2} = \frac{1}{2} = 50\% $$
+
+\subsection{Fluid Jet (on curved plate)}
+\subsubsection*{(a) stationary plate}
+
+Velocity of jet at inlet in $x$-direction = $v_1 cos \alpha_1$ \\
+Velocity of jet at outlet in $x$-direction = $v_2 cos \alpha_2$\\
+
+Force exerted on the plate,
+\begin{equation}
+  F_x = \rho Q (v_1 cos \alpha_1 - v_2 cos \alpha_2) \label{ex:eq20}
+\end{equation}
+here, $Q = a v$   \\
+
+If the curvature of plate at outlet such that outlet angle $\alpha_2$ is more than 90°, then the second term of the $eq^n$ (20) will be negligible. Hence in order to get more force, the curvature of the plate should be such that the angle $\alpha_2$ is obtuse.  
+
+\subsubsection*{Single Moving Plate / Curved Vane}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{img/curved_vane.jpeg} 
+  \caption{Single moving plate / curved vane}
+  \label{fig:curved_vane}
+\end{figure} 
+
+\begin{itemize}
+  \item $v_1. v_2 \rightarrow $ Absolite velocities of the jet at inlet and outlet respectively
+  \item $u_1, u_2 \rightarrow $ peripheral velocity of the vane at inlet and outlet respectively
+  \item $v_{r1},v_{r2} \rightarrow $ relative velocity in inlet and outlet respectively.\\
+
+  \begin{minipage}{0.20\textwidth}
+    \begin{tcolorbox}[boxrule=1pt,width=\linewidth]
+    $u + v_r = v$ \\
+    $\Rightarrow v_r = v - u$ 
+    \end{tcolorbox}
+  \end{minipage}
+  \begin{minipage}{0.33\textwidth}
+    \begin{tcolorbox}[boxrule=1pt,width=\linewidth]
+    $v_w, v_f$ is the components of $v$
+    \end{tcolorbox}
+  \end{minipage}
+
+  \item $v_{f1}, v_{f2} \rightarrow $ velocity of flow at inlet and outlet respectively. alternatively, components of absolute velocity normal to the direction of motion.
+  \item $v_{w1}, v_{w2} \rightarrow $ velocity of whirl at the inlet and outlet respectively. alternatively, components of absolute velocity in the direction of motion.  
+\end{itemize}
 
 \end{document}

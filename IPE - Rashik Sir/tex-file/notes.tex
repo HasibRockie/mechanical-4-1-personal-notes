@@ -6,7 +6,8 @@
 \usepackage{tabularx}
 \usepackage{tikz}
 \usepackage{subfigure}
-
+\usepackage{multicol}
+\usepackage{caption}
 
 \geometry{a4paper}
 
@@ -266,14 +267,14 @@ The basic components of an engine lathe include a bed, headstock, tailstock, car
 \begin{figure}[ht]
   \subsubsection*{Axis of Rotation}
   \centering
-  \begin{minipage}{0.35\linewidth}
+  \begin{minipage}{0.45\linewidth}
       \begin{itemize}
         \item Along the spindle → z axis 
         \item up to down → y axis 
         \item front to back → x axis 
       \end{itemize}
   \end{minipage}%
-  \begin{minipage}{0.65\linewidth}
+  \begin{minipage}{0.55\linewidth}
       \centering
       \includegraphics[width=\linewidth]{img/axis.jpeg}
       \caption{Axis of Rotation in engine lathe}
@@ -286,9 +287,62 @@ The basic components of an engine lathe include a bed, headstock, tailstock, car
 
 \newpage
 
-\section{Lecture 2: Topic}
-\hfill Date: DD/MM/YYYY
+\section{Lecture 2: Apron Mechanism \& Short Gear Train}
+\hfill Date: 12/06/2023
 
-Content of the lecture goes here.
+\subsection*{Apron Mechanism}
+\begin{itemize}
+  \item  Apron mechanism is the mechanism of power 
+  transmission from feed rod to apron
+  \item Carriage moves using rack and pinion 
+  mechanism
+  \item Feed rod is engaged with the worm gear 
+  using key slot mechanism
+  \item Automatic motion can be provided to 
+  longitudinal and cross direction using power 
+  clutch system
+\end{itemize}
+
+\subsection*{Half Nut Mechanism}
+\begin{itemize}
+  \item Lead screw is engaged with apron using half nut mechanism unlike key slot mechanism of feed rod
+  \item The half nut is mounted on the back side of the apron
+  \item Half nut can be engaged/disengaged using a lever
+\end{itemize}
+
+
+\begin{figure}[ht]
+  \subsection*{Main Dimension of Engine Lathe}
+  \centering
+  \begin{minipage}{0.5\linewidth}
+    \begin{enumerate}
+      \item Height of centers over bed
+      \item Maximum diameter of workpiece accommodated over the bed (most important)
+      \item Maximum diameter of workpiece accommodated over the carriage
+      \item Maximum diameter of workpiece accommodated over the gap
+      \item Maximum distance between centers
+      \item Length of the bed
+      \item No. of speeds and feeds
+    \end{enumerate}
+  \end{minipage}%
+  \begin{minipage}{0.5\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{img/dimension.jpeg}
+    \caption{Main Dimension of engine lathe}
+  \end{minipage}
+\end{figure}
+
+\subsection*{Short Gear Train}
+\begin{figure*}[h]
+  \centering
+  \includegraphics[width=\linewidth]{img/short_gear_disengaged.jpeg}
+  \caption{Forward Rotation (without back gear) $\rightarrow$ $C_1$ Disengaged}
+\end{figure*}
+
+\begin{figure*}[h] 
+  \centering
+  \includegraphics[width=\linewidth]{img/short_gear_engaged.jpeg}
+  \caption{Forward Rotation (with back gear) $\rightarrow$ $C_1$ Engaged}
+\end{figure*}
 
 \end{document}
