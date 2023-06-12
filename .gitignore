@@ -2,6 +2,8 @@
 **/*.log
 **/*.fls
 **/*.aux
+**/*.bbl
+**/*.dvi
 **/*.toc
 **/*.fdb_latexmk
 
