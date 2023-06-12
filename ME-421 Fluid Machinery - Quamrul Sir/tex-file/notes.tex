@@ -1,0 +1,266 @@
+\documentclass{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage[pages=some]{background}
+\usepackage{titling}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{forest}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{multicol}
+
+\forestset{
+  my box/.style={
+    draw,
+    rectangle,
+    rounded corners,
+    fill=gray!20,
+    inner sep=6pt,
+    minimum width=3cm % Adjust the width as needed
+  }
+}
+
+\geometry{a4paper}
+
+\backgroundsetup{
+    scale=1,
+    angle=0,
+    opacity=1,
+    contents={%
+        \includegraphics[width=\paperwidth,height=\paperheight]{institution_logo.jpg}
+    }
+}
+
+\newcommand{\subtitle}[1]{
+    \posttitle{
+        \par\end{center}
+        \begin{center}\large#1\end{center}
+        \vskip0.5em}
+}
+
+\title{ME-421}
+\author{Md. Hasibul Islam}
+\subtitle{FLUID MACHINERY}
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    
+    {\Huge\bfseries\maketitle}
+    \textbf{Quamrul Islam Sir} \\
+    \vspace{2cm}
+    \includegraphics[width=8cm]{institution_logo.jpg}
+    \vfill
+    \vspace*{2cm}
+\end{titlepage}
+
+\tableofcontents
+\pagebreak
+\section{Lecture 01: Introduction} 
+\hfill Date: 04/06/2023
+
+\subsection*{Booklist}
+
+\begin{itemize}
+    \item Hydraulic Mechanics \hfill \textbf{Govind Rao}
+    \item Hydraulic Machines Through worked out problems \hfill \textbf{Published by BUET}
+\end{itemize}
+
+
+\subsection*{Fluid Machines}
+The working principle of certain machinery where a fluid is employed to do work.
+
+\subsection*{Components}
+Chemically, any petroleum is an extremely complex mixture of hydrocarbon (hydrogen and carbon) compounds with minor amounts of nitrogen, oxygen, and sulfur as impurities. The weight percentage of petroleum is as follows:
+
+\begin{itemize}[label=$\circ$]
+    \item Liquid Fluid \footnote{Pump and turbine built together to transmit power smoothly.}
+    \begin{itemize}[label=\textendash]
+        \item Pumps
+        \begin{itemize}[label=\textbullet]
+            \item \textbf{Rotodynamics} : Axial flow pump, centrifugal pump etc
+            \item \textbf{Positive Displacement} : Reciprocating, gear, screw pump etc
+        \end{itemize}
+        \item Turbines
+        \begin{itemize}[label=\textbullet]
+            \item \textbf{Impulse} : Felton wheel (high head)
+            \item \textbf{Reaction} : 
+            \begin{itemize}[label=\textasteriskcentered]
+            		\item Radial Flow
+            		\item Mix Flow
+            		\item Axial Flow
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+    \item Gaseous Material
+    		\begin{itemize}
+    			\item Fans
+    			\item Blowers
+    			\item Compressors
+    			\item Fluid Coupling
+    			\item Torque Converter 
+    		\end{itemize}
+\end{itemize}
+\vspace{1cm}
+In the case of - 
+\subparagraph{Turbines}
+Energy is extracted from the fluid to produce torque on a rotating shaft.
+\subparagraph{Pumps}
+Pump is a device to convert mechanical energy into hydraulic energy.
+\\
+
+\subsection*{Pumps}
+\subsubsection*{Positive Displacement Type}
+Usually consists of one or more chambers which are alternately filled with liquid to be pumped and then emptied again. The rate of discharge depends on the speed of rotation. It takes care relatively small volume of liquid.\\
+Example - \textbf{reciprocating pump, gear pump, screw pump} etc
+
+\subsubsection*{Rotodynamics Pump}
+In the case of a roto dynamic pump, a rotating element called \textbf{impeller} imparts energy to the liquid and there is a pressure rise.\\
+Example - \textbf{centrifugal pump, axial flow pump} etc \\
+
+\subsection*{Reciprocating Pump}
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{img/single_acting.jpg}
+    \caption{Single Acting Pump}
+    \label{fig:image1}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{img/double_acting.jpg}
+    \caption{Double Acting Pump}
+    \label{fig:image2}
+  \end{subfigure}
+  \caption{Types of Reciprocating Pump}
+  \label{fig:two_images}
+\end{figure}
+
+\subsubsection*{Charateristics}
+\begin{itemize}
+	\item Reciprocating pump is a positive displacement which is driven by power from an external source and consists of a cylinder in which a piston or plunger is blloked backwards and forwards
+	\item The movement of the piston or plunger creates alternating vacuum pressure and positive pressure inside the cylinder by means of which water is rised.
+	\item If the water acts one side of pistons only, the pump is single acting. If the water acts on both side of the piston, it will suck and deliver during one stroke. such a pump is known as double acting pump.
+	\item The reciprocating pump is generally used for producing very high pressure.
+	
+\end{itemize}
+
+% \newpage
+\hrulefill
+
+\section{Lecture 2: Reciprocating Pump}
+\hfill Date: 11/06/2023
+
+\subsubsection*{Schamatic diagram of a Reciprocating Pump:}
+\begin{figure}[!ht]
+  \centering
+  \begin{tikzpicture}
+    \node[anchor=south west, inner sep=0] at (0,0) {\includegraphics[width=0.75\textwidth]{img/single_acting.jpg}};
+  \end{tikzpicture}
+  \caption{Schamatic diagram of a Reciprocating Pump}
+  \label{fig:reciprocating_pump}
+\end{figure}
+
+[Note: Non-return valve, check valve, foot valve -  all are same.]
+
+\subsubsection*{Main Components:}
+\begin{itemize}
+  \item A piston and a cylinder 
+  \item Suction \& delivery valve 
+  \item Suction \& delivery pipes 
+  \item Crank \& connecting rod 
+\end{itemize}
+
+
+\subsubsection*{Applications:}
+The reciprocating pump is best suited for relatively small capacities and high heads. The reciprocating pump is used for - 
+\begin{itemize}
+  \item Oil drilling operations 
+  \item Pneumatic pressure systems 
+  \item Feeding small boilers condensate return 
+  \item Light oil pumping 
+\end{itemize}
+
+\subsubsection*{Operation Principle:}
+\begin{itemize}
+  \item For a reciprocating pump as crank rotate for piston p moves backwards and forwards with the cylinder c. The piston moves to the right during the suction stroke, which causes vaccum in the cylinder. 
+  \item The atmospheric pressure under sump (reservoir) water surface forces the water up the suction pipe. 
+  \item The suction valve a is opened and water enters into the cylinder. The delivery valve b remains closed.
+  \item During the return stroke of the piston, the water pressure closes the suction valve and opens the delivery valve b. Water is then forced up the delivery pipe and raised to the required height or pressure. 
+  \item For a single acting pump, the theoretical volume of water raise per revolution is equal to the stroke volume of the cylinder and twice this volume is, if the pump is double acting. 
+\end{itemize}
+
+\subsubsection*{Coefficient of Discharge, $C_d$:}
+It is the ratio of actual volume of water discharge to the volume swept by the piston. \\
+
+\[ C_d = \frac{{\text{{actual discharge per stroke}}}}{{\text{{volume swept per stroke}}}} \]
+
+\subsubsection*{Slip :}
+Slip is the difference between actual discharge and theoretical discharge. 
+
+\[ Slip = Q_t - Q_a\]
+\begin{align*}
+  \text{where,} \quad &Q_t \text{→ Theoretical Discharge} \\
+  \text{and} \quad &Q_a  \text{→ Actual Discharge}
+\end{align*}
+
+\[ {\text{percentage slip}} = \frac{Q_t - Q_a}{Q_t} \times 100 \] 
+
+
+\subsubsection*{Negative Slip:}
+In case of a reciprocating pump with long suction pipe, short delivery pipe and running at high speed, inertia force in the suction pipe becomes large as compared to the pressure force on the outside of delivery valve. This opens the delivery valve even before the piston has completed its suction stroke. Some of the water is pushed into the delivery pipe before the delivery stroke is actually commenced. The actual discharge will be more than the theoretical discharge and slip will be negative. The coefficient of discharge will be greater than 1. 
+
+\subsubsection*{Problem 01:}
+The actual discharge of a single acting reciprocating pump is 0.02 $m^3/s$, when running at 55 rpm. The length of the stroke is 500 mm and diameter of the piston is 250 mm. For a total static heads of 16 m, calculate the percentage slip, coefficient of discharge and power required to drive the pump.\\ 
+
+\textbf{Solution:}\\
+Given data : \\ 
+\begin{tabular}{ll}
+  Actual Discharge, $Q_a$ & = 0.02 $m^3/sec$ \\
+  Speed of the pump, N & = 55 rpm \\
+  Stroke Length, L & = 500 mm\\
+  Diameter of piston, d & = 250 mm \\
+  Total static head, $H_{st}$ & = 16 m\\ 
+\end{tabular} \\
+Find - (a) Percentage Slip, (b) Coeff. of discharge, (c) Power required to drive the pump.\\
+
+\begin{align*}
+  \text{Cross sectional area of piston, A} &= \frac{\pi}{4}  \times d^2 \\
+  &= \frac{\pi}{4} \times (0.25)^2 \, m^2 \\
+  &= 0.0491 \, m^2
+\end{align*}
+
+\begin{align*}
+  \text{Theoretical Discharge, } Q_t &= \frac{L \times A \times N}{60}\\
+  &= \frac{0.5 \times 0.0491 \times 55}{60} \, m^3/sec \\
+  &= 0.0225 \, m^3/sec
+\end{align*}
+
+\begin{align*}
+  \text{Percentage slip } &= \frac{Q_t - Q_a}{Q_t} \times 100\\
+  &= \frac{0.0225 - 0.02}{0.0225} \times 100 \\
+  &= 11.10\% \\
+\end{align*}
+
+\begin{align*}
+  \text{Coefficient of Discharge, } C_d &= \frac{Q_a}{Q_t} \\
+  &= \frac{0.02}{0.0225} \\
+  &= 0.89 \\
+\end{align*}
+
+\begin{align*}
+  \text{Power required to drive the pump } &= Q_t \times \gamma \times H_{st}\\
+  &= 0.0225 \times 9800 \times 16 \, watt \\
+  &= 3.53 \, kW \\
+\end{align*}
+\hrulefill
+
+\end{document}

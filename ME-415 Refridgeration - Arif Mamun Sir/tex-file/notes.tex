@@ -1,0 +1,221 @@
+\documentclass{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage[pages=some]{background}
+\usepackage{titling}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{forest}
+\usepackage{float}
+\usepackage{subcaption}
+
+
+\forestset{
+  my box/.style={
+    draw,
+    rectangle,
+    rounded corners,
+    fill=gray!20, 
+    inner sep=6pt,
+    minimum width=3cm % Adjust the width as needed
+  }
+}
+
+
+\geometry{a4paper}
+
+\backgroundsetup{
+    scale=1,
+    angle=0,
+    opacity=1,
+    contents={%
+        \includegraphics[width=\paperwidth,height=\paperheight]{institution_logo.jpg}
+    }
+}
+
+\newcommand{\subtitle}[1]{
+    \posttitle{
+        \par\end{center}
+        \begin{center}\large#1\end{center}
+        \vskip0.5em}
+}
+
+\title{ME-415}
+\author{Md. Hasibul Islam}
+\subtitle{RWFRIGERATION \& BUILDING MECHANICAL SYSTEM}
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    
+    {\Huge\bfseries\maketitle}
+    \textbf{Arif Hasan Mamun Sir} \\
+    \vspace{2cm}
+    \includegraphics[width=8cm]{institution_logo.jpg}
+    \vfill
+    \vspace*{2cm}
+\end{titlepage}
+
+\tableofcontents
+\pagebreak
+\section{Lecture 01: Concept of refrigeration and its applications} 
+\hfill Date: 05/06/2023
+
+\subsection*{Booklist}
+1. Ahmadul Ameen (2006), Refrigeration \& Air-conditioning, 
+Prentice Hall.\\
+2. Hundy, Trott \& Welch, 4th Edition, Refrigeration \& Air conditioning, Butterworth-Heinemann.\\
+3. McQuiston, Parker \& Spitler (2005), Heating, Ventilating \& Air conditioning: Analysis \& Design, J. Wiley \& Sons, Inc.\\
+4. Stoecker \& Jones (1983), Refrigeration \& Air-conditioning, 
+McGraw-Hill, Inc.\\
+5. Dossat (1996), Principles of Refrigeration, Prentice Hall.\\
+6. McDowall (2007), Fundamentals of HVAC Systems, Elsevier.\\
+7. Grondzik, Kwok, Stein \& Reynolds (2010), Mechanical \& 
+Electrical Equipment for Buildings, J. Wiley \& Sons, Inc.\\
+
+\subsection{Refrigeration System and Components}
+\subsubsection*{Refrigeration}
+Refrigeration is a process of reducing and maintaining low temperature of a space or material below the temperature of the surroundings.\\
+Alternatively, Refrigeration is the process of removing heat from an enclosed 
+space, or from a substance, and rejecting it elsewhere for the 
+purpose of lowering the temperature of the enclosed space or 
+substance and then maintaining that lower temperature.\\
+It is usually done with the aid of a mechanical device (e.g. pump/compressor) using a substance (called a refrigerant) which absorbs heat from low temperature (objects/space) and releases heat to elsewhere at high temperature. 
+A refrigerant usually works in two-phase conditions, i.e., liquid and gas, e.g., vapor compression refrigeration system. 
+
+\paragraph*{Refrigeration System:} 
+A refrigeration system is a mechanical system designed to remove heat from a space or substance to lower its temperature. It operates on the principle of the refrigeration cycle, which involves the compression, condensation, expansion, and evaporation of a refrigerant to transfer heat from a low-temperature region to a high-temperature region. The main components of a typical refrigeration system include a compressor, condenser, expansion valve, and evaporator. 
+
+\paragraph*{Types of refrigeration system:}
+\subparagraph{Vapor Compression Refrigeration System}: This widely used system compresses a refrigerant gas, causing it to become hot and high-pressure. It then passes through a condenser where it releases heat and condenses into a liquid. The liquid refrigerant expands through an expansion valve, reducing its pressure and temperature, and evaporates in the evaporator, absorbing heat from the surroundings.
+
+\subparagraph{Vapor Absorption Refrigeration System}: This system uses a mixture of refrigerant and absorbent instead of a compressor to achieve cooling. The mixture circulates through an absorber, generator, condenser, and evaporator. Heat is applied to the generator to separate the refrigerant from the absorbent. The refrigerant vapor then flows to the condenser where it liquefies, and the absorbent is regenerated in the absorber for reuse.
+
+\subparagraph{Vapor Ejection Refrigeration System}: In this system, a primary refrigerant is compressed, condensed, and expanded similar to a vapor compression system. However, a secondary refrigerant is used to cool the primary refrigerant vapor through a heat exchanger. The cooled primary refrigerant is then expanded further to achieve the desired cooling effect.
+
+\subparagraph{Air Cycle Refrigeration}: This refrigeration system uses air as the refrigerant. Compressed air is cooled through an expansion process, causing its temperature to decrease. The cooled air is then used to absorb heat from the desired space or substance, creating a cooling effect.
+
+\subparagraph{Vortex Tube Refrigeration}: A vortex tube refrigeration system utilizes a high-pressure gas stream that enters a tangential nozzle, creating a vortex motion. This vortex separates the gas into hot and cold streams, with the cold stream used for refrigeration purposes.
+
+\subparagraph{Thermoacoustic Refrigeration System}: Thermoacoustic refrigeration systems utilize sound waves and thermal gradients to achieve cooling. The sound waves cause compression and expansion of the gas, creating temperature differences that enable cooling.
+
+\subparagraph{Thermoelectric Refrigeration System}: These systems use the Peltier effect, where an electric current is applied to a junction of two different conductive materials, resulting in a temperature difference. This temperature difference allows for cooling when applied in a refrigeration system.
+
+\subparagraph{Cascade Refrigeration System}: Cascade systems consist of two or more refrigeration cycles working in series. Different refrigerants with varying temperature ranges are used in each cycle, allowing for extremely low temperatures in specific applications.
+
+\subparagraph{Cryogenic Refrigeration}: Cryogenic refrigeration involves the use of extremely low temperatures, typically below -150 degrees Celsius (-238 degrees Fahrenheit), to achieve cooling. These systems are used in applications such as liquefied natural gas (LNG) processing, scientific research, and medical processes.
+
+\subparagraph{Magnetic Refrigeration}: Magnetic refrigeration systems use the magnetocaloric effect, where a magnetic material heats up or cools down when subjected to a magnetic field. By cycling the magnetic field, heat can be absorbed or released, providing cooling without the use of traditional refrigerants.
+\vspace{0.5cm}
+\subsection{Different Components of Vapor 
+Compression Refrigeration System}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.75\textwidth]{img/cycle.png}
+  \caption{Schematic Diagram of Different Components of Vapor 
+  Compression Refrigeration System.}
+  \label{fig:components}
+\end{figure}
+\vspace{0.25cm}
+
+\begin{itemize}
+  \item \textbf{Condenser}: The condenser is responsible for removing heat from the refrigerant and converting it from a high-pressure vapor to a high-pressure liquid. It is typically located on the outside of the refrigeration system and uses air or water as a cooling medium. The heat extracted from the refrigerant in the condenser is released into the surroundings.
+
+  \item \textbf{Compressor}: The compressor is the heart of the refrigeration system. Its main function is to increase the pressure and temperature of the refrigerant vapor. The compressor draws low-pressure refrigerant vapor from the evaporator and compresses it to a higher pressure, which raises its temperature as well. This process is crucial for the refrigerant to release heat in the condenser.
+  
+  
+  \item \textbf{Evaporator}: The evaporator is where the refrigerant absorbs heat from the surroundings, typically within the refrigerated space or the object being cooled. As the low-pressure, low-temperature refrigerant enters the evaporator, it absorbs heat from the area and evaporates into a low-pressure vapor. This heat absorption causes the surroundings to cool down. The vapor is then drawn back into the compressor, and the cycle continues.
+  
+  \item \textbf{Expansion Valve}: The expansion valve is a throttling device located between the condenser and the evaporator. It serves the purpose of reducing the pressure and temperature of the refrigerant as it passes through. The expansion valve creates a pressure drop, allowing the refrigerant to expand rapidly. This expansion results in a decrease in temperature and prepares the refrigerant for the evaporator.
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.55\textwidth]{img/components.png}
+  \caption{Different Components of a Refrigeration System.}
+  \label{fig:Different Components of a Refrigeration System}
+\end{figure}
+\vspace{0.25cm}
+
+
+\begin{figure}
+  \centering
+  
+  \begin{subfigure}{0.45\textwidth}
+      \includegraphics[width=\textwidth]{img/condenser.png}
+      \caption{condenser}
+      \label{subfig:condenser}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.45\textwidth}
+      \includegraphics[width=\textwidth]{img/compressor.png}
+      \caption{compressor}
+      \label{subfig:compressor}
+  \end{subfigure}
+  
+  \vspace{1cm}
+  
+  \begin{subfigure}{0.45\textwidth}
+      \includegraphics[width=\textwidth]{img/evaporator.png}
+      \caption{evaporator}
+      \label{subfig:evaporator}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.45\textwidth}
+      \includegraphics[width=\textwidth]{img/expansion.png}
+      \caption{expansion valve}
+      \label{subfig:expansion valve}
+  \end{subfigure}
+  
+  \caption{Components of vapour compression refrigeration system}
+  \label{fig:four_images}
+\end{figure}
+
+\subsection*{Uses of refrigeration system}
+\begin{itemize}
+  \item Food and Beverage Industry: Storing and preserving perishable items in supermarkets, warehouses, and transport.
+
+  \item HVAC: Cooling and dehumidification in residential, commercial, and industrial buildings.
+  
+  \item Industrial Processes: Temperature control in manufacturing, equipment cooling, and raw material storage.
+  
+  \item Cold Chain Logistics: Transporting temperature-sensitive goods, like food, pharmaceuticals, and vaccines.
+  
+  \item Medical and Healthcare: Storing vaccines, medications, and laboratory samples.
+  
+  \item Ice Production: Ice manufacturing for commercial use and recreational activities.
+  
+  \item Research and Scientific Applications: Temperature control in experiments and sample preservation.
+\end{itemize}
+\vspace{0.5cm}
+
+\subsubsection*{Types of Freezing}
+\begin{itemize}
+  \item \textbf{Slow freezing: }Slow freezing refers to a method of gradually lowering the temperature of a product over an extended period of time to facilitate freezing. Unlike quick freezing methods that aim for rapid freezing, slow freezing allows for a slower and more controlled freezing process. This method is commonly used in certain food preservation techniques, laboratory research, and some industrial processes. Slow freezing can help maintain the quality, texture, and cellular structure of the product, making it suitable for certain applications where slower freezing is desired or required.
+  \item \textbf{Quick Freezing} 
+  There are three types of quick freezing systems:
+  \begin{itemize}
+    \item \textbf{Air Blast Freezing:} Uses high-velocity cold air to rapidly freeze products.
+    \item \textbf{Immersion Freezing:} Involves immersing the product in a cold liquid for quick freezing.
+    \item \textbf{Indirect Contact Freezing:} Utilizes cold surfaces in direct contact with the product to achieve rapid freezing.
+  \end{itemize}
+\end{itemize}
+
+\subsubsection*{Industrial Functions of air conditioning}
+\begin{itemize}
+  \item Temperature control for employee comfort and equipment performance.
+  \item Humidity regulation to prevent condensation and protect materials.
+  \item Ventilation to remove contaminants and ensure a healthy environment.
+  \item Air filtration to maintain air quality and reduce pollutants.
+  \item Process and product cooling to optimize manufacturing and storage conditions.
+  \item Energy efficiency to minimize costs and maximize cooling effectiveness.
+\end{itemize}
+
+\newpage
+
+\section{Lecture 2: Topic}
+\hfill Date: DD/MM/YYYY
+
+Content of the lecture goes here.
+
+\end{document}

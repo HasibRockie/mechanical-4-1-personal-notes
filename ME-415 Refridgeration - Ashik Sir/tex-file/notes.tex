@@ -1,0 +1,94 @@
+\documentclass{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage[pages=some]{background}
+\usepackage{titling}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{forest}
+
+\forestset{
+  my box/.style={
+    draw,
+    rectangle,
+    rounded corners,
+    fill=gray!20,
+    inner sep=6pt,
+    minimum width=3cm % Adjust the width as needed
+  }
+}
+
+
+\geometry{a4paper}
+
+\backgroundsetup{
+    scale=1,
+    angle=0,
+    opacity=1,
+    contents={%
+        \includegraphics[width=\paperwidth,height=\paperheight]{institution_logo.jpg}
+    }
+}
+
+\newcommand{\subtitle}[1]{
+    \posttitle{
+        \par\end{center}
+        \begin{center}\large#1\end{center}
+        \vskip0.5em}
+}
+
+\title{ME-415}
+\author{Md. Hasibul Islam}
+\subtitle{REFRIGERATION \& BUILD MECHANICAL SYSTEMS}
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    
+    {\Huge\bfseries\maketitle}
+    \textbf{Md. Ashiqur Rahman Sir} \\
+    \vspace{2cm}
+    \includegraphics[width=8cm]{institution_logo.jpg}
+    \vfill
+    \vspace*{2cm}
+\end{titlepage}
+
+\tableofcontents
+\pagebreak
+\section{Lecture 01: Introduction} 
+\hfill Date: 06/06/2023
+
+Build Mechanical System:
+\begin{itemize}
+  \item HVAC
+  \item Fire Protection
+  \item Plumbing
+  \item Transportation System (Elevators, Escalators etc.)
+\end{itemize}
+
+\subsubsection*{HVAC}
+HVAC stands for Heating, Ventilation, and Air Conditioning. It is a technology or system used to control the indoor environment, including temperature, humidity, and air quality, in residential, commercial, and industrial buildings.
+
+Here's a brief explanation of each component of HVAC:
+\begin{itemize}
+  \item \textbf{Heating}: Heating systems are responsible for raising the temperature of an indoor space during colder periods. Common heating systems include furnaces, boilers, heat pumps, and electric heaters. They generate heat and distribute it throughout the building, ensuring a comfortable temperature.
+  \item \textbf{Ventilation}: Ventilation is the process of exchanging or replacing indoor air with outdoor air to maintain air quality. It involves the removal of stale air, odors, and contaminants and the introduction of fresh air. Ventilation systems can be natural (through windows or vents) or mechanical (using fans or ducts). Proper ventilation helps remove pollutants, control moisture, and provide a healthy and comfortable indoor environment.
+  \item \textbf{Air Conditioning}: Air conditioning refers to the cooling and dehumidification of indoor air to maintain a comfortable temperature during hot or humid weather. Air conditioning systems, commonly known as AC or HVAC units, use refrigeration principles to cool the air. They remove heat from the indoor space and release it outside, providing cool air for occupants.
+
+\end{itemize}
+
+HVAC systems are designed to provide thermal comfort and maintain a healthy indoor environment. They are found in residential homes, offices, schools, hospitals, shopping malls, and various other buildings. HVAC systems can be centralized, where a single system serves the entire building, or decentralized, with separate units for individual spaces or rooms.
+
+Additionally, HVAC systems can include other components such as air filtration systems, humidity control devices, thermostats, and energy management systems to enhance comfort, efficiency, and control of the indoor environment.
+
+\subsubsection*{Plumbing}
+Plumbing refers to the system of pipes, fixtures, and devices used to supply water, gas, or other fluids and remove wastewater from buildings. It includes the installation, repair, and maintenance of the plumbing infrastructure in residential, commercial, and industrial properties. Plumbing systems ensure a reliable water supply, proper drainage, and disposal of wastewater, as well as the distribution of gas for heating and cooking. Plumbers handle the design and installation of plumbing systems, ensuring compliance with safety and building codes.
+
+\newpage
+
+\section{Lecture 2: Topic}
+\subsection*{Date: DD/MM/YYYY}
+
+Content of the lecture goes here.
+
+\end{document}

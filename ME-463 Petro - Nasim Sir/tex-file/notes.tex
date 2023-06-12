@@ -1,0 +1,176 @@
+\documentclass{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage[pages=some]{background}
+\usepackage{titling}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{fontspec}
+
+\newfontfamily\bengalifont{Kalpurush}[Script=Bengali,Scale=0.9]
+
+\backgroundsetup{
+    scale=1,
+    angle=0,
+    opacity=1,
+    contents={%
+        \includegraphics[width=\paperwidth,height=\paperheight]{institution_logo.jpg}
+    }
+}
+
+\newcommand{\subtitle}[1]{
+    \posttitle{
+        \par\end{center}
+        \begin{center}\large#1\end{center}
+        \vskip0.5em}
+}
+
+\title{ME-463}
+\author{Md. Hasibul Islam}
+\subtitle{PETROLEUM ENGINEERING}
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    
+    {\Huge\bfseries\maketitle}
+    \textbf{Nasim Hasan Sir} \\
+    \vspace{2cm}
+    \includegraphics[width=8cm]{institution_logo.jpg}
+    \vfill
+\end{titlepage}
+
+\tableofcontents
+\pagebreak
+
+\section{Lecture 01: Introduction} 
+\hfill Date: 04/06/2023
+
+\subsubsection*{Books}
+Abdur Razzak Akanda \& Quamrul Islam sir
+
+\subsubsection*{Introductory \footnote{{\bengalifont আজকের ক্লাস ও প্রথম স্লাইড থেকে পুরো একটা প্রশ্ন থাকবে টার্ম ফাইনালে, এবং ক্লাস টেস্টেও প্রশ্ন আসবে। }}}
+\begin{itemize}
+    \item \textbf{well logging}: {\bengalifont খনন করার পর subsurface properties পর্যবেক্ষণ করা। }
+    \item {\bengalifont reservoir থেকে oil আসার passage বন্ধ হয়ে গেলে cracking \& steaming করে passage open করা হয়। }
+    \item Water, Food \& Energy are the main drivers of human society
+    \item {\bengalifont বাংলাদেশে ৪টা কয়লা রিজার্ভার আছে। বড়পুকুরিয়া, পায়রা, আতাবাড়ী এবং বাশখালী। }
+    \item BCF → Billion Cubic Feet
+    \item {\bengalifont বাংলাদেশের PSC (Production Sharing Contract) করে বাইরের কোম্পানির সাহায্যে প্রাকৃতিক গ্যাস তোলে। }
+    \item {\bengalifont প্রাকৃতিক গ্যাসে সালফার থাকলে তা corrosion ঘটায়। তাই sulfer is not desirable.}
+    \item International Oil Companies (IOC)\\ Bangladesh Gas Fields Company Limited (BGFCL)\\ Million cubic feet of gas per day (MMCFD)
+    \item {\bengalifont বাংলাদেশে open mining \& underground mining দুই ক্ষেত্রেই limitations রয়েছে। কারন, পরিবেশগত, ট্রান্সপোর্টেশন, খননের কারণে উদ্ভুত পানি এসে পূরণ হওয়া জনিত সমস্যা, ইত্যাদি। }
+    \item 1000 MW coal-based power plant daily consumes nearly 6000 million tons of coal. 
+    \item {\bengalifont আমাদের দেশে coal transportation এর canal নেই, তাই ব্যবহার করতে পারি না coal থাকা সত্ত্বেও। }
+    \item {\bengalifont sponge এর capillary, porosity, permeability এসব properties এর জন্যেই pore এর মধ্যে পানি আটকে যায়। }
+    \item {\bengalifont well logging → well এর ভেতরে sensor পাঠানো}
+    \item {\bengalifont কূপ খননে হাত দিয়ে বালি check করা হয়, manual well logging. }
+\end{itemize}
+
+\newpage
+
+\section{Lecture 2: Petroleum Overviews \& Formations}
+\hfill Date: 06/06/2023
+
+\subsubsection*{Petroleum}
+Petroleum is a naturally occurring, flammable liquid that is found beneath the Earth's surface. It is a complex mixture of hydrocarbons, which are organic compounds consisting primarily of carbon and hydrogen atoms. Petroleum is commonly referred to as crude oil and serves as a vital source of energy worldwide. It is refined to produce various fuels such as gasoline, diesel, and jet fuel, as well as other products like lubricants, plastics, and chemicals. The exploration, extraction, refining, and distribution of petroleum are integral to the petroleum industry, which plays a significant role in the global economy.\\
+Petroleum is natural accumulation of organic matters. It may be gaseous, liquid or semi-solid substance. 
+
+\subsubsection*{Different stages}
+Diagenesis, catagenesis, and metagenesis are terms used to describe different stages of organic matter transformation within the Earth's subsurface. These processes occur over long periods of time and under specific temperature, pressure, and geological conditions. Here are their characteristics:
+
+\textbf{Diagenesis}:
+    \begin{itemize}
+        \item Diagenesis is the earliest stage of organic matter transformation.
+        \item It occurs at relatively low temperatures and pressures.
+        \item Organic matter undergoes physical and chemical changes, such as compaction, dissolution, and microbial degradation.
+        \item Diagenesis typically happens within the upper few kilometers of the Earth's crust.
+        \item The primary result of diagenesis is the formation of sedimentary rocks.
+    \end{itemize}
+
+
+\textbf{Catagenesis}:
+    \begin{itemize}
+        \item Catagenesis is the intermediate stage between diagenesis and metagenesis.
+        \item It occurs at higher temperatures and pressures than diagenesis, typically within the range of 60 to 150 degrees Celsius.
+        \item Organic matter undergoes thermal decomposition, leading to the formation of hydrocarbons.
+        \item The process of catagenesis is responsible for the generation of petroleum and natural gas.
+        \item It is commonly associated with the burial of organic-rich sediments and the subsequent heating over geologic time.
+    \end{itemize}
+
+\textbf{Metagenesis}:
+    \begin{itemize}
+        \item Metagenesis is the final stage of organic matter transformation.
+        \item It occurs at higher temperatures and pressures than catagenesis, typically above 150 degrees Celsius.
+        \item Organic matter is subjected to extensive thermal cracking, resulting in the production of graphite, carbon dioxide, and other inorganic compounds.
+        \item Metagenesis is associated with deep burial and metamorphism of organic-rich rocks.
+        \item The process of metagenesis is responsible for the formation of metamorphic rocks.
+    \end{itemize}
+
+
+\subsubsection*{Kerogen}
+Kerogen refers to the organic matter found in sedimentary rocks that has the potential to generate hydrocarbons through processes like catagenesis. Kerogen is classified into different types based on its composition and characteristics. The four types of kerogen are Type I, Type II, Type III, and Type IV. Here are their characteristics:\\
+
+\textbf{Type I Kerogen}:
+    \begin{itemize}
+        \item Type I kerogen is derived from organic material rich in hydrogen and relatively low in oxygen.
+        \item It has a high hydrogen-to-carbon (H/C) ratio and a high potential for oil generation.
+        \item Type I kerogen is typically found in organic-rich marine environments, such as shale formations associated with ancient lakes or marine basins.
+        \item It generates primarily liquid hydrocarbons, including oil and gas.
+    \end{itemize}
+
+\textbf{Type II Kerogen}:
+    \begin{itemize}
+        \item Type II kerogen is derived from a mixture of marine and terrestrial organic matter.
+        \item It has a moderate hydrogen-to-carbon (H/C) ratio.
+        \item Type II kerogen is commonly found in shale formations and coal deposits.
+        \item It has a moderate potential for hydrocarbon generation and can generate both oil and gas.
+    \end{itemize}
+
+\textbf{Type III Kerogen}:
+    \begin{itemize}
+        \item Type III kerogen is derived from terrestrial organic matter, such as woody plant material and lignite coal.
+        \item It has a relatively low hydrogen-to-carbon (H/C) ratio and a high oxygen content.
+        \item Type III kerogen is typically found in coal deposits and can generate mainly gas during thermal maturation.
+    \end{itemize}
+
+\textbf{Type IV Kerogen}:
+    \begin{itemize}
+        \item Type IV kerogen consists of highly mature and degraded organic matter.
+        \item It has a low hydrogen-to-carbon (H/C) ratio and a high carbon content.
+        \item Type IV kerogen is commonly found in highly metamorphosed rocks, such as graphite-rich metamorphic rocks.
+        \item It has a very low potential for hydrocarbon generation.
+    \end{itemize}
+
+\subsubsection*{Maturation of Kerogen}
+The maturity of kerogen refers to the level of thermal alteration and maturation it has undergone. It is an important parameter in understanding the potential for hydrocarbon generation from organic-rich rocks. Here are some key aspects related to the maturity of kerogen:\\
+
+\textbf{Maturity Parameters}:
+    \begin{itemize}
+        \item \textbf{Vitrinite Reflectance (\%Ro)}: Vitrinite reflectance is a widely used parameter to assess the thermal maturity of kerogen. It measures the reflectance of vitrinite macerals under a microscope and increases with increasing thermal maturity. The \%Ro value is commonly used as a quantitative indicator of kerogen maturity.
+        \item \textbf{Tmax}: Tmax is the temperature at which the maximum rate of hydrocarbon generation occurs during the thermal maturation of kerogen. It is often used as an indicator of thermal maturity and can be determined through laboratory pyrolysis experiments.
+        \item \textbf{SCI (S1 Peak Height)}: Obtained from Rock-Eval pyrolysis, it measures the amount of hydrocarbons generated during pyrolysis. As kerogen matures, the S1 peak height increases, indicating higher thermal breakdown and hydrocarbon generation. SCI is expressed as the ratio of S1 peak height to total organic carbon (TOC) content.
+        \item \textbf{TAI (Thermal Alteration Index)}: TAI qualitatively assesses thermal maturity based on visual examination. It involves observing changes in kerogen's color, reflectance, and isotropy under a microscope. TAI ranges from TAI-1 (low maturity) to TAI-4 (high maturity), indicating increasing thermal alteration.
+    \end{itemize}
+
+\textbf{Maturation Indicators}:
+    \begin{itemize}
+        \item \textbf{Hydrocarbon Generation}: As kerogen matures, it undergoes thermal decomposition and generates hydrocarbons. The type and amount of hydrocarbons generated are indicative of the maturation level.
+        \item \textbf{Changes in Organic Petrography}: The microscopic examination of organic matter can reveal changes in its structure, such as the disappearance of certain organic components or the alteration of reflectance values, which indicate the maturation stage.
+        \item \textbf{Thermal Alteration of Biomarkers}: Biomarkers are organic compounds derived from specific organisms and can be preserved in sedimentary rocks. As kerogen matures, biomarkers undergo thermal alteration, such as changes in their structure or ratios, which can be used as indicators of maturation.
+    \end{itemize}
+
+
+
+\textbf{Maturation Factors}:
+    \begin{itemize}
+        \item \textbf{Temperature}: Higher temperatures accelerate the maturation process of kerogen. The geothermal gradient, burial depth, and tectonic activity in a particular area influence the temperature conditions experienced by kerogen.
+        \item \textbf{Time}: Maturation is a time-dependent process. The longer the organic-rich rocks are subjected to elevated temperatures, the more advanced the maturation becomes.
+        Organic Matter Type: The type of organic matter (e.g., marine, terrestrial) and its composition (e.g., hydrogen-to-carbon ratio, oxygen content) influence the maturation characteristics and the types of hydrocarbons generated.
+        \item \textbf{Thermal Conductivity of Surrounding Rocks}: The thermal conductivity of the rocks surrounding the organic-rich source rocks affects the rate at which heat is conducted, influencing the maturation process.
+    \end{itemize}
+
+    \subsubsection*{Wet Gas}
+    Wet gas is a natural gas mixture that contains significant amounts of natural gas liquids (NGLs) along with methane. It has a higher energy content and requires additional processing to separate and recover the NGLs. The extracted NGLs have various applications, such as petrochemical feedstocks and fuels. Wet gas reserves are economically valuable due to the additional revenue from NGLs. Understanding wet gas is essential for effective exploration, production, and processing of natural gas resources.\\ 
+
+\end{document}
