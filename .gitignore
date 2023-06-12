@@ -6,4 +6,5 @@
 **/*.dvi
 **/*.toc
 **/*.fdb_latexmk
+**/*.aux
 
