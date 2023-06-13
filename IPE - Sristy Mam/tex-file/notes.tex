@@ -8,6 +8,7 @@
 \usepackage{enumitem}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{tcolorbox}
 
 \geometry{a4paper}
 
@@ -142,7 +143,7 @@ While threading, we use higher feed rate. when feed rate becomes less, the threa
 \subsection*{Gear Mathmatical Relations:}
 \begin{figure*}
   \centering
-  \includegraphics*[width=0.8\textwidth]{img/gear_nomen.png}
+  \includegraphics*[width=0.7\textwidth]{img/gear_nomen.png}
   \caption{Gear Nomenclature}
 \end{figure*}
 
@@ -163,5 +164,101 @@ While threading, we use higher feed rate. when feed rate becomes less, the threa
   KE &\Rightarrow \text{Kinetic Energy} & 
   \text{m'} &\Rightarrow \text{Addendtum \& Dedendum} 
 \end{align*}
+
+
+
+\begin{tabularx}{\textwidth}{X|X|X}
+  \centering 
+  \begin{align*}
+    v = \frac{\pi}{4} d^2 b \\ 
+    v \propto bd^2 \\
+     \\
+    F \propto A  \left[\text{Surface area}\right]\\
+    v \propto (m'+m')b \\
+    v \propto m'b \\
+    \\
+    T \propto Fd \\
+    T \propto m'bd\\
+  \end{align*} & 
+  \begin{align*}
+    P \propto T \omega\\
+    P \propto m'bdn \\
+    \\
+    KE = \frac{1}{2} I \omega^2 \\
+    KE = \frac{1}{2} \frac{Md^2}{8} \left(\frac{2\pi n}{60}\right)^2\\
+    KE \propto Md^2n^2 \\
+    \propto \rho V d^2 n^2 \\
+    \propto \rho b d^4 n^2 
+  \end{align*} &
+  \begin{align*}
+    \propto \rho \left(m'bdn\right) \frac{d^3n}{m'} \\
+    \propto \rho P \frac{d^3 n}{m'}\\
+    \text{If } \rho \text{ and P are kept constant,}\\
+    \propto \frac{d^3 n}{m} \\
+    \propto \frac{d^2\left(mT\right)n}{m} \\
+    \propto d^2 T n 
+  \end{align*} 
+\end{tabularx}
+
+\subsubsection*{Requirements of Machine Tools:}
+A good machine tool should have:
+\begin{itemize}
+  \item \textbf{Accuracy}: High precision and accuracy in machining operations.
+  \item \textbf{Rigidity}: Structural stability to withstand cutting forces and vibrations.
+  \item \textbf{Power and Speed}: Adequate power and speed for efficient machining.
+  \item \textbf{Versatility}: Ability to handle various machining operations and workpiece materials.
+  \item \textbf{Ease of Use}: User-friendly features and ergonomic design.
+  \item \textbf{Reliability and Durability}: Consistent performance and long-term durability.
+  \item \textbf{Safety Features}: Incorporation of safety measures for operator protection.
+  \item \textbf{Cost-effectiveness}: Value for money in terms of cost, maintenance, and productivity.
+  \item \textbf{Service and Support}: Availability of technical support and maintenance services.
+  \item \textbf{Adaptability}: Potential for upgrades and compatibility with emerging technologies.
+\end{itemize}
+
+\subsubsection*{Breakdown Frequency}
+Breakdown frequency in a machine tool refers to the rate of failures or malfunctions that require repair or maintenance. It varies based on factors like machine quality, design, maintenance, and usage. Lower breakdown frequency improves productivity, while higher frequency leads to more interruptions and reduced efficiency. Proper maintenance and using reliable machine tools help reduce breakdown frequency and minimize costs associated with repairs and downtime. Tracking breakdown frequency aids in identifying recurring issues and optimizing machine performance.
+
+\subsubsection*{How Productivity can be maximized:}
+\begin{enumerate}
+  \item Efficient Workflow: Designing an optimized workflow ensures smooth material flow, minimizes idle time, and reduces non-value-added activities. Analyze and streamline processes to eliminate bottlenecks and optimize the sequence of operations.
+
+\item Cutting Parameters Optimization: Fine-tuning cutting parameters such as cutting speed, feed rate, and depth of cut can significantly impact productivity. Balancing these parameters to achieve the optimal balance between material removal rate and tool life can improve efficiency.
+
+\item Tooling Selection and Maintenance: Selecting the right cutting tools based on the material, operation, and desired outcome is crucial. Additionally, proper tool maintenance, including regular sharpening/replacement, ensures optimal cutting performance and minimizes downtime.
+
+\item Automation and CNC: Incorporating automation, robotics, and computer numerical control (CNC) systems reduces manual intervention, enhances precision, and speeds up operations. Automation can be employed for material handling, tool changing, and repetitive tasks, freeing up operators for more complex operations.
+
+\item Workpiece and Fixture Design: Well-designed workpieces and fixtures facilitate faster setup times, ease of clamping, and improved access for cutting tools. Ensuring proper workpiece stability and accurate positioning can reduce setup and changeover times.
+
+\item Continuous Monitoring and Control: Implementing real-time monitoring systems allows for proactive detection of abnormalities, tool wear, and machine performance issues. By identifying potential problems early on, corrective actions can be taken promptly, minimizing unplanned downtime.
+
+\item Operator Training and Skill Development: Providing comprehensive training to machine operators enhances their proficiency in machine operations, tooling changes, and troubleshooting. Skilled operators can optimize machine utilization, minimize errors, and perform timely maintenance.
+
+\item Lean Manufacturing Principles: Adopting lean manufacturing principles, such as 5S, visual management, and waste reduction techniques, promotes a more efficient and organized work environment. Eliminating non-value-added activities and optimizing processes improves overall productivity.
+
+\item Data-driven Decision Making: Utilizing data analytics and performance metrics helps identify areas for improvement, track key performance indicators (KPIs), and make informed decisions. Data analysis can highlight opportunities to optimize processes, reduce cycle times, and increase throughput.
+
+\item Continuous Improvement Culture: Foster a culture of continuous improvement by encouraging feedback, suggestions, and involvement from operators and technicians. Regularly evaluate processes, identify improvement opportunities, and implement changes based on lessons learned.
+\end{enumerate}
+
+\subsubsection*{Precision of Machine tools depends upon:}
+\begin{enumerate}
+  \item Machine Design and Construction: The design and construction of the machine tool play a significant role in its precision. A rigid and stable structure with proper alignment and precision components is essential for maintaining accuracy during machining operations.
+
+  \item Control System: The control system, such as computer numerical control (CNC), influences precision by accurately interpreting and executing machining instructions. A high-quality control system with advanced algorithms and precise positioning capabilities enhances the precision of the machine tool.
+  
+  \item Mechanical Components: The quality and precision of mechanical components, such as spindles, guideways, bearings, and screws, directly affect the precision of the machine tool. High-quality components with tight tolerances and minimal backlash contribute to improved precision.
+  
+  \item Cutting Tools: The selection and condition of cutting tools impact precision. High-quality tools with proper geometry, sharp edges, and accurate dimensions ensure precise cutting and dimensional accuracy.
+  
+  \item Metrology and Calibration: Regular calibration and maintenance of the machine tool using metrology equipment, such as precision measuring instruments and laser alignment systems, help maintain accuracy over time. Accurate calibration ensures that the machine tool performs as intended and delivers precise results.
+  
+  \item Environmental Factors: External factors like temperature, humidity, and vibrations can affect the precision of machine tools. Controlling the environmental conditions within acceptable limits helps maintain stability and accuracy during machining operations.
+  
+  \item Operator Skill and Training: The skill and expertise of the operator influence the precision of the machine tool. Proper training on machine operation, tool setup, and measurement techniques helps operators understand and implement precise machining practices.
+  
+  \item Process Planning and Parameters: The selection and optimization of cutting parameters, tool paths, and machining strategies impact precision. Proper process planning and parameter selection considering the material, tooling, and desired tolerances contribute to achieving the desired precision.
+\end{enumerate}
+
 
 \end{document}

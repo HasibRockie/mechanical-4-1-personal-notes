@@ -6,6 +6,8 @@
 \usepackage{tabularx}
 \usepackage{tikz}
 \usepackage{forest}
+\usepackage{amsmath}
+\usepackage{amssymb}
 
 \forestset{
   my box/.style={
@@ -86,9 +88,85 @@ Plumbing refers to the system of pipes, fixtures, and devices used to supply wat
 
 \newpage
 
-\section{Lecture 2: Topic}
-\subsection*{Date: DD/MM/YYYY}
+\section{Lecture 2: Fire Protection}
+\hfill Date: 13/06/2023
 
-Content of the lecture goes here.
+\subsection*{Fire dynamics}
+Fire dynamics is the study of how fires start, spread, and behave. It explores ignition, combustion, fire growth, and suppression methods. Understanding fire dynamics helps with fire safety, engineering, and firefighting operations.
+
+\subsubsection*{Flash Point}
+Flash point refers to the minimum temperature at which a substance releases enough vapor to form an ignitable mixture with the air near its surface. It is a crucial parameter for determining the fire hazard potential of a material.
+
+\subsubsection*{Fire Point}
+Fire point is the temperature at which a substance produces sufficient vapors to sustain combustion once the ignition source is removed. It is the temperature at which a substance continues to burn after being ignited.
+
+\subsubsection*{Flammability Limit}
+Flammability limit, also known as the explosive range, refers to the range of concentrations of a flammable substance in a mixture with air that can support combustion. It consists of two limits: the lower flammability limit (LFL) and the upper flammability limit (UFL). Below the LFL, the mixture is too lean to ignite, while above the UFL, it is too rich to ignite. Within this range, if an ignition source is present, a fire or explosion can occur.
+
+\subsubsection*{Some important points}
+\begin{enumerate}
+  \item Fire $\rightarrow$ self-sustained oxidation of fuel 
+  \item 3 components are mendatory to create fire. They are - Fuel, Heat \& Oxygen 
+  \item 3 components are given out as a resulf of fire. They are -  Heat, Light \& Smoke 
+  \item combustion occurs when the fuel is in the \textbf{gaseous} state 
+  \item fire occurance order $\rightarrow$ gaseous $\geqslant$  liquid $\geqslant$  solid
+  \item The higher the surface area to mass ratio, the more the fire 
+  \item Heat is the most crucial element to propagate or sustain the fire. Because heat can produce further heat by burning
+  \item Minimum 16\% oxygen ratio is required to sustain flamming fire.
+  \item The higher the concentration of $O_2$, the higher the fire rate 
+  \item smoke is most crucial in fire accidents. About 75\% people die because of smoke in fire accident. 
+\end{enumerate}
+
+\subsubsection*{Explosion}
+\textbf{Detonation}: Detonation refers to a rapid and violent combustion process that occurs at supersonic speeds. It involves the nearly instantaneous release of energy in the form of a shock wave. The reaction front moves faster than the speed of sound, creating a highly destructive and explosive event. Detonations typically occur in highly reactive and confined environments, such as high-explosive materials.
+\\
+
+\textbf{Deflagration}: Deflagration is a relatively slower combustion process compared to detonation. It involves a subsonic flame front that propagates through a fuel-air mixture. The combustion wave spreads at a speed lower than the speed of sound, resulting in a less intense and less destructive event compared to detonation. Common examples of deflagrations include fires, most chemical explosions, and the combustion of fuels in engines.\\
+
+\textbf{Flaming Fire}: A flaming fire is characterized by the presence of visible flames. It involves the rapid oxidation of a fuel in the presence of sufficient heat and oxygen. Flames are typically visible, and the fire releases heat, light, and often produces smoke. Flaming fires are commonly associated with open fires, such as those produced by burning wood, paper, or flammable liquids. They tend to spread quickly and are more easily extinguished by removing the fuel source or using appropriate fire suppression methods.\\
+
+\textbf{Smoldering Fire}: A smoldering fire, on the other hand, is a slow, low-temperature combustion process without the presence of visible flames. It occurs when a material undergoes incomplete combustion due to limited oxygen availability. Smoldering fires are characterized by glowing embers or hot spots that produce smoke and heat but lack the intense flames associated with flaming fires. Smoldering fires can be challenging to detect and extinguish as they can persist for extended periods, hidden within materials such as upholstery, peat, or smoldering cigarette butts. They pose a significant risk of rekindling into a flaming fire if provided with additional oxygen and fuel.
+
+\subsubsection*{Tenability \& it's limit}
+Tenability refers to the conditions within a space that are considered safe and tolerable for occupants during a fire or other hazardous event. It relates to the ability of individuals to survive, evacuate, and be protected from the harmful effects of fire, smoke, heat, and toxic gases.
+
+Tenability limits are the thresholds beyond which the conditions in a space become untenable and pose a significant risk to human life. These limits define the point at which the environment becomes hazardous and occupants may experience adverse health effects or be unable to survive. Common tenability limits include:
+
+\begin{itemize}
+  \item Temperature Limit: The temperature at which occupants may be at risk of burns or heat-related injuries. Specific temperature limits may vary depending on factors such as duration of exposure and the vulnerability of occupants.
+  \item Visibility Limit: The point at which reduced visibility due to smoke or other factors hinders occupants' ability to navigate and evacuate safely.
+  \item Toxic Gas Limit: The concentration of toxic gases, such as carbon monoxide (CO) or hydrogen cyanide (HCN), beyond which occupants may be at risk of acute or chronic health effects.
+  \item Oxygen Limit: The lower limit of oxygen concentration below which occupants may experience difficulty breathing or unconsciousness.
+  \item Radiant Heat Limit: The level of radiant heat flux at which occupants may sustain burns or other thermal injuries.
+\end{itemize}
+
+\subsubsection*{Classes of Fire}
+\begin{enumerate}
+  \item \textbf{Class A Fire}: Class A fires involve ordinary combustible materials such as wood, paper, fabric, plastics, and other common materials. These fires typically leave behind ash after burning.
+
+  \item \textbf{Class B Fire}: Class B fires involve flammable liquids or gases such as gasoline, oil, propane, butane, solvents, and certain paints. These fires can spread rapidly and produce significant heat and flames.
+  
+  \item \textbf{Class C Fire}: Class C fires involve energized electrical equipment or wiring, such as appliances, electrical panels, or power tools. The key concern in a Class C fire is the potential for electrical shock, so it requires specialized approaches to extinguishing, considering the electrical hazard.
+  
+  \item \textbf{Class D Fire}: Class D fires involve combustible metals, including magnesium, titanium, sodium, potassium, and certain metal powders or flakes. These fires can be extremely hazardous and require specialized extinguishing agents specifically designed for suppressing metal fires.
+  
+  \item \textbf{Class K Fire}: Class K fires involve cooking oils and fats, commonly found in commercial kitchens and cooking facilities. These fires pose unique challenges due to the high temperatures and the potential for re-ignition. Class K fire extinguishers or specialized suppression systems are necessary to effectively extinguish them.
+\end{enumerate}
+
+\subsubsection*{Timeline analysis}
+RSET (Required Safe Egress Time) is the time needed for occupants to evacuate a building safely during a fire. \\
+
+ASET (Available Safe Egress Time) is the time available for evacuation before conditions become hazardous. \\
+
+For safety, it is crucial that the ASET (Available Safe Egress Time) is greater than or equal to the RSET (Required Safe Egress Time). If the ASET is larger than the RSET, it provides occupants with sufficient time to evacuate before the environment becomes hazardous. This ensures a margin of safety during fire emergencies. However, if the RSET exceeds the ASET, it indicates inadequate evacuation provisions and may require adjustments to the building design, evacuation strategies, or fire protection measures to enhance occupant safety. 
+
+$$RSET \leq  ASET$$
+$$t_p + t_a + t_{rs} \leq t_u$$
+
+where, \\$t_p$ = the time elapsed from ignition to the moment at which the fire is detected (the time of perception)\\
+$t_a$ =  the time from detection/perception to the beginning of the ‘escape activity’\\
+$t_{rs}$ = the time to move to a place of ‘relative safety’\\
+$t_u$ = the time from ignition of the fire to the production of untenable conditions at the location under consideration (closely related to ASET)
+
 
 \end{document}
