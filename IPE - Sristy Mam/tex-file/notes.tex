@@ -6,6 +6,8 @@
 \usepackage{tabularx}
 \usepackage{tikz}
 \usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
 
 \geometry{a4paper}
 
@@ -63,9 +65,103 @@
 \end{itemize}
 \newpage
 
-\section{Lecture 2: Topic}
-\subsection*{Date: DD/MM/YYYY}
+\section{Lecture 2: Types of Machine Tools}
+\hfill Date: 13/06/2023
+\subsubsection*{Uses of Tailstock:}
+The term "tailstock" refers to a component found in many machine tools, such as lathes and milling machines. It serves several important purposes:
+\begin{enumerate}
+  \item Support: The tailstock provides support and stability to the workpiece being machined. It acts as a counterpoint to the cutting forces exerted by the tool, ensuring accurate and controlled machining.
+  \item Centering: In turning operations, the tailstock contains a rotating center (known as a live center) that aligns with the workpiece's center. This helps in achieving concentricity and accurate turning operations.
+  \item Drilling: The tailstock can be used for drilling operations by mounting a drill chuck or drill bit onto its quill. This allows for precise and controlled drilling operations on the workpiece.
+  \item Boring: By attaching a boring bar to the tailstock, it is possible to perform accurate and controlled boring operations on the workpiece. Boring involves enlarging existing holes or creating cylindrical recesses with tight tolerances.Taper turning: Some tailstocks can be adjusted to a specific angle, allowing for taper turning operations. This is useful when creating tapered features, such as conical shapes or tapered shafts.
+\end{enumerate}
 
-Content of the lecture goes here.
+\subsubsection*{Types of chips:}
+There are several types of chips that can occur during machining processes. The type of chip formed depends on various factors, including the material being machined, the cutting tool geometry, cutting speed, feed rate, and depth of cut. Here are some common types of chips and the materials in which they typically occur:
+
+\begin{enumerate}
+  \item Continuous Chip: Continuous chips are long, continuous curls of material. They occur primarily in \textbf{ductile materials such as aluminum, copper, mild steel, and stainless steel}. These materials have high ductility, which allows the material to deform plastically and form continuous chips.
+  \item Discontinuous Chip: Discontinuous chips are short, broken chips that are typically formed in \textbf{brittle materials such as cast iron and some types of hardened steels}. These materials have low ductility, which causes the chips to break and form shorter segments.
+  \item Built-Up Edge (BUE): A built-up edge is a localized region of material that adheres to the cutting tool edge during machining. It occurs in materials like \textbf{low carbon steels and alloys containing high carbon content}. The BUE can affect the chip formation and lead to variations in chip type.
+  \item Serrated Chip: Serrated chips have a wavy or sawtooth-like appearance. They occur in materials like\textbf{ titanium and some high-temperature alloys}. These materials have low thermal conductivity, which causes the heat generated during cutting to be concentrated in narrow bands, resulting in the formation of serrated chips.
+\end{enumerate}
+
+\subsubsection*{Why discontinuous chips are better than continuous chips:}
+\begin{enumerate}
+  \item Improved chip disposal: Discontinuous chips are shorter and easier to evacuate from the machining zone, reducing the risk of chip entanglement, jamming, and workpiece/tool damage.
+  \item Reduced heat generation: Discontinuous chips allow for better heat dissipation, preventing excessive heat buildup that can lead to tool wear, workpiece deformation, and poor surface finish.
+  \item Lower cutting forces: Discontinuous chips require less cutting force, resulting in reduced power consumption, minimized tool deflection, and improved machining stability.
+  \item Enhanced surface finish: Discontinuous chips reduce the occurrence of issues like built-up edge, poor surface finish, and material smearing, leading to improved surface quality.
+  \item Reduced workpiece deformation: Discontinuous chips distribute cutting forces more evenly, minimizing the risk of workpiece distortion or inaccuracies in the machined part.
+\end{enumerate}
+
+\subsubsection*{Chip breaker \& it's use:}
+A chip breaker is a feature in cutting tools that helps control chip formation during machining. Its uses include:
+\begin{itemize}
+  \item Chip control: Breaking long chips into shorter segments or controlled shapes.
+  \item Preventing chip clogging: Ensuring effective chip evacuation from the cutting zone.
+  \item Tool life improvement: Reducing chip-related issues and tool damage.
+  \item Surface finish enhancement: Minimizing vibrations and irregularities for a smoother finish.
+  \item Material-specific design: Tailoring chip breakers to different materials and operations.
+\end{itemize}
+
+\subsection*{Types of machine tools}
+\begin{enumerate}
+  \item According to size:
+    \begin{enumerate}
+      \item Light duty :  Smaller, less powerful machines for small-scale or hobbyist applications and light machining tasks. 
+      \item Medium duty : Sturdier machines with higher power for workshops and small to medium-sized production operations
+      \item Heavy duty:  Robust, powerful machines for demanding industrial applications, large-scale production, and heavy machining tasks.
+    \end{enumerate}
+  \item According to the method of actuation 
+    \begin{enumerate}
+      \item Manually 
+      \item Semi-automatic 
+      \item Automated
+    \end{enumerate}
+  \item According to the purposes 
+    \begin{enumerate}
+      \item General Purposes : Versatile machines for a wide range of machining tasks. Ex - Lathe machine 
+      \item Special Purposes : Designed for specific applications with customized features and higher efficiency. Ex - Gear hobbing machine 
+    \end{enumerate}
+  \item According to rotation 
+    \begin{enumerate}
+      \item Rotary cutting machine : Lathe machine, Drilling machine 
+      \item Linear cutting machine : Shaper machine, Planner machine 
+    \end{enumerate}
+  \item According to feed  
+    \begin{enumerate}
+      \item Axial Feed : Axial feed refers to the movement of the cutting tool or workpiece along the axis of rotation or the longitudinal direction. It involves the tool or workpiece moving in a straight line parallel to the axis of rotation. In turning operations on a lathe, the axial feed corresponds to the tool advancing or retracting along the workpiece's length.
+      \item Transverse Feed : Transverse feed refers to the movement of the cutting tool or workpiece perpendicular to the axis of rotation. It involves the tool or workpiece moving in a direction that is perpendicular to the axis of rotation. In milling operations, the transverse feed corresponds to the lateral movement of the cutting tool as it removes material from the workpiece.
+    \end{enumerate}
+\end{enumerate}
+
+\subsubsection*{Why turning is called micro-threading:}
+While threading, we use higher feed rate. when feed rate becomes less, the threading becomes denser. For turning, the feed rate is very low, that's why no visible threads are perceived and creates a smooth surface. That's why, turning is called micro-threading. 
+
+\subsection*{Gear Mathmatical Relations:}
+\begin{figure*}
+  \centering
+  \includegraphics*[width=0.8\textwidth]{img/gear_nomen.png}
+  \caption{Gear Nomenclature}
+\end{figure*}
+
+\begin{align*}
+  v &\Rightarrow \text{volume} &
+  b &\Rightarrow \text{face width} &
+  d &\Rightarrow \text{diameter of pitch circle} \\
+  m &\Rightarrow \text{module of gear} & 
+  t &\Rightarrow \text{No of teeth} &
+  M &\Rightarrow \text{Mass of gear} \\ 
+  n &\Rightarrow \text{Rotation in RPM} & 
+  \omega &\Rightarrow \text{angular velocity} &
+  \rho &\Rightarrow \text{Density of Gear materials} \\ 
+  I &\Rightarrow \text{Moment of Inertia} & 
+  F &\Rightarrow \text{Force} &
+  T &\Rightarrow \text{Torque} \\
+  P &\Rightarrow \text{Total power} &
+  KE &\Rightarrow \text{Kinetic Energy} & 
+  \text{m'} &\Rightarrow \text{Addendtum \& Dedendum} 
+\end{align*}
 
 \end{document}
