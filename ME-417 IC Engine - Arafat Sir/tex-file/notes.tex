@@ -11,6 +11,7 @@
 \usepackage{tcolorbox}
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{subfigure}
 
 
 \forestset{
@@ -363,5 +364,62 @@ In a four-stroke engine, the crankshaft rotates twice for every single rotation 
 	\item \textbf{why IVO pressure is slightly higher than EVC:} The inlet valve opening pressure is set slightly higher than the exhaust valve closing pressure to ensure efficient cylinder filling, prevent backflow of exhaust gases, manage valve train dynamics, and control gas exchange for optimal engine performance.
 
 \end{itemize}
+
+\subsection*{CI engine operations}
+\begin{enumerate}
+	\item \textbf{Intake Stroke}: The first stroke of the CI engine is the intake stroke. As the piston moves downward, the intake valve opens, allowing a mixture of air and fuel to enter the combustion chamber. The fuel is typically injected directly into the combustion chamber in a high-pressure fuel spray.
+
+	\item \textbf{Compression Stroke}: In the compression stroke, the piston moves back upward, compressing the air-fuel mixture. The compression ratio in a CI engine is relatively high, typically between 15:1 to 22:1, resulting in a highly compressed charge.
+	
+	\item \textbf{Combustion (Power) Stroke}: As the piston nears the top of the compression stroke, the fuel mixture reaches its autoignition temperature due to the high pressure and temperature within the combustion chamber. This causes the fuel to spontaneously ignite, creating a controlled explosion. The rapid expansion of the ignited gases pushes the piston downward with significant force, generating power.
+	
+	\item \textbf{Exhaust Stroke}: After the power stroke, the piston starts moving upward again, pushing the burned gases out of the combustion chamber. The exhaust valve opens, and the exhaust gases are expelled through the exhaust manifold and out of the engine through the exhaust system.
+\end{enumerate}
+
+\begin{figure}
+	\centering
+  
+	\subfigure[ Cylinder volume/clearance volume V/Vc]{
+	  \includegraphics[width=0.45\linewidth]{img/ci_op1.jpeg}
+	  \label{fig:image1}
+	}
+	\hfill
+	\subfigure[ rate of	fuel injection $m_{fi}$,]{
+	  \includegraphics[width=0.45\linewidth]{img/ci_op2.jpeg}
+	  \label{fig:image2}
+	}
+	
+	\subfigure[cylinder pressure p (solid line, firing cycle; dashed line, motored cycle),]{
+	  \includegraphics[width=0.45\linewidth]{img/ci_op3.jpeg}
+	  \label{fig:image3}
+	}
+	\hfill
+	\subfigure[ rate of fuel burning (or fuel chemical energy release rate) are plotted against crank angle]{
+	  \includegraphics[width=0.45\linewidth]{img/ci_op4.jpeg}
+	  \label{fig:image4}
+	}
+  
+	\caption{Sequence of events during compression, combustion, and	expansion processes of a naturally-aspirated compression-ignition engine operating cycle}\footnote[1]{$\checkmark$ SOI = Start of Injection, $\checkmark$ EOI = End of Injection, $\checkmark$ SOC = Start of Combustion}
+	\label{fig:overall}
+  \end{figure}
+
+ \subsubsection*{Why CI engine is more often than SI engine for two stroke engine:}
+ In CI engine, there is no problem if IVO \& EVC time difference is higher. Because, CI engine uses air-fuel mixures. On the other hand, in SI engine, fuel is used. In that case, more IVO \& EVC time difference may cause a waste of fuel, as fuel come outside while inlet valve is opened. That's why for two stroke engine, CI engine is more used than SI engine. 
+
+ \subsubsection*{Difference between two stroke and Four stroke:}
+ \begin{itemize}
+	\item \textbf{Simplicity}: Two-stroke engines have a simpler design with fewer moving parts.
+	\item \textbf{Power output}: Two-stroke engines tend to have a higher power-to-weight ratio due to their quicker power cycle.
+	\item \textbf{Fuel efficiency}: Four-stroke engines are generally more fuel-efficient than two-stroke engines.
+	\item \textbf{Emissions}: Two-stroke engines typically produce higher levels of emissions due to the mixture of fuel and lubricating oil.
+	\item \textbf{Lubrication}: Two-stroke engines require oil to be mixed with the fuel for proper lubrication, while four-stroke engines have a separate oil system for lubrication.
+ \end{itemize}
+
+ \subsubsection*{Types of Scavenging}
+ \begin{itemize}
+	\item Cross scavenging 
+	\item loop scavenging 
+	\item uniflow scavenging 
+ \end{itemize}
 
 \end{document}
