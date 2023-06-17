@@ -343,4 +343,55 @@ If the curvature of plate at outlet such that outlet angle $\alpha_2$ is more th
   \item $v_{w1}, v_{w2} \rightarrow $ velocity of whirl at the inlet and outlet respectively. alternatively, components of absolute velocity in the direction of motion.  
 \end{itemize}
 
+\section{Lecture 3: Curved Vane}
+\hfill Date: 17/06/2023
+
+\subsection{Analysis of Curved Vane}
+The jet enters the vane without shock if the relative $v_{r_1}$ makes an angle $\beta_1$ with the direction of motion (on x-axis). The jet glides over the vane and leaves with a velocity $v_{r_2}$. If the vane is smooth, then $v_{r_1} = v_{r_2}$. the jet will leave the vane without shock if the relative velocity $v_{r_1}$ makes an angle in $\beta_2$. \\
+
+The mass flow rate of fluid = $\rho Q = \rho a v_r$ , where a $\rightarrow$ area of jet. 
+
+\begin{itemize}
+  \item Note: if there is only single vane, then relative velocity $v_r$ have to consider, otherwise total velocity $v$ will be counted. 
+\end{itemize}
+
+Force on the vane in the direction of motion , if $\alpha_2  < 90$°,
+$$F_x = \rho a v_{r_1} \left[v_{w_1} - \left(-v_{w_2}\right)\right]$$
+\begin{equation}
+  F_x = \rho a v_{r_1} \left(v_{w_1} + v_{w_2}\right) \label{eq:eq21}
+\end{equation}
+if $\alpha_2  > 90$°, 
+\begin{equation}
+  F_x = \rho a v_{r_1} \left(v_{w_1} - v_{w_2}\right) \label{eq:eq22}
+\end{equation}
+
+if $\alpha_2  = 90$°, 
+\begin{equation}
+  F_x = \rho a v_{r_1} \left(v_{w_1} \right) \label{eq:eq23}
+\end{equation}
+
+This is the general expression of the thrust - 
+$$F_x = \rho a v_{r_1} \left[v_{w_1} \pm  v_{w_2}\right]$$
+
+if $u_1=u_2=u$, work done per second = $F_x \times u$
+\begin{equation}
+  = \rho a v_{r_1} \left[v_{w_1} \pm  v_{w_2}\right] \times u  \label{eq:eq24}
+\end{equation}
+
+Also work done can be determined for the changing kinetic energy. Thus the work done per second
+\begin{equation}
+  \text{Thus the work done per second} = \frac{1}{2} \rho a v_{r_1} \left[v_1^2 - v_2^2\right]  \label{eq:eq25}
+\end{equation}
+
+From the equation (24) \& (25),
+\begin{equation}
+  2(v_{w_1} \pm v_{w_2}) u = v_1^2 - v_2^2 \label{eq:eq26}
+\end{equation}
+
+Input energy of jet at inlet = $\frac{1}{2} \rho a v_1 \times v_1^2 $
+
+The hydraulic efficiency, $$\eta = \frac{\rho a v_{r_1}  \left[v_{w_1} \pm  v_{w_2}\right] u}{\frac{1}{2} \rho a v_1 \times v_1^2}$$
+\begin{equation}
+  \eta = \frac{2 u v_{r_1}  \left[v_{w_1} \pm  v_{w_2}\right]}{v_1^3}  \label{eq:eq27}
+\end{equation}
 \end{document}
