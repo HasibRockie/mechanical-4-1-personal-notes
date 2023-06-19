@@ -8,6 +8,9 @@
 \usepackage{subfigure}
 \usepackage{multicol}
 \usepackage{caption}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{amssymb}
 
 \geometry{a4paper}
 
@@ -345,4 +348,105 @@ The basic components of an engine lathe include a bed, headstock, tailstock, car
   \caption{Forward Rotation (with back gear) $\rightarrow$ $C_1$ Engaged}
 \end{figure*}
 
+\begin{figure*}[h] 
+  \centering
+  \includegraphics[width=\linewidth]{img/long_gear_without_back.jpeg}
+  \caption{Forward Rotation (without back gear) $\rightarrow$ $C_1$ disengaged}
+\end{figure*}
+
+\begin{figure*}[h] 
+  \centering
+  \includegraphics[width=\linewidth]{img/long_gear_with_back.jpeg}
+  \caption{Reverse Rotation (with back gear) $\rightarrow$ $C_1$ Engaged}
+\end{figure*}
+
+\subsubsection*{What is Back gear? why it is used?}
+In an engine lathe, the back gear is a mechanism located in the headstock. The back gear is used in an engine lathe to provide lower spindle speeds with increased torque. This allows the lathe to handle heavy-duty cutting tasks, work with large workpieces, and improve control and precision during machining operations.
+
+\subsubsection*{long gear train or short gear train, where back gear is used?}
+The back gear is typically associated with a long gear train in an engine lathe. A long gear train refers to a gear arrangement where multiple gears are used to transmit power from the motor to the spindle, resulting in a larger gear reduction. This allows for slower spindle speeds and increased torque.
+
+In the case of the back gear mechanism, it often involves an intermediate gear and a larger gear that work together to create the gear reduction. By engaging the back gear, power is transmitted through this longer gear train, resulting in lower rotational speeds.
+
+It's worth noting that the terminology "long gear train" does not refer to the physical length of the gears, but rather the number of gears involved in the gear reduction mechanism.
+
+\subsubsection*{Difference between Forward Rotation and Reverse Rotation:}
+\begin{itemize}
+  \item Forward rotation: In the forward rotation mode, the spindle of the lathe rotates in the same direction as the workpiece is being machined. This is the most common mode used for most turning operations. When the lathe is set to forward rotation, the cutting tool moves from the outer diameter of the workpiece towards the center.
+  \item Reverse rotation: In the reverse rotation mode, the spindle rotates in the opposite direction to the workpiece rotation. Reverse rotation is typically used for specific operations such as thread cutting or left-hand cutting. When the lathe is set to reverse rotation, the cutting tool moves from the center of the workpiece towards the outer diameter.
+\end{itemize}
+
+\subsubsection*{Summery}
+\begin{itemize}
+  \item Total Count of Forward Speeds: 24 (12 High and 12 Low)
+  \item Total Distinct Count of Forward Speeds: 22 (500 rpm and 630 rpm repeats)
+  \item Maximum Forward Speed:1635 rpm 
+  \item Minimum Forward Speed: 12.5 rpm 
+\end{itemize}
+
+\subsection*{Feed Mechanism}
+\subsubsection*{Steps}
+\begin{itemize}
+  \item Either a constant transmission or pitch increasing gearing/coarse feed unit
+  \item A reversing mechanism
+  \item A change gear train
+  \item A feed gear box
+  \item An apron transmission
+\end{itemize}
+
+\subsubsection*{Difference between Constant Transmission \& Pitch increasing Gearing}
+\textbf{Constant transmission}: In this feed mechanism, the ratio between the spindle speed and the feed rate stays the same no matter how you adjust the feed lever. It provides precise and consistent feed rates during turning operations. It's commonly used in modern lathes with variable speed control.\\
+
+\textbf{Pitch increasing gearing (coarse feed unit)}: With this feed mechanism, you can select different feed rates by adjusting the feed lever or engaging different gears. The feed rates increase in steps, getting faster with each step. It's useful for quickly removing material during roughing or rapid traverse operations when you don't need fine control.
+
+\subsubsection*{Reversing Mechanism}
+A reversing mechanism in an engine lathe allows the operator to change the direction of spindle rotation. It's useful for operations like thread cutting and enables the creation of both right-hand and left-hand threads.
+
+\subsubsection*{Change Gear Train}
+A change gear train in an engine lathe is a set of interchangeable gears that control the spindle's rotational speed. It allows the operator to adjust the gear ratios for different cutting operations and achieve various spindle speeds.
+
+\subsubsection*{Feed Gear Box}
+A feed gear box in an engine lathe controls the feed rates of the cutting tool. It consists of gears and mechanisms that adjust the tool's advancement along the workpiece, allowing for different cutting speeds and depths. It provides control over feed rates and threading capabilities during machining operations.
+
+\subsubsection*{Points}
+\begin{itemize}
+  \item $C_3$ clutch has special significance here. If it is disengaged, shaft won't get motion from the gear. They well get detached. 
+  \item $C_5$ Engaged → motion to the Lead screw
+  \item $C_5$ Disengaged → motion to the feed rod 
+  \item By 1 rotation of spindle, feed = pitch 
+\end{itemize}
+
+\begin{figure}
+  \centering
+
+  \subfigure[Constant Transmission]{\includegraphics[width=0.48\linewidth]{img/const_transmission.jpeg}}
+  \subfigure[Reversing Mechanism]{\includegraphics[width=0.48\linewidth]{img/reversing_mechanism.jpeg}}
+  \subfigure[Change Gear Box]{\includegraphics[width=0.48\linewidth]{img/change_gear_box.jpeg}}
+  \subfigure[Feed Gear box (Clutches C2, C3 and C4 disengaged, C5 engaged)]{\includegraphics[width=0.48\linewidth]{img/feed_gear_dia.jpeg}} 
+  \subfigure[Feed Gear Box (Clutches C2 disengaged, C3, C4 and C5 engaged]{\includegraphics[width=0.48\linewidth]{img/feed_gear_dia_2.jpeg}}
+  \subfigure[Apron Mechanism (Clutches C6 engaged]{\includegraphics[width=0.48\linewidth]{img/apron_mechanism.jpeg}}
+ 
+  \caption{Steps for Feed Mechanism} 
+\end{figure}
+
+\subsubsection*{Apron Mechanism}
+refers to the component on the carriage that controls the feed rates and movements of the cutting tool. It includes levers, dials, and controls for selecting feed rates and directions, allowing precise control over tool movements during machining operations.
+
+
+\subsubsection*{Kinematic Equation of Feed}
+The kinematic equation of feed is given by:
+\[1 \, \text{rev.sp} \times i_{\text{const}} \times i_{\text{rev,m}} \times i_{\text{cng}} \times i_{\text{f.g.b.}} \times i_{\text{i.p.}} \times \pi m z_p = S \, \text{mm/rev}\]
+Here, $1 rev.sp$ = 1 revolution of spindle \\
+m = module of the pinion gear \\
+$\pi m z_p$ = Circumference of the pinion gear along pitch circle \\
+$z_p$ = no. of teeth of the pinion gear \\
+$S$ = feed rate \\ 
+$i_{const}$ = motion by constant transmission \\
+$i_{rev,m}$ = motion by reverse mechanism \\
+$i_{cng}$ = motion by change gear box \\
+$i_{f.g.b}$ = motion by feed gear box \\
+$i_{ap}$ = motion by apron mechanism \\
+
+
+$\checkmark $\textbf{Follow Slide for better understanding}
 \end{document}
