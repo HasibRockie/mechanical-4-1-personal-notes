@@ -12,6 +12,7 @@
 \usepackage{subcaption}
 \usepackage{float}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{multicol}
 
 \forestset{
@@ -263,4 +264,128 @@ Find - (a) Percentage Slip, (b) Coeff. of discharge, (c) Power required to drive
 \end{align*}
 \hrulefill
 
+\section{Lecture 3: Flow Rate and Work Done}
+\hfill Date: 18/06/2023
+
+\begin{multicols}{2}
+  let, \\
+  r = crank radius \\
+  L = Length of stroke = 2r \\ 
+  A = Cross Sectional Area of Piston \\
+  N = RPM \\
+  \\
+  $H_s$ = Suction Head \\
+  $H_d$ = Delivery Head \\
+  $\gamma$ = Specific weight of water \\
+\end{multicols}
+
+Volume of water supplied in one stroke = $AL$ \\
+Theoretical flow rate per second, $Q$ = $\frac{LAN}{60}$ \\
+For a double acting pump discharge = $\frac{2LAN}{60}$ \\
+W = weight flow rate = $Q\gamma$ \\
+Total height lifted, H = $H_s + H_d$ \\
+Theoretical power required to drive the pump = $Q \gamma \left(H_s + H_d\right) = WH$\\
+The actual power required will be greater than the theoretical power due to friction, leakage etc.
+
+\subsection*{Indicator diagram of a reciprocating pump:}
+Indicator diagram may be defined as the graphical representation of pressure head in the cylinder and the volume swept by piston for one complete revolution.  
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=0.7\linewidth]{img/indicator_diagram.jpg}
+    \caption{Indicator diagram of a reciprocating pump.}
+  \end{center}
+\end{figure}
+
+  In the above figure, shows the theoretical indicator diagram of a reciprocating pump under an ideal conditions (without friction and leakage). The stroke length and pressure head inside the cylinder are represented by x and y axis in the diagram respectively. 
+
+  \begin{multicols}{2}
+    In the diagram,\\
+    $H_d$ = Delivery Head \\
+    $H_s$ = Suction Head \\ 
+    Line $ef$ = Represents atmospheric pressure \\
+    Line $ab$ = Represents pressure inside the cylinder during suction stroke \\
+    Line $cd$ = Represents pressure inside the cylinder during delivery stroke \\
+    \\
+    x-axis = absolute zero pressure \\
+    area $abfe$ = Work done by  the piston dring suction stroke \\
+    area $cdef$ = work done by the piston during delivery stroke \\
+  \end{multicols}
+
+  \subsection*{Variation of Pressure due to acceleration of piston }
+  \begin{figure}[h]
+    \begin{center}
+      \includegraphics[width=0.7\linewidth]{img/acceleration_piston.jpg}
+      \caption{Variation of Pressure due to acceleration of piston}
+    \end{center}
+  \end{figure}
+  Due to reciprocating motion of the piston, there will be acceleration at the beginning and retardation at the end of each stroke. For this reason, the inertia of water will cause a variation in the pressure in the cylinder.
+
+  \subsubsection*{Assumption}
+  \begin{itemize}
+    \item Length of the connecting rod is very large 
+    \item The rotation of the crank is uniform 
+    \item The piston makes simple harmonic motion 
+  \end{itemize}
+
+  \subsubsection*{Nomenclature}
+
+  \begin{multicols}{2}
+    A = Cross sectional area of piston \\
+    a = Cross sectional area of pipe \\
+    $\omega$ = Angular velocity of rotating crank \\
+    r = crank radius \\
+    \\
+    l = Total length of pipe \\
+    $\gamma$ = specific weight of water \\
+    $v$ = velocity of water in a pipe \\
+    $V$ = velocity of piston \\
+  \end{multicols}
+
+  \subsubsection*{Derivation of Equation}
+  Let, adter time t, the crank makes an angle $\theta$ with horizontal. Therefore, $$\theta = \omega \times t$$
+  Displacement of piston in time t, $x = r -r \cos \theta = r - r \cos \left(\omega t\right)$
+
+  Velocity of piston in time t, $v$ = $\frac{dx}{dt} = r\omega \sin \left(\omega t\right)$
+
+  acceleration of piston in time t, $f$ = $\frac{dv}{dt} = r\omega^2 \cos \left(\omega t\right)$
+
+  From continuity equation, \\
+  Cross sectional area of pipe $\times$ velocity of water in pipe = Velocity of pison $\times$ cross sectional area of piston \\
+  i.e., $av = AV$ \\
+  or, $v = \frac{A}{a} V = \frac{A}{a} r \omega \sin \omega t = \frac{A}{a} r \omega \sin \theta $
+
+  Acceleration of water in pipe = $\frac{dv}{dt} = \frac{A}{a} r \omega^2 \cos \omega t = \frac{A}{a} \omega^2 r \cos \theta$ 
+
+  weight of water in pipe = $\gamma a l$ \\ 
+  mass of water in pipe = $\frac{\gamma a l}{g}$
+
+  let, $P_a$ = intensity of pressure due to acceleration of water in pipe \\
+  from newton's second law of motion,\\
+  Force = Mass $\times$ Acceleration \\
+  $$P_a \times a = \frac{\gamma a l}{g} \frac{A}{a} \omega^2 r \cos \theta$$
+  \begin{equation}
+    P_a = \frac{\gamma l}{g} \frac{A}{a} \omega^2 r \cos \theta \label{eq:eq1}
+  \end{equation}
+
+  Let, $H_a$ = acceleration pressure head 
+  =$\frac{\text{intensity of pressure}}{\text{specific weight of water}} = \frac{P_a}{\gamma}$
+
+  Dividing the equation (1) by $\gamma$ we have,
+  $$\frac{P_a}{\gamma} = \frac{l}{g} \frac{A}{a} \omega^2 r \cos \theta$$
+  \begin{equation}
+    H_a = \frac{l}{g} \frac{A}{a} \omega^2 r \cos \theta \label{eq:eq2}
+  \end{equation}
+
+  From equation (2) it is found that pressure head due to acceleration vary with the angle $\theta$. \\
+  At the beginning of stroke, $\theta = 0, cos\theta = 1$ \\
+  $$\therefore H_a = \frac{l}{g} \frac{A}{a} \omega^2 r$$ 
+
+  At the middle of stroke, $\theta = 90, cos\theta = 0$ \\
+  $$\therefore H_a = 0$$ 
+
+  At the end of stroke, $\theta = 180, cos\theta = -1$ \\
+  $$\therefore H_a = - \frac{l}{g} \frac{A}{a} \omega^2 r$$ 
+  $\checkmark$ here (-ve) means retardation.
+
+  \hrulefill 
 \end{document}

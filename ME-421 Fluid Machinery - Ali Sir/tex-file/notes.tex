@@ -11,6 +11,7 @@
 \usepackage{amssymb}
 \usepackage{xcolor}
 \usepackage{tcolorbox}
+\usepackage{multicol}
 
 \forestset{
   my box/.style={
@@ -343,7 +344,7 @@ If the curvature of plate at outlet such that outlet angle $\alpha_2$ is more th
   \item $v_{w1}, v_{w2} \rightarrow $ velocity of whirl at the inlet and outlet respectively. alternatively, components of absolute velocity in the direction of motion.  
 \end{itemize}
 
-\section{Lecture 3: Curved Vane}
+\section{Lecture 4: Curved Vane}
 \hfill Date: 17/06/2023
 
 \subsection{Analysis of Curved Vane}
@@ -394,4 +395,150 @@ The hydraulic efficiency, $$\eta = \frac{\rho a v_{r_1}  \left[v_{w_1} \pm  v_{w
 \begin{equation}
   \eta = \frac{2 u v_{r_1}  \left[v_{w_1} \pm  v_{w_2}\right]}{v_1^3}  \label{eq:eq27}
 \end{equation}
+\pagebreak
+
+\section{Lecture 5: Series of Vanes}
+\hfill Date: 19/06/2023
+If a series of vanes is fixed radially to the rim of a wheel, there is always one vane or another facing the jet. Thus the entire fluid is utilized. This arrangement of vanes is used in radial flow turbines.\\
+
+Two types of radial flow turbine: 
+\begin{enumerate}
+  \item Inward flow turbine : If jet enters outer periphery
+  \item Outward flow turbine : If jet enters inner periphery
+\end{enumerate}
+
+Let $R_1$ and $R_2$ be the radii of the wheel at the inlet and outlet.
+
+\begin{figure}[h]
+  \begin{center}
+  \includegraphics[width=0.8\linewidth]{img/series_vane.jpg}
+    \caption{Series of vanes}
+\end{center}
+\end{figure}
+
+Let, $\omega$ is the angular velocity of the wheel,
+$$u_1 = \omega R_1 = \frac{2 \pi N}{60} R_1$$
+$$u_2 = \omega R_2 = \frac{2 \pi N}{60} R_2$$
+here, N = RPM \\
+Let $m$ be the mass flow rate striking the vane. The momentum in the tangential direction at the inlet = $mv_w$ \\
+The moment of momentum about the center at inlet = $mv_{w_1}R_1$\\
+The moment of momentum about the center at outlet = $-mv_{w_2}R_2$\\
+$\therefore$ Torque on the wheel,
+$$T = mv_{w_1}R_1 - \left(-mv_{w_2}R_2\right)$$
+\begin{equation}
+  T = m \left(v_{w_1}R_1 + v_{w_2}R_2\right) \label{eq:eq28}
+\end{equation}
+
+\begin{align*}
+  \text{Work done per second} &= T \times \omega \\
+  &= m \left(v_{w_1}R_1 + v_{w_2}R_2\right) \times \omega \\ 
+\end{align*}
+\begin{equation}
+  \text{work done per second} = m \left(v_{w_1}u_1 + v_{w_2}u_2\right)  \label{eq:eq29}
+\end{equation}
+Here, $\beta<$  90° \\
+
+
+If $\beta>$  90°,  
+\begin{equation}
+  \text{work done per second} = m \left(v_{w_1}u_1 - v_{w_2}u_2\right)  \label{eq:eq30}
+\end{equation}
+
+The general expression,  
+\begin{equation}
+  \text{work done per second} = m \left(v_{w_1}u_1 \pm v_{w_2}u_2\right)  \label{eq:eq31}
+\end{equation}
+\text{This equation is known as Euler Pump Turbine equation.}
+
+Hydraulic Efficiency,
+\begin{equation}
+  \eta_h = \frac{m\left(v_{w_1} u_1 \pm v_{w_2} u_2\right)}{\frac{1}{2} m v_1^2} = \frac{2\left(v_{w_1} u_1 \pm v_{w_2} u_2\right)}{v_1^2}
+  \label{eq:eq32}
+\end{equation}
+
+\subsubsection*{Problem 01}
+A jet of water having a velocity of 30 $ms^{-1}$ impinging for a series of vanes mounted on the periphery of a wheel moving with a peripheral velocity of 15 $ms^{-1}$. The aboslute velocity is directed at an angle of 30° to the direction of motion of vanes. The relative velocity at outlet is 95\% of the value at inlet. The absolute velocity at exit is normal to the direction of the motion of the vane. Assuming smooth entry, find the vanes angle at inlet and outlet and the hydraulic efficiency of vane. \\
+\textbf{Solution}: 
+
+\begin{multicols}{2}
+  given, \\
+  $v_1$ = 30 m/s \\
+  $\alpha$ = 30° \\
+  $u_1$ = 15 m/s \\
+  $v_{r_2} = 0.95 \times v_{r_1}$ \\
+  $\beta$ = 90° [normal] \\
+  so, $v_{w_2} = 0, v_{2} = v_{f_2}$ \\ 
+  $\checkmark$ have to add figure in exam 
+\end{multicols}
+
+\begin{multicols}{3}
+  \begin{align*}
+    v_{w_1} &= v_1 \cos 30 \\
+    &= 30 \cos 30 \\ 
+    &= 25.98 \, m/s   
+  \end{align*}
+
+  \begin{align*}
+    \tan \theta &= \frac{v_{f_1}}{v_{w_1} - u_1}\\
+    \theta &= 53.8    
+  \end{align*}
+
+  \begin{align*}
+    v_{r_1} &= \sqrt{\left[v_{w_1} - u_1\right]^2 + (v_{f_1})^2}\\
+    &= 18.59 \, m/s   
+  \end{align*}
+
+  \begin{align*}
+    v_{r_2} &= 0.95 \times v_{r_1}\\
+    &= 17.67 \, m/s   
+  \end{align*}
+
+  \begin{align*}
+    & \text{Assuminng } u_1 = u_2, \\
+    \cos \phi &= \frac{v_{f_2}}{u_2}\\
+    \phi &= \cos^{-1} \left(\frac{15}{17.66}\right) \\ 
+    &= 27.53 
+  \end{align*}
+
+  \begin{align*}
+    \eta_h &= \frac{2 v_{w_1} u_1}{v_1^2}\\
+    \eta_h &= \frac{2 \times 25.98 \times 15}{30^2}\\
+    &= 0.866 \\
+    &= 86.7\%  
+  \end{align*}
+
+
+\end{multicols}
+
+\subsubsection*{Problem 02}
+A jet of water 5 cm in diameter inpinges on a curved vane and is deflected through an angle of 175°. The vane moves in the same direction at that of the jet with a velocity of 35 m/s. The rate of flow is 170 l/s. Determine the compounds forces, horse power developed by the vane and water efficiency. Neglect friction. Solve this problem, if instead of one vane, there are a series of vanes fixed to a wheel.\\
+$F_x = ?, F_y = ? , HP = ?, \eta_h = ?$\\
+
+\textbf{Solution:} 
+\begin{multicols}{2}
+  Given,\\
+  d = 5 cm \\
+  u = 35 m/s \\
+  Q = 170 l/s = 0.17 $m^3/s$ \\
+  $$v = \frac{Q}{a} = \frac{0.17}{0.196\times 10^{-2}} = 86.58 /, m/s$$ \\
+  $$a = \frac{\pi}{4} \left[0.05\right]^2 = 0.196 \times 10^{-2} /, m^2$$ \\
+  v= u + $v_r$ \\
+  $v_r = 86.58 - 35 = 51.58$ m/s \\ 
+\end{multicols}
+
+Neglecting friction,\\
+\begin{align*}
+  v_{r_1} = v_r &= 51.58 \, m/s \\\
+  v_{r_1} \cos \phi &= 51.38 \, m/s \\
+  \therefore v_{w_1} = v_{r_1} \cos \phi - u_1 &= 51.38 -35 = 16.38 \, m/s \, [u = u_1] \\ 
+\end{align*}
+
+\begin{align*}
+  F_x &=\rho a v_r \left(v_w + v_{w_1}\right) = 10427.87 N \\
+  F_y &=\rho a v_r \times v_{f_1} \\
+  HP &= \frac{F_x u}{746} \\
+  \eta_h &= \frac{F_x u}{\frac{1}{2} m v^2} =  \frac{10427.87 \times 35}{\frac{1}{2} \times 1000 \times 0.17 \times 86.58^2} = 57.3\% 
+\end{align*}
+\hrulefill
+
 \end{document}
