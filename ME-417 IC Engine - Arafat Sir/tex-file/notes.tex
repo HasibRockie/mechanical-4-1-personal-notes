@@ -12,6 +12,8 @@
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{subfigure}
+\usepackage{ragged2e}
+\usepackage{multicol}
 
 
 \forestset{
@@ -421,5 +423,176 @@ In a four-stroke engine, the crankshaft rotates twice for every single rotation 
 	\item loop scavenging 
 	\item uniflow scavenging 
  \end{itemize}
+
+ \section{Lecture 03: IC Engines Cycles} 
+\hfill Date: 18/06/2023 \\ 
+IC engiine combustion cylinder is an open system, as here mass changes. There's no thermodynamic cycle here, rather it's a operating cycle. Operating cycle consists of multiple operating process. Here, ideal gas model is assumed, hence $C_v,C_p$ are constant. 
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabularx}{\linewidth}{ p{0.33\linewidth} p{0.66\linewidth}}
+	  \hline
+	  \multicolumn{1}{c}{Process} & \multicolumn{1}{c}{Assumptions} \\
+	  \hline
+	  Compression(1-2) & 1. Adiabatic and reversible (hence isentropic) \\
+	  \hline
+	  Combustion (2-3) & \begin{enumerate}
+			\item Adiabatic 
+			\item Combustion occurs at: 
+				\begin{enumerate}
+					\item Constant volume 
+					\item Constant Pressure 
+					\item Part at constant volume, part at const. pressure 
+				\end{enumerate}
+			\item Combustion is complete ($\eta_c = 1$)
+		\end{enumerate}
+	  \\
+	  \hline
+	  Expansion (3-4) & 1. Adiabatic and reversible (hence isentropic)\\
+	  \hline 
+		Exhaust (4-5-6) \& intake(6-7-1) & 
+			\begin{enumerate}
+				\item Adiabatic 
+				\item Valve event occurs at top \& bottom dead center 
+				\item No change in cylinder volume as pressure differences across open valve drop to zero. 
+				\item Inlet and exhause pressure constant 
+				\item Velocity affects negligible  
+			\end{enumerate}
+		\\
+		
+		\hline 
+
+	\end{tabularx}
+  \end{table}
+
+  \begin{figure}
+	\centering
+  
+	\subfigure[ Real Cycle]{
+	  \includegraphics[width=0.45\linewidth]{img/real_cycle.jpeg}
+	  \label{fig:real}
+	}
+	\hfill
+	\subfigure[Const volume combustion]{
+	  \includegraphics[width=0.45\linewidth]{img/const_vol_cycle.jpeg}
+	  \label{fig:const_vol}
+	}
+	
+	\subfigure[Const pressure combustion]{
+	  \includegraphics[width=0.45\linewidth]{img/const_pre_cycle.jpeg}
+	  \label{fig:const_pressure}
+	}
+	\hfill
+	\subfigure[Limited-pressure combustion]{
+	  \includegraphics[width=0.45\linewidth]{img/limited_pres_cycle.jpeg}
+	  \label{fig:limited_const_vol_pre}
+	}
+	\subfigure[Throttled constant-volume cycle]{
+	  \includegraphics[width=0.45\linewidth]{img/throttle_combustion.jpeg}
+	  \label{fig:image5}
+	}
+	\hfill
+	\subfigure[Supercharged constant-volume cycle]{
+	  \includegraphics[width=0.45\linewidth]{img/combustion_frg.jpeg}
+	  \label{fig:image6}
+	}
+  
+	\caption{Combustion cycle for different case}
+	\label{fig:combustion_cycle}
+  \end{figure}
+
+  \subsection*{Thermodynamic Relations}
+  \begin{multicols}{2}
+	\subsubsection*{Nomenclature}
+	\begin{itemize}
+		\item $W_{C,i}$ = indicated work power
+		\item $W_{E}$ = expansion power
+		\item $W_{C}$ = compression process power
+		\item $\eta_c$ = indicated efficiency 
+		\item $m_f$ = mass flow rate of fuel 
+		\item $\eta_{t,i}$ = thermal efficiency 
+		\item imep = indicated mean effective pressure 
+		\item $V_d$ = displacement volume 
+		\item $r_c$ = volume ratio 
+		\item u = internal energy, U = specific internal energy 
+		\item h = enthalpy, U = specific enthalpy 
+		\item S = entropy 
+		\item LHV = Lower Heating Value
+		\item $h = u + pv $
+	\end{itemize}
+	$$\eta_{f,i} = \frac{W_{c,i}}{m_f Q_{LHV}}$$
+	$$\eta_{t,i} = \eta_c \times \eta_{f,i}, \text{,here, } \eta_c=1 $$
+	$$imep = \frac{W_{c,i}}{v_d} = \eta_{f,i} \times m_f \times \frac{Q_{LHV}}{V_d}$$
+	$$W_{C,i} = W_E + W_C$$
+	\subsubsection*{Compression Process}
+	$$\frac{v_1}{V_2} = r_c \text{, and } S_1 = S_2$$
+	$$W_C = U_1-U_2 = m(u_1-u_2)$$
+	
+	\subsubsection*{Combustion Process}
+	\begin{enumerate}
+		\item Const. VOlume : $v_3 = v_2$ and $u_3 - u_2 = 0$
+		\item Const. Pressure : $p_e - p_2$ and $h_3 - h_2 = 0$
+		\item Limited Pressure Constant: $v_{3a} = v_2$ and $u_{3a}-u_2 = 0$ ; $p_{3b}=p_{3a}$ and $h_{3b} - h_{3a} = 0$
+	\end{enumerate}
+	\subsubsection*{Expansion Process}
+	\begin{enumerate}
+		\item Const Volume : $\frac{V_4}{V_3} = r_c$ and $s_4=s_3$\\
+		$W_E = U_3 - U_4 = m(u_3-u_4)$
+		\item Constant Pressure : $p_3 = p_2, \frac{v_4}{v_2} = r_c \text{ and, } s_4 = s_3$ \\
+		\begin{align*}
+			W_E &= U_3 - U_4 + p_2(V_3 - V_2) \\
+			&= m\left[(u_3-u_4)+ p_2(V_3-V_2)\right] \\
+			&= m\left[(u_3 +p_3V_3-u_4-p_4V_4) - p_2V_2 - p_4V_4 \right] \\ 
+			&= m\left[(h_3-h_4)+ p_4V_4 - p_2V_2\right]
+		\end{align*}
+		\item Limited Pressure Const : $\frac{V_4}{V_3a} = r_c$, $p_{3b}=p_{3a}$ and $s_4=s_{3b}$
+		$W_E = m\left[(h_{3b}-h_4) + p_4V_4 - p_eV_{3a}\right]$
+	\end{enumerate}
+
+	\subsubsection*{Efficiency}
+	\begin{enumerate}
+		\item Const volume : $$\eta_{f,i} = \frac{m\left[(u_3-u_4)-(u_2-u_1)\right]}{m_fQ_{LHV}}$$
+		\item Const Pressure : $$\eta_{f,i} = \frac{m\left[(h_3-h_4)-(u_2-u_1) + p_4V_4 - p_2V_2\right]}{m_fQ_{LHV}}$$
+		\item Limited Pressure Const : $$\eta_{f,i} = \frac{m\left[(h_3-h_4)-(u_2-u_1) + p_4V_4 - p_3V_{3a}\right]}{m_fQ_{LHV}}$$
+	\end{enumerate}
+  \end{multicols}
+\vspace*{0.5cm}
+  \textbullet Efficiency is very important. There may be residual gases inside and hamper the process.
+  \subsubsection*{Blowdown \& Gas displacement}
+  \begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=0.75\linewidth]{img/hypothetical_state.jpeg}
+		\caption{Hypothetical State}
+	\end{center}
+  \end{figure}
+  At hypothetical point (7), 
+  $$p_7 = p_e$$ 
+  $$T_7 = T_4 \left(\frac{p_7}{p_4}\right)^\frac{\gamma - 1}{\gamma}$$
+
+  \textbullet The better exhaust, the less residual and better intake will occur. CI engine has less residuals after exhause. \\
+  
+  \subsubsection*{Blowdown}
+  Blowdown in an IC engine refers to the process of expelling burned gases during the exhaust stroke. It involves opening the exhaust valve(s) to release high-pressure exhaust gases, allowing fresh air-fuel mixture to enter the combustion chamber. Blowdown improves gas exchange, relieves pressure, and aids in thermal management of the engine. Timing the opening and closing of the exhaust valve(s) is critical for optimizing engine performance and efficiency.
+
+  \subsubsection*{Exhaust Mechanism}
+  \begin{itemize}
+	\item The exhaust valve opens to allow the high-pressure exhaust gases to exit the cylinder.
+
+	\item As the exhaust gases are expelled, the pressure inside the cylinder decreases due to the expansion of the gases.
+	
+	\item The temperature of the exhaust gases also decreases as they expand and lose energy.
+	
+	\item The first molecule to exit the cylinder has high pressure and kinetic energy. However, as subsequent molecules exit, their kinetic energy decreases as energy is transferred to the surrounding exhaust system.
+	
+	\item The volume of the combustion chamber expands as the piston moves away from the cylinder head, creating more space for the exhaust gases to occupy.
+	
+	\item The expansion of the exhaust gases aids in the removal of combustion by-products, including carbon dioxide, water vapor, and unburned hydrocarbons.
+	
+	\item The decreasing pressure and temperature of the exhaust gases contribute to the thermal management of the engine by reducing the heat buildup within the combustion chamber.
+	
+	\item Sonic flow, which refers to the flow of gases at the speed of sound, may occur in certain parts of the exhaust system but is typically not present in the cylinder itself during the exhaust stroke.
+  \end{itemize}
+  \vspace*{1cm}
+  \textbf{Reference: John B. Heywood, Internal Combustion Engine Fundamentals, 2nded, 2018\\ Chap: 4.1, 5.1, 5.2, 5.3}
 
 \end{document}

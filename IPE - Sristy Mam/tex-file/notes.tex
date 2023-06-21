@@ -9,6 +9,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{tcolorbox}
+\usepackage{subcaption}
 
 \geometry{a4paper}
 
@@ -259,6 +260,114 @@ Breakdown frequency in a machine tool refers to the rate of failures or malfunct
   
   \item Process Planning and Parameters: The selection and optimization of cutting parameters, tool paths, and machining strategies impact precision. Proper process planning and parameter selection considering the material, tooling, and desired tolerances contribute to achieving the desired precision.
 \end{enumerate}
+
+\section{Lecture 03: Regulation of speed \& Feed rate} 
+\hfill Date: 19/06/2023 \\
+
+The optimum and most economical speeds for the two machining
+movements—the cutting and the feed movement are determined by-
+• tool materials and workpiece materials
+• tool shape
+• type of machining processes
+• required surface quality
+
+\subsection*{Machining Cost}
+A machining operation should be conducted at such values of cutting
+parameters (speed, feed, depth of cut etc.) that ensure the minimum
+cost price of the machined component.\\
+The machining cost can be expressed by the equation - 
+$$C = C_{mt} + C_{npt} + C_{tc} + C_t$$
+here,\\ 
+$C =$ machining cost \\
+$C_{mt} =$ the cost of machining time \\
+$C_{npt} =$ the cost of non-productive time; such as loading and unloading, idle travel of cutting tool. \\
+$C_{tc} =$ tool changing cost per component \\
+$C_{t} =$ the cost of the tool per component \\
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics*[width=0.8\linewidth]{img/cost_func.jpeg}
+    \caption{Machining cost graph}
+  \end{center}
+\end{figure}
+
+\subsection*{Some Important Mathematical Expression}
+Taylor's tool life formula: 
+$$VT^n = C$$
+here, V = cutting velocity, T = cutting time, n = tool life index, C = constant.\\
+cutting velocity formula: 
+$$V = \frac{\pi n d}{1000} \, m/min$$
+here, \\
+n = rotation in rpm, d = diameter of rotating workpiece (in mm)\\
+$$\Rightarrow n \propto \frac{1}{d}$$
+so, we get, 
+$$n_{min} = \frac{V_{max} \times 1000}{\pi \times d_{min}}$$
+$$n_{max} = \frac{V_{min} \times 1000}{\pi \times d_{max}}$$
+
+The speed range ratio ,
+\begin{align*}
+  R_n &= \dfrac{n_{max}}{n_{min}}\\
+  &= \frac{v_{max}}{v_{min}} \frac{d_{max}}{d_{min}} \\
+  &= R_v \times R_d
+\end{align*}
+Here, $R_v$ = cutting speed range ratio, $R_d$ = diameter range ratio.\\
+Point : $\checkmark V_{min} \rightarrow d_{min}\, \& \, V_{max} \rightarrow d_{max}$   
+
+
+\textbullet In shaper machine, $R_n = R_v$. Because, there is no effect of diameter in case of shaping. 
+
+\subsection*{Law of stepped revolution}
+\subsubsection*{Geometric Progression}
+\begin{align*}
+  n_1 \\
+  n_2 &= n_1 \phi \\
+  n_3 &= n_2 \phi &= n_1 \phi^2\\ 
+  n_4 &= n_3 \phi &= n_1 \phi^3\\
+  .\\
+  .\\
+  n_z &= n_{z-1} \phi &= n_1 \phi^{z-1}\\
+\end{align*}
+here, $\phi$ = prograssive ratio (a constant) \\
+so, we get, $$\phi = \left(\frac{n_z}{n_1}\right)^{\frac{1}{z-1}}$$
+
+\subsubsection*{Example}
+Calculate the rpm values and diameter range served by each rpm for
+the following conditions:\\
+$n_1$ = 30 rpm,
+$n_z$ = 375 rpm,
+Number of speed steps, z = 12,
+v = 20 m/min, Assume, initial diameter = 212 mm.
+
+\textbf{Solution:}\\
+$$\phi = \left(\frac{375}{30}\right)^{\frac{1}{12-1}} = 1.26$$
+
+\begin{figure}[h]
+  \centering
+
+  \begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{img/table_d.jpeg}
+    \caption{chart for $\Delta$d}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{img/saw_dia.jpeg}
+    \caption{saw diagram}
+    \label{fig:saw diagram}
+  \end{subfigure}
+\end{figure}
+
+\begin{itemize}
+  \item $$\frac{n_n}{n_{n-1}} = \frac{v_u}{v_l}$$
+  \item $$\phi = \frac{v_u}{v_l}$$
+  \item Generally depth of cut, t is kept upto 5mm.  Here, $\Delta d_1$ = 42mm, so (d/2) = (42/2) = 21mm , that means it  will need 6 revolution. 
+  \item  $\Delta d_11$ = 4.2mm, that means it  will need only 1 revolution.
+  \item In order to make the machine tool performance equally feasible in the
+  whole rpm range, the low rpm values should be brought still closer while
+  the high rpm values can be widened a little.
+  \item So, depth of cut will not be uniform in this case. To make it uniform, some extra steps are added for lower speeds, and some steps are ignored at higher speeds. So that, depth of cut will remain similar or nearby. 
+\end{itemize}
 
 
 \end{document}
