@@ -7,6 +7,7 @@
 \usepackage{tikz}
 \usepackage{forest}
 \usepackage{float}
+\usepackage{subfigure}
 
 \forestset{
   my box/.style={
@@ -283,5 +284,107 @@ Alternative automotive fuels, such as ethanol, biodiesel, natural gas (CNG/LNG),
   Efficiency will never be 100\%. Because, fuel attached with cylinder wall have less temperature, like - 300-400°C. Whereas, burn temperature in 2500°C. So, Fuel along with wall doesn't burn at ease and requires much time to burn out. \\
 
   Any fuel can be used in Fuel engine. But, in petrol engine, fuel needs to make vapor first, that's why efficiency is an issue here. 
+
+  \vspace*{0.5cm}
+  \section{Lecture 5: Combustion \& Flame}
+  \hfill Date: 20/06/2023 \\
+
+  For combustion three parameters are important: \textbf{Power, Efficiency \& Emission}\\
+
+
+  \textbullet Flame: A rapid exothermic chemical reaction. \\
+  \textbullet Flame:  Conventional spark-ignition (SI) flame is premixed unsteady turbulent flame, and the fuel-air mixture through which it propagates is in the
+  gaseous state.
+
+  Conventional spark-ignition (SI) flame is premixed unsteady turbulent
+  flame, and the fuel-air mixture through which it propagates is in the
+  gaseous state.
+
+  Diesel engine (CI) combustion process is predominantly an unsteady
+  turbulent diffusion flame, and the fuel is initially in the liquid phase\\
+
+  \textbf{Premixed Flame}: fuel and oxidizer are essentially uniformly mixed
+  prior to combustion. It is a rapid, essentially isobaric, exothermic
+  reaction of gaseous fuel and oxidizer, and flame propagates as a thin
+  zone with speeds of less than a few m/s.\\
+
+  \textbf{Diffusion Flame}: reactants are not premixed and must mix together
+  in the same region where reactions take place. It is dominated by the
+  mixing of reactants, which can be either laminar or turbulent, and
+  reaction takes place at the interface between the fuel and oxidizer
+
+  \subsection*{Auto Ignition \& Self-Ignition Temperature:}
+  \textbf{Auto Ignition Temperature:} The auto ignition temperature is the lowest temperature at which the air-fuel mixture can auto-ignite under specific conditions of pressure and composition. It is typically associated with gasoline engines and is the temperature at which knocking or detonation can occur if it is reached before the spark plug fires. The auto ignition temperature of gasoline is typically around 495-535 degrees Celsius (923-995 degrees Fahrenheit).
+
+\textbf{Self Ignition Temperature:} The self-ignition temperature, also known as the ignition point or the ignition temperature, is the minimum temperature at which a fuel will self-ignite without the presence of an external ignition source. It is more commonly associated with diesel engines, where the fuel is injected into the hot, compressed air in the combustion chamber. The self-ignition temperature of diesel fuel is generally higher than that of gasoline, ranging from about 210-260 degrees Celsius (410-500 degrees Fahrenheit).
+
+\subsubsection*{Effect of SIT \& AIT}
+In general, for internal combustion engines, both gasoline and diesel, higher auto-ignition and self-ignition temperatures are preferred.\\
+
+For auto-ignition in gasoline engines, a higher temperature threshold is preferred to prevent premature or uncontrolled combustion, such as knocking or detonation. Knocking can lead to engine damage, reduced performance, and increased emissions. Fuels with higher resistance to auto-ignition, indicated by higher auto-ignition temperatures, are desired to ensure proper combustion control and avoid these issues.\\
+
+Similarly, in diesel engines, a higher self-ignition temperature is preferred. Diesel engines rely on the self-ignition of the fuel when injected into the compressed air. A higher self-ignition temperature ensures that ignition occurs at the intended timing and allows for efficient combustion. It also helps in avoiding spontaneous ignition during the compression stroke before the fuel injection, which can cause damage to the engine.\\
+
+As the ignition temperature increases, the ignition time becomes faster and the ignition delay becomes shorter. Higher temperatures promote more efficient combustion by facilitating quicker and more complete fuel combustion. This, in turn, reduces the time it takes for the air-fuel mixture to ignite and lowers the delay between the ignition event and the start of combustion. However, it's important to note that the relationship between ignition temperature and ignition time can be influenced by various factors, including fuel properties, engine design, and operating conditions. 
+
+\subsubsection*{Ignition delay (ID) depends on which factor:}
+Factors influencing ignition delay in internal combustion engines include fuel properties (such as cetane number or octane rating),initial temperature, Density, turbulence swirl, compression ratio, air-fuel mixture composition, presence of inert gas, engine operating conditions (speed, load, temperature, pressure), ignition system effectiveness, and combustion chamber design.\\  
+
+\subsection*{Minimum Ignition Energy}
+
+
+\begin{figure}[h]
+	\centering
+  
+	\subfigure[Ignition Delay]{
+	  \includegraphics[width=0.45\linewidth]{img/ignition_delay.jpeg}
+	  \label{fig:ID}
+	}
+	\hfill
+	\subfigure[Critical Pressure vs critical temperature]{
+	  \includegraphics[width=0.45\linewidth]{img/critical_pv.jpeg}
+	  \label{fig:const_vol}
+	}
+	
+	\subfigure[electrode gap]{
+	  \includegraphics[width=0.45\linewidth]{img/min_egn_energy.jpeg}
+	  \label{fig:const_pressure}
+	}
+	\hfill
+	\subfigure[Minimum Ignition Energy]{
+	  \includegraphics[width=0.45\linewidth]{img/min_egn_energy2.jpeg}
+	  \label{fig:limited_const_vol_pre}
+	}
+
+	\label{fig:combustion_cycle}
+  \end{figure}
+  
+  \begin{itemize}
+    \item For lower d, heat loss to electrode is higher  (Heat loss $\propto \frac{1}{d}$)
+    \item For higher d, volume increases ($d^3$) . The volume of air fuel mixure will be higher between the eletrodes. 
+    \item so, Heat loss will be minimum at a particular distance d. (shown on the figure)
+  \end{itemize}
+
+  \subsection*{flammability limit}
+  Flammability limits, also known as explosive limits or flammable limits, refer to the range of concentrations of a combustible substance in a mixture with air that can support combustion. These limits define the lower flammable limit (LFL) and upper flammable limit (UFL) of the substance.
+
+\textbf{The lower flammable limit (LFL)} is the minimum concentration of the combustible substance in the air below which there is insufficient fuel for combustion to occur. At concentrations below the LFL, the mixture is too lean to sustain a flame or ignition.
+
+\textbf{The upper flammable limit (UFL)} is the maximum concentration of the combustible substance in the air above which there is too much fuel for combustion to occur. At concentrations above the UFL, the mixture is too rich to sustain a flame or ignition.
+
+Within the flammability limits, the mixture is within the range where combustion can occur if an ignition source is present. This range is often referred to as the flammable range.
+
+The Lower Flammable Limit (LFL) and Upper Flammable Limit (UFL) can depend on temperature. Changes in temperature can affect the flammability limits of a substance. In general, as the temperature increases, the flammability limits tend to widen.
+
+Flame speed significantly increase by turbulance. 
+
+\subsubsection*{How Flame works:}
+Nearest molecule of flame reaches the SIT, then burn and increase the furthur temperature of next molecules and propagate to the forwards. 
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=0.95\linewidth]{img/flame_graph.jpeg}
+  \end{center}
+\end{figure}
 
 \end{document}
