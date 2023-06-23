@@ -8,6 +8,8 @@
 \usepackage{forest}
 \usepackage{float}
 \usepackage{subfigure}
+\usepackage{amsmath}
+\usepackage{amssymb}
 
 \forestset{
   my box/.style={
@@ -230,11 +232,121 @@ Alternative automotive fuels, such as ethanol, biodiesel, natural gas (CNG/LNG),
 
 \newpage
 
-\section{Lecture 3: Topic}
-\subsection*{Date: DD/MM/YYYY}
+\section{Lecture 3: Combustion stoichiometry}
+\hfill{Date: 13/06/2023}
+
+$$\underbrace{C_\alpha H_\beta O_\gamma N_\delta}_{fuel} + \underbrace{a_s \left(O_2 + 3.76 N_2\right)}_{air} \rightarrow n_1CO_2 + n_2H_2O + n_3N2$$ 
+here, $a_s \equiv$ stoichiomertric molar air fuel ratio. 1 mol $O_2$ is associated with 3.76 mol $N_2$. By solving, we get,
+$$a_s = \alpha + \frac{\beta}{4} - \frac{\gamma}{2}$$
+$\left(\frac{A}{F}\right)_s$ = stoichiometric air fuel ratio (mass basis) \\
+$\left(\frac{A}{F}\right)_a$ = actual air fuel ratio 
+$$\left(\frac{A}{F}\right)_s = \left(\frac{F}{A}\right)_s^{-1} = \frac{28.85\times 4.76 a_s}{12\alpha + \beta + 16 \gamma + 14 \delta}$$
+here, 28.85 is the molar mass of air. \\
+Most of the combustion engine runs at stoichoimetric condition. 
+
+$\Phi$ = Fuel air equivalence ratio. simply called as equivalence ratio. 
+
+$$\Phi = \lambda^{-1} = \frac{\left(\frac{F}{A}\right)_a}{\left(\frac{F}{A}\right)_s}$$
+$$\Phi = \begin{cases}
+  < 1 : \text{Lean mixure} \\
+  = 1 : \text{Stoichiometric mixure} \\
+  > 1 : \text{Rich mixure} 
+\end{cases}$$
+
+\subsection*{Heating Value}
+Heating value, also known as calorific value or energy content, refers to the amount of heat energy released per unit mass or volume of a fuel during complete combustion. It is a measure of the energy content or potential of a fuel and is typically expressed in units such as joules per kilogram (J/kg) or British thermal units per pound (BTU/lb).
+
+Heating value is an important parameter used to assess the energy efficiency and suitability of different fuels for various applications, such as power generation, heating systems, and industrial processes. It indicates the amount of heat energy that can be obtained by burning a specific fuel completely.
+
+The heating value of a fuel is influenced by its chemical composition, including the amount of carbon, hydrogen, sulfur, and other elements present. Different types of fuels, such as coal, natural gas, gasoline, and biomass, have different heating values due to variations in their chemical properties.
+
+\subsubsection*{Lower Heating Value (LHV)}
+LHV (LCV) considers that the water vapor formed during combustion is condensed, and the heat released by condensation is recovered and utilized. This means that LHV accounts for the heat of vaporization of water and assumes that the water in the combustion products is in a liquid state. LHV does not include the heat carried away by the water vapor in the exhaust gases.
+
+\subsubsection*{Lower Heating Value (HHV)}
+HHV (HCV), on the other hand, considers that the water vapor formed during combustion remains in a gaseous state and carries away its heat of vaporization. HHV includes the heat carried away by the water vapor in the exhaust gases.
+
+\subsubsection*{For IC engine, which one should use:}
+The choice of which value to consider depends on the specific application. In the case of internal combustion engines (IC engines), it is common to use the Lower Heating Value (LHV) because it reflects the actual heat available for useful work in the engine. This is because the water vapor in the exhaust gases typically remains in the gaseous state and does not contribute to the work output of the engine. Using LHV allows for a more accurate estimation of the actual energy content of the fuel that can be utilized by the engine. It accounts for the fact that the water vapor in the exhaust gases does not contribute to the engine's power output and cannot be effectively utilized.
+
+\subsubsection*{Estimate the HHV of $CH_4$ (Methane)}
+The higher heating value (HHV) of $CH_4$ (methane) at constant volume can be estimated based on the chemical equation for its complete combustion:
+
+$$CH_4 + 2(O_2 + 3.76N_2) \rightarrow CO_2 + 2H_2O + 7.52N_2$$
+
+The balanced equation shows that for every one mole of methane ($CH_4$) combusted, one mole of carbon dioxide ($CO_2$), two moles of water ($H_2O$), and 7.52 moles of nitrogen ($N_2$) are produced.\\
 
 
-\newpage
+
+To estimate the HHV, we need to consider the enthalpy of formation ($\Delta H_f$) values for $CH_4, CO_2, H_2O$, and $N_2$.\\
+The enthalpy of formation values at 25°C and 1 atm pressure are:\\
+$\Delta H_f(CH_4)$ = -74.8 kJ/mol\\
+$\Delta H_f(CO_2)$ = -393.5 kJ/mol\\
+$ \Delta H_f(H_2O)$ = -285.8 kJ/mol\\
+$\Delta H_f(N_2)$ = 0 kJ/mol\\
+
+Using these values, we can calculate the HHV of CH4 by summing up the enthalpy changes ($\Delta H$) for the products and subtracting the enthalpy changes for the reactants:\\
+
+$$HHV = \Delta H_f(CO_2) + 2\Delta H_f(H_2O) - \Delta H_f(CH_4) - 7.52\Delta H_f(N_2)$$
+
+$$HHV = -393.5 kJ/mol + 2(-285.8 kJ/mol) - (-74.8 kJ/mol) - 7.52(0 kJ/mol)$$
+
+Simplifying the calculation, we have:
+
+$$HHV \thickapprox  -393.5 kJ/mol - 571.6 kJ/mol + 74.8 kJ/mol$$
+
+$$ HHV \thickapprox -890.3 kJ/mol$$
+
+Therefore, the estimated higher heating value (HHV) of methane ($CH_4$) at constant volume is approximately -890.3 kJ/mol.
+
+\subsubsection*{Some Important Points:}
+\begin{itemize}
+  \item Heating value is calculated for 25°C temperature. 
+  \item Constant pressure heating value is more used in boiler and others.
+  \item Higher heating value is also called "Gross Heating Value", and Lower Heating Value is called "Net Heating Value". 
+  \item Maximum countries use LHV for IC engine. 
+  \item For coal \& octane, there is no difference between them for higher heating value. 
+  \item $CH_4$ : The hydrogen burning here make a difference of 10\% between HHV \& LHV.  
+\end{itemize}
+
+\subsection*{Adiabatic Flame Temperature}
+Adiabatic flame temperature refers to the maximum temperature reached during the combustion process of a fuel when no heat is lost to the surroundings (i.e., in an adiabatic and reversible process). It represents the idealized scenario where combustion occurs without any heat transfer to or from the surroundings.\\
+If 1 kg fuel is burnt in stoichoimetric and isolated condition, then how much temperature it produces is known as adiabatic flame temperature. 
+
+The adiabatic flame temperature is typically higher than the actual flame temperature observed in practical combustion systems due to heat losses and inefficiencies. The actual peak temperature are less due to - 
+\begin{itemize}
+  \item Not 100\% burning 
+  \item Loss heat from the flame (Radiation)
+  \item Endothermic Reaction 
+\end{itemize}
+
+\subsubsection*{Effects of Adiabatic Flame Temperature}
+If adiabatic flame temperature is higher, engine will run at a higher speed. 
+
+\subsubsection*{Pros and Cons of Higher adiabatic flame temperature}
+\begin{enumerate}
+  \item Positive Effects:
+  \begin{enumerate}
+    \item \textbf{Increased Thermal Efficiency}: A higher adiabatic flame temperature can lead to improved thermal efficiency of the engine. It means a greater proportion of the fuel's energy is converted into useful work, resulting in improved engine performance.
+    \item \textbf{Increased Power Output}: Higher flame temperature can result in increased pressure and temperature in the combustion chamber, leading to higher expansion ratios and increased power output. This can be advantageous for applications where high power is desired, such as in high-performance engines.
+  \end{enumerate}
+  
+  
+  
+  
+  \item Negative Effects:
+  \begin{enumerate}
+    \item \textbf{Increased NOx Emissions}: Higher flame temperature can contribute to increased production of nitrogen oxides (NOx) during the combustion process. NOx emissions are associated with environmental concerns and contribute to air pollution. Controlling and reducing NOx emissions becomes crucial for meeting emission regulations.
+    \item \textbf{Increased Heat Losses}: A higher flame temperature can increase heat losses through various mechanisms such as increased radiation and convective heat transfer. These losses reduce the actual thermal efficiency of the engine and can impact overall performance.
+    \item \textbf{Increased Combustion Temperatures}: Higher flame temperature can result in higher peak combustion temperatures, which may lead to increased formation of harmful pollutants, such as particulate matter (PM) and unburned hydrocarbons. Managing these emissions becomes essential for meeting emission standards and ensuring environmental sustainability.
+    \item \textbf{Increased Engine Wear}: Higher temperatures in the combustion chamber can lead to increased thermal stresses on engine components, potentially causing accelerated wear and reduced engine lifespan. This is particularly relevant for components such as piston rings, valves, and cylinder walls.
+  \end{enumerate}
+  
+\end{enumerate}
+$\checkmark$ No accurate relation with adiabatic flow temperature and burning velocity is found. \\
+$\checkmark$ Engine fuel burning temperature is more than 2500°C, 1500°C temperature is considered as cold enough. \\
+$\checkmark$ Mixing $H_2$ will give a higher engine speed. \\
+\vspace*{2cm}
 
 \section{Lecture 4: Equilibrium Composition (ISO-Octane at 30 bar)}
 \hfill Date: 17/06/2023
