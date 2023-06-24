@@ -499,4 +499,84 @@ Nearest molecule of flame reaches the SIT, then burn and increase the furthur te
   \end{center}
 \end{figure}
 
+
+\section{Lecture 6: Laminar Flame Propagation }
+\hfill Date: 23/06/2023
+
+\subsection*{Laminar Burning Velocity, $S_L$}
+It is an intrinsic property of a fuel-air mixure. It is defines as the velocity, relative to \& normal to the flame front, with which unburned gas moves into the front \& is transformed to products under laminar flow conditions. \\
+\textbullet if we sit on the flame co-ordinate, how Unburn mixure along with flame co-ordinate exit, the such velocity in perpendicular  way is called the laminar burning velocity.  
+$$S_L = \frac{1}{\rho_u A_f} \frac{dm_b}{dt}$$
+$$S_S = S_L + u_g$$ 
+here, $dm_b/dt$ is mass burning rate and $A_f$ is flame front surface area \\
+$S_S$ = flame speed; space velocity of flame front normal to itself. it is not a unique property of combustible fuel air premixure. \\
+$u_g$ = gas expansion velocity \& is a punction of $\rho_u$ and $\rho_b$ \\
+u (subscript) = unburned mixuyre \\
+0 (subscript) = datum pressure and temperature \\
+
+$$S_L= f(fuel, T, P, \Phi) \cong S_{L,0} \left(\frac{T}{T_0}\right)^\alpha \left(\frac{P}{P_0}\right)^\beta$$
+
+\begin{figure*}[h]
+  \begin{center}
+    \includegraphics[width=0.9\linewidth]{img/laminar_flame.jpeg}
+  \end{center}
+\end{figure*}
+
+\subsection*{Turbulent Flame Propagation}
+$$S_T = f\left(fuel, T, P, \Phi, turbulence\right)$$
+$$\frac{S_T}{S_L} \cong f(turbulence) $$
+
+If turbulence is higher, basically burn surface area will increase. Hene, burning velocity will also increase. \\
+If turbulence is too high, then burn surface area will be separated from each other, resulting decrease in buring velocity. 
+
+
+\begin{figure}[h]
+  \centering
+  \subfigure[Effect on Equivalence ratio]{\includegraphics[width=0.30\linewidth]{img/sl-equival_ratio.jpeg}}
+  \hfill
+  \subfigure[Effect on unburned mixure temperature]{\includegraphics[width=0.62\linewidth]{img/sl-temp.jpeg}}
+  \vspace{0.5cm}
+  \subfigure[Effect on unburned mixure pressure]{\includegraphics[width=0.45\linewidth]{img/sl-press.jpeg}}
+  \hfill
+  \subfigure[Effect of turbulance]{\includegraphics[width=0.45\linewidth]{img/sl-turbu.jpeg}}
+  \caption{Effects of Laminar flame velocity.}
+  \label{fig:subfigures}
+\end{figure}
+
+
+
+\subsection*{Effects on Laminar Flame Propagation}
+The equivalence ratio, unburned mixture temperature, and unburned mixture pressure have significant effects on laminar flame propagation in internal combustion engines. Here's a breakdown of how each parameter influences the process:
+  
+  \begin{itemize}
+  \item Equivalence Ratio:
+  \begin{enumerate}
+    \item The equivalence ratio ($\Phi$) is the ratio of the actual fuel-to-air ratio to the stoichiometric fuel-to-air ratio required for complete combustion. It represents the relative richness or leanness of the air-fuel mixture. Higher equivalence ratios ($\Phi > 1$) indicate a rich mixture with excess fuel, while lower equivalence ratios ($\Phi < 1$) represent a lean mixture with excess air.
+    \item  Effect on Flame Propagation:\\
+    \textbf{Rich Mixtures ($\Phi > 1$):} In rich mixtures, the increased fuel concentration leads to a higher fuel availability for combustion. This can result in faster flame propagation due to the greater availability of reactive fuel molecules.\\
+    \textbf{Lean Mixtures ($\Phi < 1$):} Lean mixtures have a higher proportion of air, which can result in slower flame propagation. Lean mixtures may require longer ignition times and may exhibit slower burning rates due to the limited fuel availability.
+  \end{enumerate}
+  
+  
+  
+  
+  \item Unburned Mixture Temperature:
+    \begin{enumerate}
+      \item The unburned mixture temperature ($T_{unburned}$) refers to the temperature of the air-fuel mixture prior to combustion. It can vary depending on factors such as engine operating conditions, intake air temperature, and compression ratio.
+      \item Effect on Flame Propagation:\\
+      $\alpha$ is +ve. Increase in temperature increases chemical reaction rates and dissociations. So, more active radicals are produced to enhance flame
+      propagation.
+    \end{enumerate}
+   
+  
+  \item Unburned Mixture Pressure:
+  \begin{enumerate}
+    \item The unburned mixture pressure ($P_{unburned}$) represents the pressure of the air-fuel mixture before combustion. It is influenced by factors such as intake air pressure, compression ratio, and engine load.
+    \item Effect on Flame Propagation:\\
+    $\beta$ is either zero or negative. Increased pressure increases flame temperature
+    because of less dissociation, and less dissociation means less active radicals are available to diffuse upstream to enhance flame propagation
+  \end{enumerate}
+   
+  
+\end{itemize}
 \end{document}
