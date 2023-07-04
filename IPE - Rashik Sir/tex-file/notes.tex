@@ -416,7 +416,7 @@ A feed gear box in an engine lathe controls the feed rates of the cutting tool. 
   \item By 1 rotation of spindle, feed = pitch 
 \end{itemize}
 
-\begin{figure}
+\begin{figure}[h]
   \centering
 
   \subfigure[Constant Transmission]{\includegraphics[width=0.48\linewidth]{img/const_transmission.jpeg}}
@@ -449,4 +449,110 @@ $i_{ap}$ = motion by apron mechanism \\
 
 
 $\checkmark $\textbf{Follow Slide for better understanding}
+\pagebreak
+\section{Lecture 03: Gear Train } 
+\hfill Date: 03/07/2023
+
+\subsection*{Setup of Change Gears for Non-standard Pitch Thread}
+$$\frac{K}{L} \times \frac{M}{N} = \frac{5}{8} \times \frac{P_{\text{to be cut}}}{P_{\text{on plate (standard)}}} $$
+
+\begin{itemize}
+  \item $P_{\text{to be cut}}$ is the non-standard pitch which is to be imparted in the workpiece
+  \item Find the nearest pitch on the chart provided with the lathe machine and set that as the $P_{\text{on plate (standard)}}$
+  \item Try to use the default gears as much as possible (K = 40, 60; L = 86; M = 86; N = 64)
+\end{itemize}
+
+\subsubsection*{Example}
+Select change gears K, L, M and N for cutting a metric thread with pitch P = 18 mm.
+\subsubsection*{Solution}
+Here, $P_{\text{to be cut}}$ = 18 mm \\
+$P_{\text{on plate (standard)}}$ = nearest pitch on the chart provided with lathe machine = 16 mm or 20 mm \\
+Now, Have to adjust K, L, M, N to maintain the ratio mentioned above.
+
+
+\subsection*{Cutting Multiple Start Threads}
+Lead (L) = Distance between 2 consecutive similar points of a particular thread\\
+And Pitch, $$P = \frac{\text{Lead (L)}}{\text{No. of Start (Z)}}$$
+There are 3 methods for multiple start threads. \\
+
+\subsubsection*{Method - I}
+\begin{enumerate}
+  \item  Cut the first thread as if the pitch is equal to lead.
+  \item After cutting the first thread, move back the carriage to the initial position (exactly the point of start of the already cut thread)
+  \item Rotate $\frac{1}{Z}$ portion of the circumference of the workpiece if the no. of start is Z. For example rotate $\frac{1}{2}$ of the circumference of the workpiece if the no. of start is 2.
+  \item In the studied lathe machine, a ring is fixed on the headstock housing marking 
+  revolutions in respect to workpiece circumference i.e.,$$\frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \frac{1}{5}, \frac{1}{6}, \frac{1}{10}, \frac{1}{12}, \frac{1}{15}, \frac{1}{20}, \frac{1}{30}, \frac{1}{60}$$
+  to simplify the rotation process
+  
+\end{enumerate}
+
+\subsubsection*{Method - II}
+After cutting the first thread, move $\frac{L}{Z} = P$ mm in the 
+longitudinal direction from the start point of the first thread
+
+
+
+\subsubsection*{Method - III}
+Threads are cut using multiple tool holder where the tools 
+are positioned at P mm spacing
+
+\subsubsection*{Points}
+\begin{itemize}
+  \item For better precision, follow method - I 
+  \item For minimum time, follow method - III 
+  \item If multiple tool holders are not available or cutting down a portion of workpiece is not an issue, then choose method - II 
+\end{itemize}
+
+
+\vspace*{1cm}
+\subsection*{Setup for Taper Turning}
+There are 5 ways to setup lathe machine for taper turning operation.\\
+1. Form tools for taper turning\\
+2. Setting over the tailstock\\
+3. Swiveling the compound rest\\
+4. Providing simultaneous longitudinal and cross feed\\
+5. Using taper turning attachment\\
+
+
+\subsubsection*{Form tools for taper turning}
+\begin{itemize}
+  \item Easy method 
+  \item Hard to maintain precision. As maintaining 90° angle is so challenging
+  \item Taller workpiece can not tapered by this process 
+  \item Here, the shape of cutting tool is tapered, that's why the workpiece also becomes tapered.  
+\end{itemize}
+
+\subsubsection*{Setting over the tailstock}
+\begin{itemize}
+  \item Suitable for long lengthed workpiece 
+  \item Suitable for a lower taper angle 
+  \item $$a = \frac{d_1-d_2}{2}= l\tan \alpha $$
+  $$ \tan \alpha = \frac{d_1-d_2}{2l}$$ 
+  \item $$h = L \sin \alpha $$
+  as $\alpha$ is very small, then, $$h \approx L \tan \alpha = \frac{L (d_1-d_2)}{2l} $$
+\end{itemize}
+
+
+\subsubsection*{Swiveling the Compound Rest}
+\begin{itemize}
+  \item Feed is provided using the top slides 
+  \item Used in short internal and outer tapers 
+  \item Swivel plate angle = half of taper angle 
+\end{itemize}
+
+\subsubsection*{Providing simultaneous Longitudinal and cross feed}
+\begin{itemize}
+  \item Longitudinal and cross, both feed are given at the same time.  
+  \item Vector resultant, $\overline{S} = \overline{S_l} + \overline{S_c}$, where $S_l$ = longitudinal feed and $S_c$ = cross feed. 
+  \item Setting angle of swivel plate, $$\beta = \alpha + \sin^{-1} \left(\frac{S_l}{S_c} \sin \alpha \right)$$ where, $\alpha$ is taper angle 
+  \item $$S_l = \frac{sin \left(\beta - \alpha \right)}{\sin \beta} \times S $$
+\end{itemize}
+
+\subsubsection*{Using Taper Turning Attachment}
+\begin{itemize}
+  \item The most universal and convenient way of generating taper surface. 
+\end{itemize}
+
+\vspace*{1cm}
+$\checkmark$ Follow slide no. \#1 : Case study of Engine Lathe 
 \end{document}
