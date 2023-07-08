@@ -137,9 +137,9 @@ $$\Rightarrow -F_x = \rho Q (0-v)$$
 \end{figure}
 
 If $a$ is the area of jet,
-$$F_x = \frac{\rho}{g} a v  v$$
+$$F_x = \frac{\gamma}{g} a v  v$$
 \begin{equation}
-	\textcolor{red}{\Rightarrow F_x = \frac{\rho}{g} a v^2} \label{eq:eq7}
+	\textcolor{red}{\Rightarrow F_x = \frac{\gamma}{g} a v^2} \label{eq:eq7}
 \end{equation}
 
 \subsubsection{Inclined Plate}
@@ -399,6 +399,7 @@ The hydraulic efficiency, $$\eta = \frac{\rho a v_{r_1}  \left[v_{w_1} \pm  v_{w
 
 \section{Lecture 5: Series of Vanes}
 \hfill Date: 19/06/2023
+
 If a series of vanes is fixed radially to the rim of a wheel, there is always one vane or another facing the jet. Thus the entire fluid is utilized. This arrangement of vanes is used in radial flow turbines.\\
 
 Two types of radial flow turbine: 
@@ -623,4 +624,107 @@ The specific speed of a hydraulic turbine is a dimensionless parameter that char
   \textbf{Radial Hydraulic Turbine}: Radial turbines are efficient in applications where there is a significant pressure drop. They are designed to generate power under high head conditions, where water is available at a relatively low flow rate.
 \end{itemize}
 \hrule
+
+\section{Lecture 7: Pelton Wheel}
+\hfill Date: 08/07/2023
+
+Mainly 2 types of turbine:
+\begin{enumerate}
+  \item Impulse Turbine 
+  \item Reaction Turbine 
+\end{enumerate}
+
+\checkmark  Force always acts perpendicular to the wall. 
+\subsection*{Pelton Wheel}
+The whole hydraulic energy is converted into kinetic energy. 
+
+\subsection*{Major Components}
+\subsubsection*{a) Nozzle With Control Mechanism}
+The jet velocity remains the same and only the discharge changes. 
+\subsubsection*{b) Buckets \& Runner}
+A pelton wheel is fitted with buckets havingthe shape of double hemispherical cup. The angle at the outlet teeth varies from 10° to 20° and the jet deflects 170°-160°.\\
+
+The advantage of double cup bucket is that because of symmetric, the axial thrust on the shaft is zero. 
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=0.8\linewidth]{img/PELTON-TURBINE.png}
+    \caption[Pelton wheel components]{Pelton wheel components}
+  \end{center}
+\end{figure}
+
+\subsubsection*{Casing}
+\begin{itemize}
+  \item To prevent splashing 
+  \item To lead the water to tail race 
+  \item To act as a safeguard against accident 
+\end{itemize}
+
+\subsubsection*{Hydraulic Brake}
+The hydraulic brake consists of a small nozzle which directs a jet on the back of the bucket, in the opposite direction which causes braking.
+
+\subsubsection*{Deflector}
+The sudden closing of the nozzle may cause excessive water hammer. To avoid water hammer, the nozzle is closed slowly by a moveable steel plate known as deflector. 
+
+
+\subsubsection*{Why Pelton wheel deflection angle is not set for 180°}
+Although, deflection angle 180° will give the best thrust, it is not set in pelton wheel. When water flows through the Pelton wheel, it strikes the buckets or cups, causing the wheel to rotate. The design of the buckets is crucial for efficient energy transfer. The water jet enters the bucket at a specific angle, known as the jet's deflection angle.
+
+If the deflection angle were set to 180 degrees, the water jet would hit the bucket and then reverse its direction completely, flowing back in the opposite direction. This would result in a loss of kinetic energy and disrupt the smooth operation of the wheel.
+
+To maximize the energy transfer, the deflection angle is typically set to less than 180 degrees. Ideally, the water jet should leave the bucket with minimal residual velocity, meaning that most of its kinetic energy has been transferred to the wheel. This is achieved by setting the deflection angle at a value that allows the water jet to leave the bucket at an optimal angle, usually around 160 to 170 degrees.
+
+
+\subsection*{Expression of work done}
+Effective head, H = Gross head - $h_f$ \\
+$h_f \rightarrow$ loss of head in the penstock\\ 
+
+torque,
+$$T = \rho a v \left[v_w R - (v_{w1} R_1)\right] = \rho a v \left(v_w R + v_{w1}R_1 \right)$$
+
+$$W = T \times \omega = \rho a v \left(v_w R + v_{w1} R_1\right) \times \omega $$
+
+Now, $R \omega = u, R_1 \omega_1 = u_1$
+$$W = \rho a v \left(v_w u + v_{w1} u_1\right) $$
+
+In general,
+\begin{equation}
+  W = \rho a v \left(v_w u \pm v_{w1} u_1\right) \label{eq:eq33}
+\end{equation}
+
+\begin{figure*}[h]
+  \begin{center}
+    \includegraphics*[width=0.8\linewidth]{img/pelton_force.jpeg}
+    \caption{Force analysis on pelton wheel}
+  \end{center}
+\end{figure*}
+
+Let, $u=u_1$
+\begin{align*}
+  W &= \rho a v \left(v_w + v_{w1} \right) \times u \\
+  &= \rho a v \left(v + v_{r1} \cos \phi - u \right) \times u \\
+  &= \rho a v \left(v - u + K v_{r} \cos \phi \right) \times u \\
+  &= \rho a v \left[(v - u) + K (v-u) \cos \phi \right] \times u \\
+  &= \rho a v (v - u)(1 + K  \cos \phi)  \times u 
+\end{align*}
+
+\begin{equation}
+  W = \rho a v (v - u)(1 + K  \cos \phi)  \times u \label{eq:eq34}
+\end{equation}
+
+Neglecting losses in nozzle,\\
+ \begin{equation}
+ \text{Input power} = \frac{1}{2} \rho a v \times v^2 \label{eq:eq35}
+\end{equation}
+
+Hydraulic efficiency,
+\begin{align*}
+  \eta_h &= \frac{\text{work done}}{\text{input power}} \\ 
+  &= \frac{\rho a v (v - u)(1 + K  \cos \phi)  \times u}{\frac{1}{2} \rho a v \times v^2}
+\end{align*}
+\begin{equation}
+  \eta_h = \frac{ 2 (v - u)(1 + K  \cos \phi)  \times u}{v^2} \label{eq:eq36}
+ \end{equation}
+
+
 \end{document}
