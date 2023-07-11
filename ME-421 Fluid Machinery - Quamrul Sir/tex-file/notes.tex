@@ -388,4 +388,85 @@ Indicator diagram may be defined as the graphical representation of pressure hea
   $\checkmark$ here (-ve) means retardation.
 
   \hrulefill 
+
+  \section{Lecture 4: Indicator diagram \& Air Vessel}
+\hfill Date: 09/07/2023
+
+\subsubsection*{Problem}
+The and stroke of a double acting pump are 250mm and 300 mm respectively. The pump discharge is 0.038 $m^3/s$ of water at 50 rpm. Through a portal static head of 12m. Find the ship and actual power required to drive the pump with 80\% efficiency. 
+
+\subsubsection*{Solution}
+
+\begin{multicols}{2}[Given Data]
+  Bore diameter, d = 350 mm \\
+  Stroke length, L = 300 mm \\
+  Speed, N = 50 rpm \\ 
+  Total Static Head, $H_{st}$ = 12 m \\
+  Actial discharge, $Q_a$ = 0.038 $m^3/s$ \\
+  Pump efficiency, $\eta$ = 80\% 
+  
+\end{multicols}
+
+Find:\\
+ - Slip of the pump \\
+ - Power Required to drive the pump \\
+
+Cross sectional area of cylinder, $A = \frac{\pi}{4} d^2 = 0.096 m^2$ \\
+Theoretical discharge, $Q_t = \frac{2LAN}{60} = 0.048 m^3/s$ \\
+Slip of the pump = $Q_t - Q_a = 0.048 - 0.038 = 0.01 m^3/s$ \\ 
+
+Power Required to drive the pump, $P = \gamma Q_t H_{st} = 5.65 kW$
+
+Efficiency, $$\eta = \frac{\text{theoretical power}}{\text{actual power}}$$
+$$\Rightarrow 0.8 = \frac{5.65}{\text{actual power}}$$
+$$\Rightarrow \text{actual power} = 7.063 kW $$ 
+\hspace*{0.65\linewidth}(ans:)
+
+\subsubsection*{Important Note}
+Actual power will be more than theoretical power due to friction, weight, auxiliary back flow and others.
+
+
+\subsection*{Separation}
+It has been experimentally found that when the vaccum pressure head ($H_s + H_a$) reaches 7.9 m of water or 2.4 m absolute. The continuity of flow will stop because of water will commenced vaporized and the separation of flow will take place, therefore to avoid separation, 
+$$H_s + H_a = 7.9 m$$ 
+
+\begin{itemize}
+  \item If water temperature is higher, it can not be pumped by creating vaccum. Rather it will be vaporized. 
+\end{itemize}
+
+
+\subsection*{Indicator Diagram with Acceleration Head}
+\begin{figure*}[h]
+  \begin{center}
+    \includegraphics*[width=0.7\linewidth]{img/indicator_dia.jpeg}
+    \caption*{Indicator diagram with acceleration head}
+  \end{center}
+  \end{figure*}
+
+\begin{enumerate}
+  \item The acceleration head, $H_a$ is added to the vaccum head at the beginning of suction stroke and subtracted at the end.
+  \item In the delivery stroke, the acceleration head, $H_a$ is added at the beginning of the delivery strooke and subtracted at the end. 
+  \item The inertia of water doesn't affect the net work done, but only causes a variation of pressure in the cylinder.  
+\end{enumerate}
+
+  \subsection*{Air Vessel in a Reciprocating Pump}
+  \begin{figure*}[h]
+    \begin{center}
+      \includegraphics*[width=0.7\linewidth]{img/air_vessel.jpeg}
+      \caption*{Air Vessel in a Reciprocating Pump}
+    \end{center}
+    \end{figure*}
+
+    \subsubsection*{Definition}
+    An air vessel is a cast iron chamber which has an openning at the base through which water can flow.
+
+    \subsubsection*{Characteristics}
+    \begin{enumerate}
+      \item Volume of air vessel is 5-9 times of pump displacement volume. 
+      \item The vessel is filled with compressed air with opening at it's base. 
+      \item The vessels are fitted in suction and delivery pipe close to the cylinder. 
+    \end{enumerate}
+
+
+
 \end{document}

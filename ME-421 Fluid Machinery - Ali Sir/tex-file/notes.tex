@@ -726,5 +726,155 @@ Hydraulic efficiency,
   \eta_h = \frac{ 2 (v - u)(1 + K  \cos \phi)  \times u}{v^2} \label{eq:eq36}
  \end{equation}
 
+ \vspace*{1cm}
+
+ \section{Lecture 8: Working proportions of Pelton Wheel}
+\hfill Date: 10/07/2023
+
+$\eta_h$ will be maximum if, 
+\begin{align*}
+  \dfrac{d\eta_h}{du} &= 0 \\
+  \frac{d}{du} \left\{2 (v-u) (1 + K \cos \phi) u \right\} &= 0 \\
+  v - 2u &= 0 \\
+  u &= \frac{v}{2}
+\end{align*}
+
+now, 
+\begin{align*}
+  (\eta_h)_{max} &= \frac{ 2 (v - \frac{v}{2})(1 + K  \cos \phi)  \times \frac{v}{2}}{v^2} \\
+  &= \frac{ \frac{v^2}{2}(1 + K  \cos \phi)}{v^2} \\
+  &= \frac{1 + K  \cos \phi}{2}
+\end{align*}
+
+If K=1, i.e. the vanes are smooth,
+$$\eta_h = \frac{1 + \cos \phi}{2}$$
+The $\eta_h$ is less than unity, because K is always less than unity and $\phi \neq  0$
+\\
+
+The work done by a pelton wheel may also be expressed as the difference of kinetic energy at the inlet and outlet. This work done = $\frac{1}{2} \rho a v \left(v^2 - v_1^2\right)$
+
+\begin{equation}
+  \eta_h = \frac{\frac{1}{2} \rho a v \left(v^2-v_1^2\right)}{\frac{1}{2} \rho a v v^2} = \frac{v^2-v_1^2}{v^2} \label{eq:eq37}
+\end{equation}
+
+The mechanical efficiency $(\eta_m)$ is defined as the ratio of the power obtained at the shaft (S.P.) to the power developed by the runner. Thus,
+\begin{equation}
+  \eta_m = \frac{S.P.}{P} \label{eq:eq38} 
+\end{equation}
+
+The overall efficiency, 
+\begin{equation}
+  \eta_o = \frac{S.P}{\text{Power supplied ti the turbine} (P_t)} = \frac{S.P}{P} \times \frac{P}{P_t} = \eta_h \times \eta_m \label{eq:eq39}
+\end{equation}
+
+\subsection*{The working proportions of pelton wheel}
+\begin{enumerate}
+  \item Velocity of Jet: 
+  $$V_{theo.} = \sqrt{2g H}$$ Here, H = net head. Now actual velocity,
+  \begin{equation}
+    V = C_v \sqrt{2g H}  
+    \label{eq:eq40}
+  \end{equation}
+$$C_v = 0.97 \sim  0.99$$
+
+\item Theoretical Power ($P_t$)
+\begin{equation}
+  P_t = \gamma Q H
+  \label{eq:eq41}
+\end{equation}
+
+\begin{center}
+\begin{minipage}{0.5\textwidth}
+    \setlength{\fboxrule}{1pt} % Border thickness
+    \setlength{\fboxsep}{10pt} % Padding
+    \fbox{%
+        \parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{%
+            $\frac{1}{2} m v^2 = \frac{1}{2} m \times 2g H = m g H = \rho Q g H = \gamma Q H $
+        }%
+    }
+  \end{minipage}
+\end{center}
+
+\item Angle ($\theta$)
+
+The angle varies from 10°-20°. The average value of angle is 15°. 
+
+\item Diameter of Jet($\alpha$)
+
+The diameter of jet may be obtained if the discharge is low. 
+$$\frac{\pi}{4} d^2 = \frac{Q}{C_v \sqrt{2gH}}$$
+\begin{equation}
+  d = \left(\frac{4Q}{\pi C_v \sqrt{2gH}}\right)^{\frac{1}{2}}
+\end{equation}
+
+\item Speed Ratio ($K_u$)
+
+It is the ratio of the velocity of the wheel at pitch circle (u) to the theoretical velocity of the jet,
+\begin{equation}
+  K_u = \frac{u}{\sqrt{2gH}} \label{eq:eq43}
+\end{equation}
+$K_u$ varies from $0.43 \sim 0.47$ 
+
+\item Mean diameter of the wheel (D)
+
+The diameter of the wheel measured upto the center of the bucket is called the mean diameter. 
+$$u = \frac{\pi D N}{60}$$
+
+\begin{equation}
+  D = \frac{60 u}{\pi N}
+\end{equation}
+D is also known as pitch diameter. 
+
+\item Jet Ratio ($J_r$)
+\begin{equation}
+  J_r = \frac{D}{d} 
+\end{equation}
+
+$J_r$ varies from 11 to 14. 
+
+\item Size of Bucket 
+
+The flowing proportion of the bucket are usually adopted. \\
+Radial length of the bucket = $(2 \sim 3) \times d $\\
+Axial width of the bucket = $(3 \sim 5) \times d $ \\
+Depth of the bucket = $(0.8 \sim 1.2) \times d $ \\
+Where, 'd' is the diameter of the jet. 
+
+\item Number of Jets
+
+Ordinarily pelton wheel has a single jet, but to develop more power, it has number of jets. More than 6 jets are not provided. 
+
+\item Number of Buckets (z)
+
+Number of buckets should be as small as possible. So as to keep the frictional losses to a minimum. But number of buckets should also be sufficiently large, so that the jet is always intercepted by one bucket or another. The jet will always be intercepted by the buckets if the angle between two successive buckets is equal to or less than $2\theta$, such that $$\cos \theta = \frac{R+\frac{d}{2}}{r_o}$$
+or, $$\sin \theta = \sqrt{1 - \cos^2 \theta} = \left[1- \left(\frac{R + \frac{d}{2}}{r_o}\right)^2\right]^{1/2} $$
+
+\begin{figure*}[h]
+  \begin{center}
+    \includegraphics[width=0.9\linewidth]{img/number_of_bucket.png}
+    \caption{Parameters for Pelton wheel}
+  \end{center}
+\end{figure*} 
+
+For a small $\theta$, $\sin \theta \approx \theta $
+$$\theta = \left[1- \left(\frac{R + \frac{d}{2}}{r_o}\right)^2\right]^{1/2} $$
+
+Therefore, the number of buckets is given by, $$z = \frac{2\pi}{2\theta} = \frac{\pi}{\theta}$$
+\begin{equation}
+  z = \frac{\pi}{\left[1- \left(\frac{R + \frac{d}{2}}{r_o}\right)^2\right]^{1/2}}
+\end{equation}
+
+Emperical formula given by Taygun,
+$$z = \frac{D}{2d} + 15$$
+\begin{equation}
+  z = 0.5 J_r + 15  
+\end{equation}
+Here, $J_r = $ Jet Ratio 
+\end{enumerate}
+
+\vspace*{1cm}
+
+\section{Lecture 9: Topic Name}
+\hfill Date: 08/07/2023
 
 \end{document}
