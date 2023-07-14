@@ -369,5 +369,175 @@ $$\phi = \left(\frac{375}{30}\right)^{\frac{1}{12-1}} = 1.26$$
   \item So, depth of cut will not be uniform in this case. To make it uniform, some extra steps are added for lower speeds, and some steps are ignored at higher speeds. So that, depth of cut will remain similar or nearby. 
 \end{itemize}
 
+\section{Lecture 4: Arithmatic Progression (AP) \& Logarithmic Progression (LP) Series}
+\hfill Date: 11/07/2023
+
+\subsection*{Arithmatic Progression (AP) series}
+\begin{align*}
+  n_1 \\
+  n_2 &= n_1 + a \\
+  n_3 &= n_2+ a = n_1 + 2a\\
+  ...\\
+  ...\\
+  n_z &= n_1 + (z-1) a 
+\end{align*}
+
+Here, $$\phi_1 = \frac{n_1 + a}{n_1}$$
+and, $$\phi_2 = \frac{n_1 + 2a}{n_1 + a}$$
+
+So, $\phi$'s are not same in AP. 
+
+\subsubsection*{Example}
+Calculate the rpm values and diameter range served by each rpm for
+the following conditions:\\
+$n_1$ = 30 rpm,
+$n_z$ = 375 rpm,
+Number of speed steps, z = 12,
+v = 20 m/min, Assume, initial diameter = 212 mm.
+
+\textbf{Solution:}\\
+$$d_x = \frac{1000 v}{\pi n_x}$$
+$$d_{x+1} = \frac{1000 v}{\pi n_{x+1}}$$
+so, we get,
+$$\Delta d_x = \frac{1000 v}{\pi} \times \left(\frac{1}{n_x} - \frac{1}{n_{x+1}}\right) $$
+
+\begin{figure}[h]
+  \centering
+
+  \begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{img/ap_table.jpeg}
+    \caption{chart for $\Delta$d}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{img/saw_dia_ap.jpeg}
+    \caption{saw diagram}
+    \label{fig:saw diagram of AP}
+  \end{subfigure}
+\end{figure}
+
+
+\subsection*{Logarithmic Progression (LP) series}
+\begin{align*}
+  \Delta d_x &= 2 Md_x^p \\
+  \Delta d_x &\propto d_x 
+\end{align*}
+
+Here, M and p are constant. Generally, p = 0.5. In this progression, no. of cut are nearly uniform. That's why better than previous two progression. 
+
+Again, 
+\begin{align*}
+  \Delta d_x &= 2 Md_x^p \\
+  d_x - d_{x+1} &= 2Md_x^p \\
+  d_{x+1} &= d_x \left(1 - \frac{2M}{d_x^{1-p}}\right) \\
+  \frac{1000 v}{\pi n_{x+1}} &= \frac{1000 v}{\pi n_{x}} \left(1 - \frac{2M}{\left(\frac{1000 v}{\pi n_{x}}\right)^{1-p}}\right) \\ 
+  \frac{n_x}{n_{x+1}} &= 1 - 2M  \left(\frac{\pi n_{x}}{1000 v}\right)^{1-p}\\
+  \frac{1}{\phi_x} &= 1 - 2M  \left(\frac{\pi n_{x}}{1000 v}\right)^{1-p}
+\end{align*}
+
+\subsubsection*{Example}
+Calculate the rpm values and diameter range served by each rpm for
+the following conditions:\\
+$n_1$ = 30 rpm,
+$n_z$ = 361 rpm,
+Number of speed steps, z = 12,
+v = 20 m/min, Assume, initial diameter = 212 mm.
+
+\subsubsection*{Solution}
+Here, M = 0.88 (approx.)  and p = 0.5 
+
+\begin{figure}[h]
+  \centering
+
+  \begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{img/lp_table.jpeg}
+    \caption{chart for $\Delta$d}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{img/saw_dia_lp.jpeg}
+    \caption{saw diagram}
+    \label{fig:saw diagram of LP}
+  \end{subfigure}
+\end{figure}
+
+\subsection*{Kinematic Advantages of Geometri Progression}
+
+\subsubsection*{Constant loss of Economic Cutting Speed in the whole rpm range}
+\begin{figure*}[h]
+  \begin{center}
+    \includegraphics*[width=0.95\linewidth]{img/kinematic_advantage.png}
+  \end{center}
+\end{figure*}
+
+$\Delta v_j = \text{the loss of economic cutting speed} = v_{opt} - v_j$
+ (lowest distance of $V_{opt}$ from either $V_j$ or $v_{j+1}$, for max $\Delta v_j$, $v_{opt}$ will be at the center)
+
+ \begin{align*}
+  \frac{\left(\Delta v_j\right)_{max}}{v_{opt}} &= \frac{\left(v_{j+1} - v_j\right)/2}{\left(v_{j+1} + v_j\right)/2} \\
+  \left(\Delta v_j\right)_{max} &= \frac{\left(n_{j+1} - n_j\right)}{\left(n_{j+1} + n_j\right)} \times v_{opt} \\
+  \left(\Delta v_j\right)_{max} &= \frac{\phi_{j} - 1}{\phi_{j} + 1} \times v_{opt} \\
+ \end{align*}
+
+ \subsubsection*{Constant loss of Productivity in the whole rpm range}
+ The rate of material removal, $Q = 1000 \times t  \times s \times v $  $mm^3/min$. 
+
+Now, maximum relative loss of production volume : 
+$$\left(\frac{\Delta Q}{Q}\right)_{max} = \left(\frac{\Delta v}{v}\right)_{max} = \frac{n_{j+1} - n_j}{n_{j+1} } = \left(1 - \frac{1}{\phi}\right) $$ 
+
+\subsubsection*{Better Design Features}
+If number of steps are reduced to half, still the ratio remains same. 
+$$n - n\phi - n\phi^2 - n\phi^3 - n\phi^4 - n\phi^5$$
+$$n  - n\phi^2 - n\phi^4 $$
+$$\overbrace{\phi^2} -- \overbrace{\phi^2} $$
+
+If A times increased, still the ratio remains same. 
+$$An - An\phi - An\phi^2 - An\phi^3 - An\phi^4 - An\phi^5$$
+$$\overbrace{\phi} - \overbrace{\phi} - \overbrace{\phi} - \overbrace{\phi} - \overbrace{\phi}$$
+
+If $\phi^2$ times increased, still the ratio remains same. 
+$$An\phi^2 - An\phi^3 - An\phi^4 - An\phi^5$$
+$$\overbrace{\phi} - \overbrace{\phi} - \overbrace{\phi} $$
+
+$R_n = R_v \times R_d$
+
+\subsection*{Selection of Speed Steps}
+\begin{align*}
+  &\Rightarrow n_z = n_1 \phi^{z-1} \\
+  &\Rightarrow \phi^{z-1} = \left(\frac{n_z}{n_1}\right) = R_n \\
+  &\Rightarrow (z-1) \log \phi = \log R_n \\
+  &\Rightarrow z \log \phi = \log \left(R_n \phi\right) \\
+  &\Rightarrow z = \frac{\log \left(R_n \phi\right)}{\log \phi} 
+\end{align*}
+
+\subsection*{Standard values of $\phi$}
+$$n_x \phi^{s_1} = 2nx$$
+$$n_x \phi^{s_2} = 10nx$$
+
+\begin{align*}
+  \phi &= 2^{1/s_1} = 10^{1/s_2} \\
+  &\frac{1}{s_1} \log 2 = \frac{1}{s_2} \log 10 \\
+  &\frac{s_2}{s_1} = \frac{\log 10}{\log 2} = \frac{1}{0.3} = \frac{10 s'}{3s'}  
+\end{align*}
+
+so, $s_2 = 10s'$ and $s_1 = 3s'$ 
+\subsubsection*{IMPORTANT}
+$$if \, \phi \uparrow \, , \left[\frac{\phi - 1}{\phi + 1}\right] \uparrow \, , \frac{\phi -1}{\phi} \uparrow $$ 
+so, $\phi$ should be low in order to minimize losses. 
+
+Again, $$z = \frac{\log \left(R_n \phi\right)}{\log \phi}$$
+if $\phi \uparrow , z \downarrow $ and if $\phi \downarrow , z \uparrow $
+
+so, if $\phi$ decreases, no. of speed steps increase, hence design becomes complicated and costly.
+
+Therefore, we've to find the optimum of $\phi$. 
+
+\begin{itemize}
+  \item Let z = 6.5 found, but no. of steps can not be fractions. So, it have to be round off. While rounding off, we have to select the number which is multiple of 2 or 3. Hence, z = 6 have to be taken, and z $\neq$ 7, as it is not divisible by 2 or 3. 
+\end{itemize}
 
 \end{document}
