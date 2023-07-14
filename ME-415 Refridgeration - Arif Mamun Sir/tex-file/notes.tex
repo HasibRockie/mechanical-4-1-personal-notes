@@ -8,6 +8,9 @@
 \usepackage{forest}
 \usepackage{float}
 \usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{multicol}
 
 
 \forestset{
@@ -237,5 +240,156 @@ Central air conditioning systems offer several advantages, including the ability
   \item \textbf{Return Duct}: A return duct, also known as an exhaust duct or return air duct, is a component of the HVAC system that collects and transports air back to the AHU. It pulls in air from different areas of the building, which may have been circulated through the space or mixed with the indoor air, and directs it back to the AHU for reconditioning.
   \item \textbf{Air Cutter}: An air diffuser or grille designed to direct the flow of conditioned air in a specific pattern or direction. It is typically installed at the outlet of a supply duct or directly on the AHU itself. The air cutter helps to distribute the conditioned air evenly and efficiently throughout the space by controlling the direction, velocity, and spread of the air stream.
 \end{itemize}
+
+\section{Lecture 3: Refrigeration Cycle}
+\hfill Date: 10/07/2023
+
+\subsubsection*{Problem-01}
+A Simple vapor compression refrigeration cycle using R134a as 
+refrigerant operates on an ideal vapor compression refrigeration cycle 
+between 0.12 and 0.7 MPa. The mass flow rate of the refrigerant is 
+0.06 kg/s. Determine:\\
+1. The rate of heat removal of the refrigerated space and the 
+power input to the compressor \\
+2. The rate of heat rejection to the environment \\ 
+3. The Coefficient of performance, COP
+
+\subsubsection*{Solution}
+
+\begin{figure}
+  \centering
+  
+  \begin{subfigure}{0.45\textwidth}
+      \includegraphics[width=\textwidth]{img/prb-01.jpeg}
+      \caption{p-h diagram}
+      \label{subfig:p-h diagram}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.95\textwidth}
+      \includegraphics[width=\textwidth]{img/prb-01a.jpeg}
+      \caption{Saturated vapor at 0.12 MPa}
+      \label{subfig:Saturated vapor at 0.12 MPa}
+  \end{subfigure}
+  
+  \vspace{1cm}
+  
+  \begin{subfigure}{0.95\textwidth}
+      \includegraphics[width=\textwidth]{img/prb-01b.jpeg}
+      \caption{Saturated Liquid at 0.7 MPa}
+      \label{subfig:Saturated Liquid at 0.7 MPa}
+  \end{subfigure}
+
+  
+  \caption{Problem-01 Solution}
+  \label{fig:problem}
+\end{figure}
+
+\begin{figure}[h]
+  \includegraphics[width=0.95\textwidth]{img/prb-01c.jpeg}
+  \caption{Enthaply at s=1.74  and p = 0.7 MPa}
+\end{figure}
+
+Here, $P_{cond} = 0.70 $ MPa \\
+$P_{eva}$ = 0.12 MPa \\
+$\dot{m}$ = 0.06 kg/s \\
+For R123a refrigerant,
+$h_2=385.43 kJ/kg , h_3 = 428 kJ/kg, h_1 = h_4 = 236 kJ/kg$
+
+(a) 
+\begin{align*}
+  \text{Refrigering capacity, } Q_2 &= \dot{m}(h_2-h_1) = 8.96 KW \\
+  \text{Compressor work, } \dot{W} &= \dot{m}(h_3-h_2) = 2.55 KW 
+\end{align*}
+
+(b) 
+\begin{align*}
+  \text{Rate of heat rejection }&= Q_2 + \dot{W} = 11.51 KW 
+\end{align*}
+
+(c) 
+\begin{align*}
+  \text{COP } &= \frac{R.E.}{\dot{W}} =\frac{8.96}{2.55} = 3.51 
+\end{align*}
+
+\subsubsection*{Problem-02}
+Determine the COP of 2-stage refrigeration system with flash gas removal. The system uses R134a as a refrigerant to produce 50 kW refrigeration effect. Given that, $T_{cond}$ = 30°C and $T_{evap}$ = -20°C and inter-cooler temperature is 0°C. 
+
+\subsubsection*{Solution}
+\begin{figure}[h]
+  \centering
+  
+  \begin{subfigure}{0.45\textwidth}
+      \includegraphics[width=\textwidth]{img/prb-02.jpeg}
+      \caption{refrigeration cycle}
+      \label{subfig:refrigeration cycle}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.45\textwidth}
+      \includegraphics[width=\textwidth]{img/prb-02a.jpeg}
+      \caption{p-h diagram}
+      \label{subfig:p-d diagram of problem 02}
+  \end{subfigure}
+  
+  \caption{Problem-02 Solution}
+  \label{fig:problem 02}
+\end{figure}
+
+\begin{multicols}{2}
+  Given,\\
+  $T_{cond}$ = 30°C \\
+  $T_{evap}$ = -20°C \\
+  $T_{inter-cooler}$ = 0°C \\
+  R.E. = 50 kW \\
+  C.O.P. = ? \\
+  Data:\\
+  $h_1$ = 386.55 kj/kg , $s_1$ = 1.7413 [From table] \\
+  $h_2$ = 400 kj/kg [From p-h chart] \\
+  $h_3$ = 398.60 kj/kg , $s_3$ = 1.7271 [From table] \\
+  $h_4$ = 415 kj/kg [From p-h diagram] \\
+  $h_5$ = $h_6$ = 241.72 kj/kg [From table] \\
+  $h_7$ = $h_8$ = 200 kj/kg [from table] \\
+
+  \begin{align*}
+    \text{Now, } h_6 &= h_7 + x(h_3 - h_7) \\ 
+    \Rightarrow 241.72 &= 200 + x (398.60 - 200) \\
+    \Rightarrow x &= 0.21  
+  \end{align*}
+
+  
+  \begin{align*}
+    \text{Again, } R.E. &= \dot{m} (1-x)(h_1 - h_8) \\ 
+    \Rightarrow 50 &= \dot{m} \times 0.79 \times (386.55 - 200) \\
+    \Rightarrow \dot{m} &= 0.339  
+  \end{align*}
+
+$$W_{1-2} = \dot{m}(1-x) (h_2-h_1) = 4.29 KW$$
+$$W_{3-4} = \dot{m} (h_4-h_3) = 6.80 KW$$
+$$C.O.P. = \frac{R.E.}{W_{1-2} + W_{3-4}} = 4.50 KW$$
+\end{multicols}
+
+\subsubsection*{Problem-03}
+Do the same problem for the single stage refrigeration system
+\subsubsection*{Solution}
+\begin{multicols}{2}
+  Given,\\
+  $T_{cond}$ = 30°C \\
+  $T_{evap}$ = -20°C \\
+  R.E. = 50 kW \\
+  C.O.P. = ? \\
+  Data:\\
+  $h_1$ = 386.55 kj/kg , $s_1$ = 1.7413 [From table] \\
+  $h_2$ = 420 kj/kg [From p-h chart] \\
+  $h_3$ = $h_4$ = 241.72 kj/kg [From table] \\
+
+  \begin{align*}
+    \text{Again, } R.E. &= \dot{m} (h_1 - h_4) \\ 
+    \Rightarrow 50 &= \dot{m} \times (386.55 - 241.72) \\
+    \Rightarrow \dot{m} &= 0.345  
+  \end{align*}
+
+  $$W_{1-2} = \dot{m}(h_2-h_1) = 11.54 \, KW$$
+  $$C.O.P. = \frac{R.E.}{W_{1-2}} = 4.33 \, KW$$
+
+\end{multicols}
 
 \end{document}
