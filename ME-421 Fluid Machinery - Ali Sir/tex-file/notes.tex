@@ -12,6 +12,7 @@
 \usepackage{xcolor}
 \usepackage{tcolorbox}
 \usepackage{multicol}
+\usepackage{float}
 
 \forestset{
   my box/.style={
@@ -849,7 +850,7 @@ Ordinarily pelton wheel has a single jet, but to develop more power, it has numb
 Number of buckets should be as small as possible. So as to keep the frictional losses to a minimum. But number of buckets should also be sufficiently large, so that the jet is always intercepted by one bucket or another. The jet will always be intercepted by the buckets if the angle between two successive buckets is equal to or less than $2\theta$, such that $$\cos \theta = \frac{R+\frac{d}{2}}{r_o}$$
 or, $$\sin \theta = \sqrt{1 - \cos^2 \theta} = \left[1- \left(\frac{R + \frac{d}{2}}{r_o}\right)^2\right]^{1/2} $$
 
-\begin{figure*}[h]
+\begin{figure*}[H]
   \begin{center}
     \includegraphics[width=0.9\linewidth]{img/number_of_bucket.png}
     \caption{Parameters for Pelton wheel}
@@ -873,8 +874,77 @@ Here, $J_r = $ Jet Ratio
 \end{enumerate}
 
 \vspace*{1cm}
+\pagebreak
+\section{Lecture 9: Problems on Pelton Wheel}
+\hfill Date: 17/07/2023
 
-\section{Lecture 9: Topic Name}
-\hfill Date: 08/07/2023
+\begin{multicols*}{2}
+  \subsubsection*{Problem-01}
+  A single jet pelton turbine is required to drive a generator to develop 10000 kw. The available head at the nozzle is 760m. Assuming electric generator efficiency as 95\%, pelton wheel efficiency 87\%, coefficient of velocity for nozzle as 0.97, mean bucket velocity as 0.46 of jet velocity. Outlet angle of the bucket as 15° and the relative velocity of water leaving the bucket as 0.85 of that at inlet. Find: a) Diameter of jet, b) The flow in cumecs, c) The force exerted by the jet on the bucket, d) If the ratio of mean bucket circle diameter to the jet diameter is not to be less than 10, find the synchronous speed for generator at 50 cycles/second and the corresponding mean diameter of the runner.
+
+  \subsubsection*{Solution:}
+  Given, P = 10000 kW, H = 760 m, $\eta_g = 0.95, \eta_h = 0.85, C_v = 0.97$, u = 0.46 v, $\phi = 15\deg , V_{r1} = 0.85 V_r$, f=50 hz, $\frac{D}{d} > 10 $ \\
+
+  Available power at the wheel = $\frac{10000}{0.95} = 10526.3$ kW \\
+  Now, \begin{align*}
+    \eta_h &= \frac{10526.3\times 10^3}{\gamma Q H} \\
+    0.87 &= \frac{10526.3\times 10^3}{9810 \times Q \times 760} \\
+    Q &= 1.623 \, cumecs 
+  \end{align*}
+  Again,
+  \begin{align*}
+    Q &= \frac{\pi}{4} d^3 \times C_v \times \sqrt{2gH} \\
+    d &= 0.132 \, m 
+  \end{align*}
+  Assuming $D/d=10$, D = 1.32 m \\
+  Now, $$v_w = v = 0.97 \times \sqrt{2\times 9.81\times 760} = 118.5 \, m/s$$
+  $$u = 0.46 \times v = 54.51 \, m/s$$ 
+  $$v_r = v_w - u = 64 \, m/s$$
+  $$v_{r1} = 0.85 v_r = 54.4 \, m/s$$ 
+  $$v_{w1} = v_{r1} - v_{r1} \cos \phi = 544 -52.55 = 2 \, m/s $$
+  $$\text{Force} = \rho Q (v_w - v_{w1}) = 1000 \times 1.623 \times (118.5-2)$$ So, Force = 189.1 \, kN 
+
+  Again, \begin{align*}
+    u &= \frac{\pi D N}{60} \\
+    N &= 788 \, rpm 
+  \end{align*}
+
+  Now, \begin{align*}
+    N &= \frac{120 \times f}{Pole}\\
+    Pole &= 7.614 \approx 8
+  \end{align*}
+
+  Putting, Pole = 8, $N = \frac{120f}{8} = 750 rpm$\\
+  $$u=\frac{\pi D\times 750}{60} \Rightarrow D = 1.388 \, m$$
+  \vspace*{0.5cm} 
+
+  \subsubsection*{Problem-02}
+  A pelton wheel is developing 11000 kW under a head of 650 m at 600 rpm. The peripheral velocity of wheel is 0.47 times the jet. The coefficient of velocity is 0.97 and overall efficiency is 85\%. Find jet diameter, wheel diameter, and number of buckets. 
+
+  \subsubsection*{Solution:} 
+  P = 11000 kW, H = 650 m, N = 600 rpm, $C_v = 0.97, \eta_o = 0.85$
+
+  \begin{align*}
+    &\eta_o = \frac{P}{\gamma Q H} \\
+    & Q = 2.03 \, m^3/s  
+  \end{align*}
+  again, \begin{align*}
+    &Q = \frac{\pi}{4} d^2 \times v \\
+    & d = 0.1528 \, m  
+  \end{align*}
+
+  $$V = C_v \sqrt{2gH} = 110.67 \, m/s$$ 
+  $$u = 0.47 v = 52.02 \, m/s$$
+  $$u = \frac{\pi D N}{60} \Rightarrow D = 1.66 \, m $$
+  Now, $$z = \frac{D}{2d} + 15 = 21 $$
+
+  \vspace*{0.5cm} 
+  \subsubsection*{Problem-03}
+  A pelton wheel is rotating at a speed of 650 rpm. The diameter of the jet is 82 mm and the velocity of jet is 111 m/s. The ratio of the bucket speed to jet speed is 0.47. The bucket deflects the jet through an angle of 170°. Neglecting friction, find - \\
+  a) D, b) Power, c) KE per unit weight of exit water 
+  \subsubsection*{Solution:}
+  \textbf{Follow Quamrul sir book: 2.15}
+\end{multicols*} 
+
 
 \end{document}

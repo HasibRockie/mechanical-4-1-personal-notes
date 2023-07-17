@@ -8,6 +8,9 @@
 \usepackage{forest}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{subcaption}
+\usepackage{float}
 
 \forestset{
   my box/.style={
@@ -277,7 +280,7 @@ Outer crust:\\
 i) Continental crust (30 km thick, average specific gravity 2.8, high over 0.2 to 0.3 km above sea)\\
 ii) Oceanic crust (5km thick, average specific gravity 2.9, 4 to 5 km sea level)
 
-\begin{figure}[h]
+\begin{figure}[H]
   \begin{center}
     \includegraphics*[width=0.6\linewidth]{img/cross_section_earth.jpg}
     \caption{Cross section of Earth}
@@ -321,7 +324,7 @@ Plates may be -
 
 Mountain ranges, ocean basins, major features of earth etc are found due to the movement of plate boundaries. 
 
-\begin{figure}[h]
+\begin{figure}[H]
   \begin{center}
     \includegraphics*[width=0.7\linewidth]{img/lithospehere.png}
     \caption{Plastic Higher Temperature Layer\\ (Asthenosphere 100 to 200 km)}
@@ -338,4 +341,98 @@ Three types of plate boundaries exist:
   \item Transcurrent Boundaries 
 \end{enumerate}
 \hrulefill
+
+\section{Lecture 4: Internal Structure of the earth}
+\hfill Date: 08/07/2023 
+
+\begin{multicols*}{2}
+  \subsection*{ii) Mantle}
+  \subsubsection*{characteristics:}
+  \begin{itemize}
+    \item Next to earth's crust 
+    \item Rich in Al, Si, Mg 
+    \item 2900 km thick 
+  \end{itemize}
+
+  It has three sections:
+  \begin{enumerate}
+    \item Upper mantle: 40 to 200 km below the earth's surface 
+    \item Middle mantle: At a depth of 200 to 1000 km 
+    \item Lower mantle: 1000 to 2900 km below the surface of the earth 
+  \end{enumerate}
+  Maximum temperature of these section in 2200°C. 
+
+  \subsection*{iii) Core}
+  \subsubsection*{charateristics:}
+  \begin{itemize}
+    \item Next to mantle 
+    \item About 3400 km radius 
+    \item two parts: Outer core \& Inner core 
+  \end{itemize}
+
+  \subsubsection*{Outer Core:}
+  \begin{itemize}
+    \item Temperature 2200°C to 5000°C 
+    \item Consists of hot molten nickel, cast iron etc. 
+  \end{itemize}
+
+  \subsubsection*{Inner Core:}
+  \begin{itemize}
+    \item The temperature is 5000°C 
+    \item Consists of solid balls of iron and nickel.
+    \item  The atoms of the metal are pressed together so tightly by gravity that melting is impossible.  
+  \end{itemize}
+
+  \subsection*{Tectonic Plates and Plate Boundaries}
+  \subsubsection*{(a) Divergent Boundaries:}
+  It is a tensile regime, as the two plates of the continent diverges or separates, magma rises from mantle after solidification forms mid-ocean ridge. 
+
+  Example: About 200 million years ago, the atlantic ocean was born in this process. 
+
+  % \includegraphics[width=\columnwidth]{img/divergent_boun.jpg}
+
+
+  \subsubsection*{(b) Convergent Boundaries:}
+  It is a compressional regime and several things can happen. 
+  \begin{itemize}
+    \item Ocean-ocean convergent boundaries 
+    \item Ocean-continent convergent boundaries 
+    \item Continental-continental convergent boundaries 
+  \end{itemize}
+
+  \subsubsection*{Ocean-Ocean convergent boundaries:}
+  One plate slips beneath the edge of the other. The lower plate is melted as it moves into the hot mantle. The melting minerals rises through the crust forming granite and other igneous rocks.
+
+  Example: South sandwich trench of atlantic ocean formed in this way. 
+
+  \subsubsection*{Ocean-Continent Convergent Boundaries:}
+  Thinner and heavier oceanic plate plunges beneath continental crust, forming a deep sea trench. Magma rises from descending pipe.
+
+  Example: Mount saint helens volcanos formed in this way.
+
+  \subsubsection*{Continent-continent Convergent Boundaries:}
+  The collision buckles and folds the rocks.
+\end{multicols*}
+
+\begin{figure}[H]
+  \centering
+  
+  \begin{subfigure}[b]{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{img/divergent_boun.jpg}
+    \caption{Divergent Boundaries}
+    \label{fig:subfig1}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{img/convergent_boun.png}
+    \caption{Convergent Boundaries}
+    \label{fig:subfig2}
+  \end{subfigure}
+  
+  \caption{Tectonic Plates and plate boundaries}
+  \label{fig:mainfig}
+\end{figure}
+   
 \end{document}

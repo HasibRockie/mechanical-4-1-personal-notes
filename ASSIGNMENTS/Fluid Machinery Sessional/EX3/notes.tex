@@ -9,13 +9,12 @@
 \usepackage{newtxtext}
 \usepackage{enumitem}
 \usepackage{fancyhdr}
-\usepackage{graphicx}
 \usepackage{multirow}
 \usepackage{makecell}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{subcaption}
-\usepackage{subfigure}
+\usepackage{float}
 % \usepackage{figure}
 
 \usetikzlibrary{positioning}
@@ -155,7 +154,7 @@ Flowmeter calibration equation: $Y = 1.109 X - 2.201$ (LPM) \\
 \pagebreak
 \begin{figure}[h]
   \begin{center}
-    \includegraphics*[width=0.89\linewidth]{img/exp_3a.png}
+    \includegraphics*[width=0.8\linewidth]{img/exp_3a.png}
   \end{center}
 \end{figure}
 
@@ -200,12 +199,12 @@ type depending on the fluid to be handled.
 4. Study the components and energy flow sequence. \\
 5. Assemble all components to form the pump again. \\
 
-\begin{figure}[h]
+\begin{figure}[H]
   \begin{center}
     \includegraphics*[width=0.9\linewidth]{img/cetrifugal_pump.jpeg}
   \end{center}
 \end{figure}
-\pagebreak
+
 \subsection*{Pump Component Sequence:}
 \vspace*{0.5cm}
 \begin{tikzpicture}[node distance=2cm, every node/.style={rectangle, draw, align=center, text width=2.5cm, inner sep=4pt}]
@@ -245,59 +244,80 @@ type depending on the fluid to be handled.
 \textbf{Ans:} Gland packing seals are used in centrifugal pumps for several reasons. They provide a reliable sealing solution that helps prevent leakage along the pump shaft. Gland packing seals can accommodate shaft movement and vibration, making them suitable for dynamic applications. They also allow for adjustment and tightening as needed to maintain the desired level of sealing effectiveness.
 
 \pagebreak
+
 \begin{figure}
   \centering
 
   \begin{subfigure}{0.3\textwidth}
-      \includegraphics[width=\linewidth]{img/p01.jpg}
+      \includegraphics[width=\linewidth]{img/p_01.jpg}
       \caption{Pump}  
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.3\textwidth}
-      \includegraphics[width=\linewidth]{img/02.jpg}
+      \includegraphics[width=\linewidth]{img/p_02.jpg}
       \caption{Motor}
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.3\textwidth}
-      \includegraphics[width=\linewidth]{img/03.jpg}
-      \caption{Image 3}
+      \includegraphics[width=\linewidth]{img/p_03.jpg}
+      \caption{Suction Pipe}
   \end{subfigure}
 
   \vspace{0.5cm}
 
   \begin{subfigure}{0.3\textwidth}
-      \includegraphics[width=\linewidth]{img/04.jpg}
-      \caption{Image 4}
+      \includegraphics[width=\linewidth]{img/p_04.jpg}
+      \caption{Impeller}
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.3\textwidth}
-      \includegraphics[width=\linewidth]{img/05.jpg}
-      \caption{Image 5}
+      \includegraphics[width=\linewidth]{img/p_05.jpg}
+      \caption{Vane/Diffuser}
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.3\textwidth}
-      \includegraphics[width=\linewidth]{img/06.jpg}
-      \caption{Image 6}
+      \includegraphics[width=\linewidth]{img/p_06.jpg}
+      \caption{Flange}
   \end{subfigure}
 
   \vspace{0.5cm}
 
   \begin{subfigure}{0.3\textwidth}
-      \includegraphics[width=\linewidth]{img/07.jpg}
-      \caption{Image 7}
+      \includegraphics[width=\linewidth]{img/p_07.jpg}
+      \caption{Asbestos rope (Gland Packing)}
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.3\textwidth}
-      \includegraphics[width=\linewidth]{img/08.jpg}
-      \caption{Image 8}
+      \includegraphics[width=\linewidth]{img/p_08.jpg}
+      \caption{Key}
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.3\textwidth}
-      \includegraphics[width=\linewidth]{img/09.jpg}
-      \caption{Image 9}
+      \includegraphics[width=\linewidth]{img/p_09.jpg}
+      \caption{Bolts}
   \end{subfigure}
 
-  \caption{Subplot Figure with 9 Images}
+  \caption{Components of Centrifugal Pump}
 \end{figure}
+
  
+\subsection*{Components of Centrifugal Pump:}
+\begin{itemize}
+  \item \textbf{Motor or Driver:} The motor or driver provides the power to rotate the pump's shaft and impeller, enabling the pump to function.
+  
+  \item \textbf{Impeller:} The impeller accelerates the fluid, increasing its kinetic energy and generating centrifugal force, which helps in moving the fluid through the pump.
+  \item \textbf{Casing or Housing:} The casing guides the flow of fluid and converts the kinetic energy imparted by the impeller into pressure energy.
+  \item \textbf{Vanes or Diffuser} Increases pressure and reduces velocity of the fluid.
+  
+  \item \textbf{Wear Rings:} Minimize clearance between impeller and casing, improving efficiency and preventing leakage.
+  \item \textbf{Gaskets:} Create tight seals between pump components, preventing fluid leakage.
+  
+  \item \textbf{Shaft:} The shaft transmits the rotational motion from the motor or driver to the impeller, enabling the pump to operate.
+  
+  \item \textbf{Bearings:} Bearings support the shaft, reducing friction and allowing smooth rotation. They help maintain the stability and reliability of the pump.
+  
+  \item \textbf{Seal:} The seal prevents fluid leakage along the shaft, ensuring the integrity of the pump and preventing contamination or loss of fluid.
+  
+\end{itemize}
+
 \end{document}
