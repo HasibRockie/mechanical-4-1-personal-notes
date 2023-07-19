@@ -1,0 +1,122 @@
+\documentclass{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage[pages=some]{background}
+\usepackage{titling}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{subfigure}
+\usepackage{multicol}
+\usepackage{caption}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\geometry{a4paper}
+
+\backgroundsetup{
+    scale=1,
+    angle=0,
+    opacity=1,
+    contents={%
+        \includegraphics[width=\paperwidth,height=\paperheight]{institution_logo.jpg}
+    }
+}
+
+\newcommand{\subtitle}[1]{
+    \posttitle{
+        \par\end{center}
+        \begin{center}\large#1\end{center}
+        \vskip0.5em}
+}
+
+\title{IPE-432}
+\author{Md. Hasibul Islam}
+\subtitle{MACHINE TOOLS SESSONAL}
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    
+    {\Huge\bfseries\maketitle}
+    \vspace{2cm}
+    \includegraphics[width=8cm]{institution_logo.jpg}
+    \vfill
+    \vspace*{2cm}
+\end{titlepage}
+
+\tableofcontents 
+\hrulefill
+
+\section{Experiment 03: Study of Engine Lathe\\ (New Sir)} 
+\hfill Date: 15/07/2023
+
+\begin{multicols}{2}
+\subsubsection*{Power}
+\begin{itemize}
+  \item Spindle speed $\rightarrow$ Primary motion speed 
+  \item 3 phase induction motor $\rightarrow$ V-belt pullet $\rightarrow$ Headstock (S.G.B.) 
+  \item Feed rod/ Lead screw $\rightarrow$ Feed movement 
+  \item Rest all $\rightarrow$ auxiliary move.
+  \item S.G.B. $\rightarrow$ spindle $\rightarrow$ Jaw $\rightarrow$ Job 
+  \item F.G.B. (below S.G.B.) $\rightarrow$ Lead screw / Feed rod $\rightarrow$ Motion in carriage. 
+\end{itemize}
+
+\subsubsection*{Headstock:}
+Housing of SGB, and rotation transfer to the spindle. 
+
+\subsubsection*{Change Gear Box}
+Precision threading (non-standard thread)\\
+F.G.B. $\rightarrow$ speed transfer \\
+
+\textbf{Why change gear?} 
+$\rightarrow$ We can easily change the gears of CGB 
+
+Normally, 4 gears with different combination and their transmission ratio is high. 
+
+\subsubsection*{Stepped drive system:}
+We can not get continuous speed but discrete speed is possible only. 
+
+\subsubsection*{Important Points:}
+\begin{itemize}
+  \item Lead screw/feed rod $\rightarrow$ automatic feed is given 
+  \item In lathe machine, almost all operations can be done except - gear cutting. 
+  \item Difference between turning and threading: \\Threading $\rightarrow$ high feed rate, \\Turning $\rightarrow$ low feed rate (also known as micro threading) 
+  \item 2 output shaft:\\ High feed (threading) $\rightarrow$ Lead screw \\Low feed (turning) $\rightarrow$ Feed rod 
+  \item Torsional Deformation happens if high \& low feed are given one after another. Thats why different feed for different rod/shaft.
+  \item Apron (cover) $\rightarrow$ can convert roational motion to feed motion. Contains carriage. 
+  \item Saddle : H-shaped 
+  \item Cross slide [cross movement] : half nut mechanism 
+  \item Swivle Plate [angular movement] 
+  \item Top slide 
+  \item Tail stock : Support long workpiece and attach cutting tool. Can not move cross, only horizontal. But offsetting very small angle around 4° is possible.
+  \item Guideway : Guide the movement of tailstock \& carriage. [V-shaped guideway]  
+  \item topslide $\rightarrow$ manual movement in cutting tool. 
+  \item half nut mechanism  $\rightarrow$ 2 position. cross slide and lead screw motion. 
+\end{itemize}
+
+\subsubsection*{Taper Turning}
+\begin{enumerate}
+  \item Setting over tail stock [offsetting tail]
+  \item 2 feed method: simultaneous longitudial (carriage) and cross slide (cross) motion. 
+  \item With swivle plate angle. 
+  \item With taper turning attachment. 
+\end{enumerate}
+
+How rotary motion converted to linear motion (lead screw/ feed rod)\\
+Key slot and spur gear in apron. The key sets on key slot and feed rod will move with spur gear. Rack and pinion are present (Bevel gear). 
+
+\subsubsection*{Accesories:}
+\begin{itemize}
+  \item Live center  $\rightarrow$ headstock 
+  \item Dead center  $\rightarrow$ tailstock 
+  \item Mandle  $\rightarrow$ Holds the internal hollow workpiece 
+  \item 3 jaw self centered chuck [auto center]
+  \item 4 jaw independent chuck [manually centering] 
+  \item Faceplate  $\rightarrow$ holds the irregular shape workpiece. 
+  \item Rest  $\rightarrow$ Support the small diameter workpiece, in order to prevent buckling. \\Two types:\\a)Steady rest : fixed, doesn't move. (in bed)\\Follower rest: mounted on saddle. Follow the cutting tool. 
+\end{itemize}
+
+\end{multicols}
+\textbf{Follow Lab sheet also.}\\
+\hrulefill
+\end{document}

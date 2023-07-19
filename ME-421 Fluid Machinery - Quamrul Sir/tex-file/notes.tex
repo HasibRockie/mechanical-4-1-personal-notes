@@ -467,6 +467,99 @@ $$H_s + H_a = 7.9 m$$
       \item The vessels are fitted in suction and delivery pipe close to the cylinder. 
     \end{enumerate}
 
+    \section{Lecture 5: Problems on Reciprocating Pump}
+    \hfill Date: 16/07/2023
+
+    \begin{multicols*}{2}
+      \subsubsection*{Problem-01}
+      A double acting reciprocating pump has a 500 mm diameter and stroke of 500 mm respectively. The pump is required to deliver 0.1 $m^3/s$ water at a head of 100 m. Frictional losses are estimated to be 1 m in suction pipe and 19m in delivery pipe. Velocity of water in delivery pipe is 1 m/s. Overall efficiency is 85\% and slip is 3\%. Determine the speed of the pump and power required for the pump. 
+
+      \subsubsection*{Solution:} 
+      Given data:\\
+      \begin{align*}
+        &\text{Cylinder diameter, } d = 500 \text{ mm} \\
+        &\text{Stroke length, } L = 500 \text{ mm} \\
+        &\text{Actual discharge, } Q_a = 0.1 \text{ m}^3/\text{s} \\
+        &\text{Static head, } H_s + H_d = 100 \text{ m} \\
+        &\text{Frictional losses in suction pipe, } h_{fs} = 1 \text{ m} \\
+        &\text{Frictional losses in delivery pipe, } h_{fd} = 19 \text{ m} \\
+        &\text{Velocity of water in delivery pipe, } v_d = 1 \text{ m/s} \\ 
+        &\text{Overall efficiency, } \eta_o = 85\% \\
+        &\text{Percentage slip} = 3\%  
+      \end{align*}
+      Slip = $\frac{Q_t - Q_a}{Q_t} \times 100\% \Rightarrow Q_t = 0.1031 \, m^3/s $   \\
+      Theoretical discharge, $Q_t = \frac{2LAN}{60} \Rightarrow  N = 31.51 \, rpm $  \\
+      Total head against which the pump has to work, \\
+      $H = H_s + H_d + h_{fs} + h_{fd} + \frac{v^2}{2g} = 120.05 \,m$ \\
+      Overall efficiency,$\eta_o = \frac{\text{Theoretical power}}{\text{actual power}}$ \\
+      Actual power = 142.8 kW  
+
+      \subsubsection*{Problem-02}
+      A single acting reciprocating pump running at 45 rpm as a piston of diameter 150 mm and stroke length of 200 mm. The suction pipe diameter is 150 mm and it's length is 20 m. Determine the acceleration head at the beginning of suction stroke. 
+      \subsubsection*{Solution:}
+      Given data:
+      \begin{align*}
+        &\text{Piston diameter, d} = 150 mm \\
+        &\text{stroke length, L} = 200 mm \\
+        &\text{suction pipe diameter,} d_s = 150 mm \\
+        &\text{suction pipe length }, l_s = 20 m \\
+        &\text{Speed of pump,} N = 45 rpm 
+      \end{align*}
+      
+      At the beginning of suction stroke, $\theta = 0,  \cos \theta = 1$ \\
+      Angular velocity, $\omega = \frac{2LAN}{60} = 5.3014$ rad/s \\
+      Crank radius, r = $\frac{L}{2} = 100 mm$ \\
+      Cross sectional area of piston, A = $\frac{\pi}{4} (0.15)^2$ \\ 
+      Cross sectional area of pipe, a = $\frac{\pi}{4} (0.15)^2$\\
+      Acceleration head, $$H_a = \frac{l_s}{g} \frac{A}{a} \omega^2 r \cos \theta = 4.52 \, m $$
+
+      \subsubsection*{Problem-03}
+      Single acting reciprocating pump as a bore of 500 mm and a stroke of 500 mm respectively. The pump delivers 0.11 $m^3/s$ water against a head of 100 m. The head loss due to friction in suction and delivery pipe are 2 m  and 14 m respectively. The velocity of water in pipe is 1.5 m/s. If the pump efficiency is 92\% and slip is 5\%. Calculate the speed of the pump and power required to drive the pump. 
+
+      \subsubsection*{Solution:}
+      Given data: \\
+      \begin{align*}
+        &\text{Cylinder diameter, } d = 500 \text{ mm} \\
+        &\text{Stroke length, } L = 500 \text{ mm} \\
+        &\text{Actual discharge, } Q_a = 0.11 \text{ m}^3/\text{s} \\
+        &\text{Head, } H = 100 \text{ m} \\
+        &\text{Frictional losses in suction pipe, } h_{fs} = 2 \text{ m} \\
+        &\text{Frictional losses in delivery pipe, } h_{fd} = 14 \text{ m} \\
+        &\text{Velocity of water in delivery pipe, } v_d = 1.5 \text{ m/s} \\ 
+        &\text{Overall efficiency, } \eta_o = 92\% \\
+        &\text{Percentage slip} = 5\%  
+      \end{align*}
+      Slip = $\frac{Q_t - Q_a}{Q_t} \times 100\% \Rightarrow Q_t = 0.116 \, m^3/s $   \\
+      Theoretical discharge, $Q_t = \frac{2LAN}{60} \Rightarrow  N = 70.89 \, rpm $  \\
+      Total head, \\
+      $H_t = H + h_{fs} + h_{fd} + \frac{v^2}{2g} = 116.11 \,m$ \\
 
 
+      Overall efficiency,$\eta_o = \frac{\text{Theoretical power}}{\text{actual power}}$ \\
+      Actual power = 143.47 kW  
+
+      \subsubsection*{Problem-04}
+      Single acting reciprocating pump running at 45 rpm as a piston of diameter of 150 mm and the stroke length of 200 mm. The suction pipe is 150 mm diameter and of length 20 m. Determine the maximum possible suction head to avoid separation. 
+
+      [Formula: $H_s + H_a = 7.9$]
+
+      \subsubsection*{Solution:}
+      Given data:
+      \begin{align*}
+        &\text{Piston diameter, d} = 150 mm \\
+        &\text{stroke length, L} = 200 mm \\
+        &\text{suction pipe diameter,} d_s = 150 mm \\
+        &\text{suction pipe length }, l_s = 20 m \\
+        &\text{Speed of pump,} N = 45 rpm 
+      \end{align*}
+
+      Crank radius, r = $\frac{L}{2} = 100 mm$ \\
+      Cross sectional area of piston, A = $\frac{\pi}{4} (0.15)^2$ \\ 
+      Cross sectional area of pipe, a = $\frac{\pi}{4} (0.15)^2$\\
+      Acceleration head, $$H_a = \frac{l_s}{g} \frac{A}{a} \omega^2 r \cos \theta = 4.527 \, m $$
+      
+      To avoid separation,
+      $$H_s + H_a = 7.9 \, m$$
+      $$\Rightarrow H_s = 3.37 \, m$$
+    \end{multicols*}
 \end{document}

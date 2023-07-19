@@ -11,6 +11,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{multicol}
+\usepackage{float}
 
 
 \forestset{
@@ -391,5 +392,72 @@ Do the same problem for the single stage refrigeration system
   $$C.O.P. = \frac{R.E.}{W_{1-2}} = 4.33 \, KW$$
 
 \end{multicols}
+\pagebreak
+\section{Lecture 4: 2 compressor \& 2 evaporator}
+\hfill Date: 17/07/2023
+
+\begin{figure}[H]
+  \centering
+  
+  \begin{subfigure}{0.3\textwidth}
+      \includegraphics[width=\textwidth]{img/two_com_2_evap.jpeg}
+      \caption{2 compressor and 2 evaporator}
+      \label{subfig:2_compressor_2_evaporator}
+  \end{subfigure}\hfill
+  \begin{subfigure}{0.3\textwidth}
+      \includegraphics[width=\textwidth]{img/two_com_2_evap_phase_dia.jpeg}
+      \caption{Phase diagram}
+      \label{subfig:Phase_diagram}
+  \end{subfigure}\hfill
+  \begin{subfigure}{0.3\textwidth}
+      \includegraphics[width=\textwidth]{img/two_com_2_evap_phase_dia_control_volume.jpeg}
+      \caption{Control volume approach}
+      \label{subfig:Control_volume_approach}
+  \end{subfigure}
+
+  \caption{Two compressor and two evaporator problem}
+  \label{fig:2-c-2-e} 
+\end{figure}
+\subsubsection*{Solution:}
+\begin{multicols}{2}
+  Here, \\
+  $m_1 = m_2 = m_7 = m_8$ \\
+$m_3 = m_4 = m_5$ \\
+
+\textbf{Reading the properties:}
+\begin{align*}
+  &h_1 = 380.32 \, \text{kj/kg}, s_1 =  1.7515 \\
+  &h_2 = 405 \, \text{kj/kg},  s_2 = 1.7515  \\
+  &h_3 = 401 \, \text{kj/kg}, s_3 = 1.7250 \\
+  &h_4 = 404 \, \text{kj/kg} \\
+  &h_5 = 256 \, \text{kj/kg} \\
+  &h_7 = h_8 = 206 \, \text{kj/kg} \\
+\end{align*}
+
+Now, Refrigetation effect, R.E.: 
+\begin{align*}
+  &m_1 (h_1-h_8) = 180 \, kW\\
+  &m_1 = 1.03 \, kg/s 
+\end{align*}
+
+Here, In intercooler, $m_2$ \& $m_5$ enters and $m_3$ \& $m_7$ exits. We are trying to avoid $m_6$ for simplicity. 
+
+So, we found: \\
+$$m_2h_2 + m_5h_5 + 200 = m_3h_3 + m_7h_7$$
+As, $m_1 = m_2 = m_7$ and $m_3 = m_5$,by solving,\\
+$$m_3 = 2.793 \, kg/s$$
+
+$$W_{1-2} = m_1 (h_2-h_1) = 25.4204 \, kW$$ 
+$$W_{3-4} = m_3 (h_4-h_3) = 8.375 \, kW$$ 
+$$C.O.P. = \frac{R.E.}{W_{1-2} + W_{3-4}} = 5.326 $$
+  
+\end{multicols}
+
+\subsubsection*{Some others important parameters:}
+\begin{itemize}
+  \item $$EER = \frac{\text{R.E. in BTU/hr}}{\text{Power Required in W}}$$
+  \item $$ kW/ton = \frac{3.516}{C.O.P.}$$
+  \item $$ EER \times kW/ton = 12 $$
+\end{itemize}
 
 \end{document}
