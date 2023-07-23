@@ -1025,11 +1025,105 @@ $$\eta_m (\text{Mechanical efficiency}) = \frac{S.P.}{\text{Power Developed}}$$
 \end{multicols*}
 
 
+\section{Lecture 11: Radial Flow Turbine}
+\hfill Date: 22/07/2023
 
+\begin{multicols}{2}
+  
+  The weight of water may be obtained from the flow area and the velocity of flow. \\
 
+  Let, N = The number of vanes \\
+  B, D \& t = width, diameter and thickness of the vane at inlet \\
+  $B_1$, $D_1$ \& $t_1$ = width, diameter and thickness of the vane at outlet \\
 
+  The area of flow = $\pi D B - N B t$\\
+  = $(\pi D - Nt) B$ \\
+  = $K\pi DB$ [where, K = Vane thickness factor; k<1] \\
 
+"K" is the vane thickness factor. It is always less than unity. \\
 
+For example - If 10\% area is occupied by vanes. Then, K = 0.9. \\
 
+\begin{align*}
+  \text{Discharge} &= \text{Area of flow} \times \text{Flow velocity} \\
+  \Rightarrow Q &= K\pi D B V_f 
+\end{align*}
+$$D \rightarrow inlet$$
+$$D_1 \rightarrow outlet$$
 
+The mass of water striking per second,
+$$m = \rho Q = \rho K \pi D B V_f$$
+
+Similarly, at the exit,
+$$m_1 = \rho K_1 \pi D_1 B_1 V_{f1}$$
+
+If velocity of flow is constant, $m = m_1$
+
+\subsection*{Working Proportions of a Francis Turbine}
+\begin{enumerate}
+  \item Ration of width to diameter : $$n = \frac{B}{D}$$ Varies from $0.1 \sim  0.45$
+  \item  Flow ratio ($\phi$): $$\phi = \frac{V_f}{\sqrt{2gH}}$$ varies from $0.15 \sim 0.30$
+  \item Speed ratio, $k_u$: $$k_u = \frac{u}{\sqrt{2gH}}$$ varies from $0.6 \sim 0.9$
+\end{enumerate}
+
+\subsection*{Design of Runner}
+\begin{enumerate}
+  \item Assume the suitable values of $\eta_o, \eta_h, n, k_u, \phi$ 
+  \item $$u= \frac{\pi D N}{60}$$
+\end{enumerate}
+
+\subsection*{Problem-01:}
+Water enters an inward flow reaction turbine at an angle of 22° to the tangent to the outer rim and leaves the turbine radially. The speed of the wheel is 300 rpm and the velocity of flow is constant at 3 m/s. Find the necessary angles of the blade when the innder and outer diameters of the turbine are 30 cm and 60 cm respectively. If width of wheel at inlet is 15 cm, calculate horse power developed. Thickness of blade may be neglected.
+
+\subsection*{Solution:}
+Given,
+\begin{align*}
+  & \alpha = 22° \\
+  & \beta = 90° \\
+  & N = 300 \, rpm \\
+  & V_f = 3 \, m/s \\
+  & D = 0.6 \, m \\
+  & D_1 = 0.3 \, m \\
+  & B = 0.15 \, m 
+\end{align*}
+
+\textbf{[Vecocity diagram is mendatory at exam!!]}
+
+\begin{align*}
+  u = \frac{\pi D N}{60} = \frac{\pi \times 0.6 \times 300}{60} = 9.42 \, m/s 
+\end{align*}
+\begin{align*}
+  u_1 = \frac{\pi D_1 N}{60} = \frac{\pi \times 0.3 \times 300}{60} = 4.71 \, m/s 
+\end{align*}
+
+\begin{align*}
+  V = \frac{V_f}{\sin \alpha} = \frac{3}{\sin 22} = 8.01 \, m/s 
+\end{align*}
+\begin{align*}
+  V_w = V \cos \alpha = 8.01 \times \cos 22 = 7.42 \, m/s 
+\end{align*}
+Here, $u>v_w$
+
+\begin{align*}
+  \tan \theta &= \frac{V_f}{u-V_w} = \frac{3}{9.42-7.42}\\
+  \Rightarrow \theta &= 56.4
+\end{align*}
+
+\begin{align*}
+  \tan \phi &= \frac{V_{f_1}}{u_1} = \frac{3}{4.71} \\
+  \Rightarrow \phi &= 32.5
+\end{align*}
+Here, $V_{f1} = v$ and $V_{w1}=0$
+
+\begin{align*}
+  Q &= \pi D B V_f = \pi \times 0.6 \times 0.15 \times 3 = 0.85 \, m^3/s
+\end{align*}
+
+\begin{align*}
+  hp &= \frac{\rho Q V_w u}{746} \\
+  &= \frac{1000 \times 0.85 \times 7.42 \times 9.42}{746}\\
+  &= 79.65 \, hp
+\end{align*}
+
+\end{multicols}
 \end{document}
