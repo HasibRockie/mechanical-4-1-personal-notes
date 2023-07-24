@@ -1025,7 +1025,7 @@ $$\eta_m (\text{Mechanical efficiency}) = \frac{S.P.}{\text{Power Developed}}$$
 \end{multicols*}
 
 
-\section{Lecture 11: Radial Flow Turbine}
+\section{Lecture 11: Francis Turbine}
 \hfill Date: 22/07/2023
 
 \begin{multicols}{2}
@@ -1089,6 +1089,11 @@ Given,
 
 \textbf{[Vecocity diagram is mendatory at exam!!]}
 
+\begin{figure}[H]
+  \includegraphics[width=0.97\linewidth]{img/velo_dia_prb.png}
+  \caption{Velocity diagram}
+\end{figure}
+
 \begin{align*}
   u = \frac{\pi D N}{60} = \frac{\pi \times 0.6 \times 300}{60} = 9.42 \, m/s 
 \end{align*}
@@ -1126,4 +1131,89 @@ Here, $V_{f1} = v$ and $V_{w1}=0$
 \end{align*}
 
 \end{multicols}
+
+\section{Lecture 11: Propeller Turbine}
+\hfill Date: 24/07/2023
+
+\begin{multicols}{2}  
+  \subsection*{Problem-01}
+  In an inward flow reaction turbine the inlet and outlet diameters are 3m and 2m respectively. The discharge through the turbine is 80 $m^3/s$ and the inlet vane angle is 120°. The discharge is radial at outlet and the velocity of flow at outlet is 13.6 m/s. The head of water is 162 m and width od the wheel is constant throughout. If the hydraulic efficiency is 88\%, Find the power produced and the speed of the turbine.
+
+  \subsection*{Solution:}
+  Given,
+  \begin{align*}
+    & D = 3 \, m \\
+    & D_1 = 2 \, m \\
+    & Q = 80 \, m^3/s \\
+    & \theta = 120° \\
+    & V_{f1} = 13.6 \, m/s \\
+    & H = 162 \, m \\
+    & \eta_h = 0.88
+  \end{align*}
+
+  Neglecting vane thickness factor,
+  Q = $\pi D_1 B_1 V_{f1}$ \\
+  \begin{align*}
+    & 80 = \pi \times 2 \times B_1 \times 13.6 \\
+    & B_1 = 0.94 \, m
+  \end{align*}
+  Here, $B = B_1$\\
+  Again,
+  \begin{align*}
+    Q &= \pi D B V_f \\
+    80 &= \pi \times 3 \times 0.94 \times V_f \\
+    V_f &= 9.03 \, m/s
+  \end{align*}
+
+  Now, 
+  \begin{align*}
+    \tan (180-120) &= \frac{V_f}{u-V_{w}} \\
+    \Rightarrow v_w &= u - 5.21 
+  \end{align*}
+
+  \begin{align*}
+    \eta_h &= \frac{v_w u}{gH} \\
+    0.88 &= \frac{u(u-5.21)}{9.81 \times 162} \\
+    u &= 40.09 \, m/s
+  \end{align*}
+
+  \begin{align}
+    u &= \frac{\pi D N}{60} \\
+    N &= 255.22 \, rpm
+  \end{align}
+  
+  so, $v_w$ = u - 5.21 = 34.88 m/s \\
+  and, 
+  \begin{align*}
+    P_{out} &= \rho Q v_w  u \\
+    &= 1000 \times 80 \times 34.88 \times 40.09 \\
+    &= 111.867 \, MW
+  \end{align*}
+\end{multicols}
+\pagebreak
+\subsection*{Propeller Turbine}
+\begin{multicols}{2}
+  The propeller turbine is an axial flow turbine having a small number of blades usually 3 to 8. The runner is generally kept horizontal. That is the shaft is vertical.
+  
+  The following deviations from Francis Turbine should be carefully noted:\\
+
+  \begin{enumerate}
+    \item In case of propeller turbine the ratio 'n' is taken as - $$n = \frac{D_1}{D}$$ Where, $D_1$ = diameter of boss or hub on which the blades are mounted. And $D$ is the outside diameter of the runner.
+    Now, Discharge, 
+    \begin{align*}
+      Q &= \frac{\pi}{4} \times (D^2 - D_1^2) \times V_f \\
+      &= \frac{\pi}{4} \times (D^2 - D_1^2) \times \times \Psi \sqrt{2gH} \\
+      &= \frac{\pi}{4} \times D^2 \times ( 1 - n^2) \times \Psi \sqrt{2gH} \\
+    \end{align*} 
+    The values of n ranges from 0.35 to 0.6. The value of $\Psi$ is about 0.7. 
+
+    \item The peripheral velocity of u of the runner vanes depends upon the radius of the point under consideration. The blade angle varies from the rim of the boss and the vanes are warped. 
+    \item The velocity triangle can be constructed at any radius. The expressions for work done is same as Francis turbine. 
+    $$P = m v_w u $$
+
+    \item The velocity of flow remains constant throughout.
+  \end{enumerate}
+
+\end{multicols}
+  
 \end{document}
