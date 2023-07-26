@@ -10,6 +10,8 @@
 \usepackage{amssymb}
 \usepackage{tcolorbox}
 \usepackage{subcaption}
+\usepackage{multicol}
+\usepackage{float}
 
 \geometry{a4paper}
 
@@ -539,5 +541,97 @@ Therefore, we've to find the optimum of $\phi$.
 \begin{itemize}
   \item Let z = 6.5 found, but no. of steps can not be fractions. So, it have to be round off. While rounding off, we have to select the number which is multiple of 2 or 3. Hence, z = 6 have to be taken, and z $\neq$ 7, as it is not divisible by 2 or 3. 
 \end{itemize}
+\vspace*{1cm}
 
+\section{Lecture 5: Transmission range of a group}
+\hfill Date: 22/07/2023
+ 
+\begin{multicols*}{2}
+  Let, z = 12, then it have to represent in multiple of 2 and 3. so, z = $2 \times 3 \times 2$.
+
+  $$i_{min} = \frac{1}{4} \,\,\,\, \& \,\,\,\, i_{max} = 2$$
+
+  $$\text{Transmission Ratio, T.R.} = \frac{i_{max}}{i_{min}} = 8$$
+
+  \subsubsection*{GP}
+  $n$ - $n \phi$ - $n \phi^2$ - $n\phi^3 - n\phi^4$ \\
+  $\frac{n_2}{n_1} = \phi^x$, here $x$ indicates after how many steps we got the speed. \\
+  For example - \\
+  $n$ - $n \phi^2$ - $n\phi^4$ \\ 
+  Here, x = 2 \\
+
+  x = characteristics of transmission rate \\
+
+  \begin{align*}
+    \text{Structural formula, S.F.: } z &= p_1 \times p_2 \times p_3 \times ... \times p_n \\
+    12 &= 2 \times 2 \times 3 \\  
+  \end{align*}
+
+  Here, the possible combination: $\frac{3!}{2!} = 3$ 
+
+  \begin{align*}
+    \text{Detailed Stru. for. : } z &= p_1 (x_1) \times p_2(x_2) \times p_3 (x_3) \times ... \times p_n (x_n) \\
+    12 &= 2(1) \times 3(2) \times 2(6) \\
+    &\\
+    x_1 &= 1 \\
+    x_2 &= p_1 = 2 \\
+    x_3 &= p_1p_2 = 6  
+  \end{align*}
+
+  Here, the possible combination: $\frac{3!}{2!} \times 3! = 18$ 
+
+  \subsection*{Kinematic Arrangement}
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics[width=\columnwidth]{img/kinematic_arrangement.jpeg}
+    \end{center}
+  \end{figure}
+
+  \subsubsection*{Structural Diagram}
+  \begin{align*}
+    z &= p_1 (x_1) \times p_2(x_2) \times p_3 (x_3) \times ... \times p_n (x_n) \\
+    12 &= 2(1) \times 3(2) \times 2(6) \\
+  \end{align*} 
+
+  $u = 3$ [stage] \\
+  $u + 1 = 4$ [shaft] \\
+
+  \subsubsection*{How to draw structural diagram:}
+  \begin{itemize}
+    \item Draw (u+1) vertical lines. 
+    \item Then, draw 'z' horizontal line. 
+    \item choose mid point of shaft I.
+    \item Then, draw $p_1$ lines maintaining a distance of $x_1$.
+    \item continue for all shafts.
+  \end{itemize}
+
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics[width=\columnwidth]{img/structural_diagram.jpeg}
+    \end{center}
+  \end{figure}
+
+  \subsubsection*{The selection of the best structural diagram}
+  \begin{enumerate}
+    \item $$i_g = \frac{i_{max}}{i_{min}} = 8$$
+    $$i_g \leq 8$$
+    \item $$\sum_{i = 1}^{u+1} d = min $$
+    In the intermediate shafts, have to check which min speed has a maximum speed among them. For example - in figure, in shaft III, among the minimum speeds of all, (a) and (c) has the maximum speed. So, their diameter would be the minimum. Again, in between (a) and (c), (a) has the maximum speed of minimums at shaft II, so diameter of (a) will be the minimum.
+    \item 
+    \begin{align*}
+      i_m &= \phi^{(p_m - 1)}x_m \\ 
+      &\\
+      & 2(1)\times 3(2)\times 2(6) \\ 
+      &\\
+      i_1 &= \phi^{(2 - 1)}1 = \phi \\ 
+      i_2 &= \phi^{(3 - 1)}2 = \phi^4\\ 
+      i_3 &= \phi^{(2 - 1)}6 = \phi^6\\ 
+      &\\
+      \phi^{x_{max}} &= \phi^6
+    \end{align*}
+
+    now, $\phi^6 < $  8, so $\phi < 1.41$ 
+  \end{enumerate}
+
+\end{multicols*}
 \end{document}
