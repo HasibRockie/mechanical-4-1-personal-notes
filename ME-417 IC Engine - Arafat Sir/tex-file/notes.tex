@@ -407,7 +407,7 @@ In a four-stroke engine, the crankshaft rotates twice for every single rotation 
   \end{figure}
 
  \subsubsection*{Why CI engine is more often than SI engine for two stroke engine:}
- In CI engine, there is no problem if IVO \& EVC time difference is higher. Because, CI engine uses air-fuel mixures. On the other hand, in SI engine, fuel is used. In that case, more IVO \& EVC time difference may cause a waste of fuel, as fuel come outside while inlet valve is opened. That's why for two stroke engine, CI engine is more used than SI engine. 
+ In CI engine, there is no problem if IVO \& EVC time difference is higher. Because, CI engine uses air-fuel mixtures. On the other hand, in SI engine, fuel is used. In that case, more IVO \& EVC time difference may cause a waste of fuel, as fuel come outside while inlet valve is opened. That's why for two stroke engine, CI engine is more used than SI engine. 
 
  \subsubsection*{Difference between two stroke and Four stroke:}
  \begin{itemize}
@@ -607,5 +607,245 @@ IC engiine combustion cylinder is an open system, as here mass changes. There's 
 		\item Matlab Extension also available 
 	\end{itemize}
 	\textbf{There will a CT regarding reading properties from NASA-CEA }
+
+	\vspace*{1cm}
+	\section{Lecture 05: Ideal Gas Constant-Volume cycle anlysis} 
+	\hfill Date: 18/07/2023
+
+	\begin{multicols}{2}
+		\subsection*{Residual Gas Mass Fraction, $X_r$}
+		
+
+		\begin{align*}
+			x_r &= \frac{m_{r}}{m} \\
+			\Rightarrow m_r &= \frac{V_6}{v_7} = \frac{V_2}{v_7} \\
+			&\\
+			\text{and } m &= \frac{V_i}{v_i} \, \text{ ; i= 1,2,3,4,7}\\
+			&\\
+			x_r &= \left(\frac{\frac{V_6}{v_7}}{\frac{V_4}{v_4}}\right) \\
+			&= \left(\frac{V_6}{V_4}\right) \left(\frac{v_4}{v_7}\right) \\
+			&= \frac{1}{r_c} \times \frac{\frac{RT_4}{P_4}}{\frac{RT_7}{P_7}} \\
+			&= \frac{1}{r_c} \times \frac{P_{ex}}{P_4} \times \frac{T_4}{T_7} \\
+			&= \frac{1}{r_c} \times \frac{P_{ex}}{P_4} \times \left(\frac{P_4}{P_7}\right)^{\frac{\gamma -1}{\gamma}} \, \text{ [isentropic relation]} \\
+			&= \frac{1}{r_c} \left(\frac{P_4}{P_{ex}}\right)^{-1/r} \\
+			&= \frac{1}{r_c} \left(\frac{P_{ex}}{P_4}\right)^{1/r} \\
+			&= \frac{1}{r_c} \left(\frac{P_{ex}}{P_i} \times \frac{P_1}{P_4}\right)^{1/r}\, [P_{inlet} = P_4] \\
+			&\\
+			\text{Now, } \frac{P_{1}}{P_4} &= \frac{P_1}{P_2} \times \frac{P_2}{P_3} \times \frac{P_3}{P_4} \\
+			&= \left(\frac{V_2}{V_1}\right)^\gamma \frac{T_2}{T_3} \left(\frac{V_4}{V_3}\right)^\gamma \\
+			r_c &= \frac{V_1}{V_2} = \frac{V_4}{V_3} \\
+			\text{so, } \frac{P_1}{p_4} &= \frac{T_2}{T_3} \\
+			&\\
+			x_r &= \frac{1}{r_c} \left(\frac{P_{ex}}{P_i}\right)^{1/\gamma} \times \left(\frac{T_2}{T_3}\right)^{1/r} \\ 
+		\end{align*}
+
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[width=\columnwidth]{img/const_vol_adia_comb_process.jpeg}
+			\end{center}
+		\end{figure}
+
+		\begin{itemize}
+			\item $c_p, c_v$ are constant for ideal gas.
+			\item point-7 is a hypothetical point. 
+		\end{itemize}
+
+		At constant volume adiabatic combustion process,
+		\begin{align*}
+			mC_v(T_3-T_2) &= m_f Q_{LHV} \\
+			&\\
+			\text{Again, }\frac{m_f Q_{LHV}}{m} &= Q^* \\
+			&\\
+			\text{So, } C_v (T_3-T_2) &= Q^* \\
+			\frac{T_3}{T_2} &= 1 + \frac{Q^*}{C_vT_2}
+		\end{align*}
+		\begin{center}
+			\fbox{
+			  \begin{minipage}{\columnwidth}
+				$$\frac{T_2}{T_1} = \left(\frac{V_1}{V_2}\right)^{\gamma -1} = \left(\frac{V_4}{V_3}\right)^{\gamma -1} = r_c^{\gamma -1} = \frac{T_3}{T_4} $$\\
+				$$\therefore \frac{T_4}{T_1} = \frac{T_3}{T_2}$$
+			  \end{minipage}
+			}
+		  \end{center}
+
+		  \begin{align*}
+			\text{So, } \frac{T_3}{T_2} &= 1 + \frac{Q^*}{C_v \frac{T_3}{T_4} T_1} \\
+			&= 1 + \frac{Q^*}{C_v T_1 r_c^{\gamma -1}} \\
+		  \end{align*}
+
+		  \begin{center}
+			\fbox{
+			  \begin{minipage}{\columnwidth}
+				$$x_r = \frac{1}{r_c} \frac{\left(\frac{P_{ex}}{P_i}\right)^{1/\gamma}}{\left[1 + Q^* / \left(C_v T_1 r_c^{\gamma -1}\right)\right]^{1/\gamma}}$$
+				\\
+				$$x_r\, \, \uparrow \,, \,\, \underbrace{P_i<P_{ex}} \,,\,\, r_c \,\, \downarrow \,,\,\, \frac{Q^*}{C_v T_1} \, \downarrow $$
+				\hspace*{2.7cm} \textbf{throttled} \\ 
+				\begin{itemize}
+					\item $\frac{Q^*}{C_v T_1}$ is dimensionless parameter. Here, $C_v$ changes with temperature. That's why, this whole dimensionless parameter depends upon exhaust temperature. Hence, $x_r$ will also change with temperature.
+				\end{itemize}
+			  \end{minipage}
+			}
+		  \end{center}
+
+		  \begin{align*}
+			\eta_{f,i} &= \frac{m\left[(u_3-u_4)-(u_2-u_1)\right]}{m_fQ_{LHV}} \\
+			&= \frac{\left(T_3-T_4\right) - \left(T_2-T_1\right)}{T_3 - T_2} \\
+			&= 1 - \frac{T_4-T_1}{T_3-T_2} \\
+			&= 1 - \frac{1}{r_c^{\gamma -1}} \\
+			&\\
+			& \eta_{f,i} \,\, \uparrow \,\, , \,\, r_c \,\, \uparrow ,\,\, \gamma \, \uparrow 
+		  \end{align*}
+
+		  $\gamma$ is change:-
+		  \begin{itemize}
+			\item If temperature is changed 
+			\item If air-fuel mixture burnt, the mixing combination also changed. Hence $\gamma$ is changed. 
+		  \end{itemize}
+
+		  \textbf{IMEP (mean effective pressure):} How well displaement volume works.
+
+		  \begin{align*}
+			\frac{imep}{P_1} &= \frac{m_f \times Q_{LHV} \times \eta_{f,i}}{V_d P_1} \\
+			&= \underbrace{\left(\frac{Q^*}{C_v T_1}\right)} \frac{m T_1 C_v}{V_d P_1} \underbrace{\left(1 - \frac{1}{r_c^{\gamma -1}}\right)} \\
+			& \text{dimensionless} \hspace*{1cm} \text{dimensionless}
+		  \end{align*}
+
+		  now, 
+		  \begin{align*}
+			\frac{C_v T_1 V_1/v_1}{(V_1-V_6) P_1} &= \frac{C_v T_1 V_1}{(V_1-V_6) R T_1} \\
+			&= \left(\frac{C_v}{C_p - C_v}\right) \left(\frac{1}{1-\frac{1}{r_c}}\right)\\
+			&= \left(\frac{1}{\gamma -1}\right) \left(\frac{r_c}{r_c-1}\right)
+			&\\
+			\therefore \frac{imep}{P_1} &= \left(\frac{Q^*}{C_v T_1}\right) \left(\frac{1}{\gamma -1}\right) \left(\frac{r_c}{r_c-1}\right) \left(1 - \frac{1}{r_c^{\gamma-1}}\right)\\
+			&\\
+			\text{using, } \frac{T_3}{T_2} &= 1 + \frac{Q^*}{C_v T_1 r_c^{\gamma -1}}
+		  \end{align*}
+
+		  We get,
+		  $$\frac{imep}{P_3} = \frac{1}{\left(\gamma -1\right) r_c^\gamma} \left(\frac{r_c}{r_c-1}\right) \frac{1 - \frac{1}{r_c^{\gamma-1}}}{\frac{C_v T_1}{Q^*} + \frac{1}{r_c^{\gamma-1}}}$$
+
+		  \begin{itemize}
+			\item A higher value of $imep$ is desirable 
+			\item $P_3$ should be less, so less stress. $P_3$ is the highest pressure. So, lesser value of $P_3$ is desirable. 
+		  \end{itemize}
+
+		  
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[width=\columnwidth]{img/eff_vs_rc_with_gamma.jpeg}
+			\end{center}
+		\end{figure}
+	\end{multicols}
+	\pagebreak
+	\subsection*{Cycle Comparison}
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[width=\linewidth]{img/cycle_comparison.jpeg}
+		\end{center}
+	\end{figure}
+	\begin{multicols}{2}
+		const volume : $\eta \,\, \uparrow \,$ but, $\frac{imep}{P_3} \,\, \downarrow $\\
+		const pressure : $\eta \,\, \downarrow \,$ but, $\frac{imep}{P_3} \,\, \uparrow $\\
+
+		\textbf{Then, efficiency of CI engine is less than SI engine?}\\
+		No, Because in CI engine, compression ratio ($r_c$) is higher. As a result, graphically they are more extended to the right side (in Fig. point 4). That's why, The efficiency of CI engine in high although having constant pressure. 
+
+		\begin{itemize}
+			\item Graph explaination is important for term final 
+		\end{itemize}
+
+		\subsection*{Fuel-Air Ratios}
+		\begin{itemize}
+			\item $\phi\, \rightarrow$ Equivalence ratio  
+			\item $\phi=1$ indicates stoichiometric mixture 
+			\item $\phi < 1$ indicates lean mixture 
+			\item $\phi > 1$ indicates rich mixture 
+			\item Combustion temperature would be highest when $\phi$ is slightly higher than 1. 
+			\item $\phi$ can be changed with temperature and air density. 
+			\item Equivalence ratio ($\phi$) is behaving like $\gamma$ is air fuel mixing 
+			\item With the change of $\phi$, temperature changes, $C_p\, \, \&\,\, C_v$ changes, as a result $\eta$ also changes.  
+		\end{itemize}
+
+		\begin{itemize}
+			\item Lean mixture $\rightarrow$ higher $\eta$
+			\item Rich mixture $\rightarrow$ lower $\eta$
+			\item In rich mixture, due to incomplete combustion, efficiency drops. This effect is more than temperature rise, $C_p, C_v$ rise. That's why lean mixture has more efficiency than rich mixtures.
+			\item with the change of $\phi$, mixing composition changes, mass fraction changes, also $imep/P_3$ changes.   
+		\end{itemize}
+	\end{multicols}
+	\begin{center}
+		\fbox{\hspace*{0.33\linewidth} \textbf{Follow Heywood: 5.3, 5.4, 5.5} \hspace*{0.33\linewidth}} 
+	\end{center}
+	\pagebreak 
+
+	\section{Lecture 06: Fuel-Air Otto Cycle} 
+	\hfill Date: 23/07/2023
+
+	\begin{multicols}{2}
+		\begin{itemize}
+			\item $imep$ is maximized when $\phi$ is closed to 1. 
+			\item Fuel efficiency is better at lean mixture.
+			\item \textbf{Inlet pressure or outlet pressure, which one is higher?} Can be equal or different, anything.
+			\item $\frac{P_i}{P_e} < 1 \rightarrow$ throttle 
+			\item $\frac{P_i}{P_e} > 1 \rightarrow$ supercharged, Turbocharged 
+			\item Limited pressure cycle indicates diesel cycle. 
+			\item In otto cycle, for lower value of $\phi$ efficiency is higher, which is consistant with limited pressure cycle. 
+		\end{itemize}
+	\end{multicols}
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[width=\linewidth]{img/otto_cycle.jpeg}
+		\end{center}
+	\end{figure}
+	\begin{itemize}
+		\item Superchargers and turbochargers increase air intake density, allowing more fuel to be burned, boosting power output. However, they do not significantly alter the underlying thermodynamic efficiency, leading to consistent net indicated thermal efficiency.
+	\end{itemize}
+
+	\subsubsection*{Overexpanded IC engine}
+	\begin{multicols}{2}
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[width=\linewidth]{img/overexpanded.jpeg}
+			\end{center}
+		\end{figure}
+		\begin{itemize}
+			\item 6-1: intake 
+			\item 1-2: compression 
+			\item 2-3: combustion
+			\item 3-4': expansion 
+			\item 4'-5': blowdown 
+			\item 5'-6': exhaust
+			\item if we don't blow down in 4'-5', rather expand it more and pass through 4-5, then it's called overexpanded.
+			\item $r_c$ = compression ratio, $r_e$ = expansion ratio
+			\item conventional: $r_c = r_e$
+			\item overexpanded: $r_c < r_e$
+		\end{itemize}
+		By overexpansion,
+		$$r=\frac{r_e}{r_c} \, \, \uparrow, \, \eta_{f,i} \,\, \uparrow \, ,\text{but } \frac{imep}{P_1} \,\,\downarrow$$
+		So, we need to turbocharge or supercharge, in order to increase $imep$. 
+
+		\textbf{Physical Interpretation of IMEP}: IMEP (induced mean effective pressure) represents the hypothetical constant pressure that, if exerted on the piston throughout the entire power stroke, would produce the same amount of net work output as the actual varying pressure that occurs during the combustion process.
+
+		\subsubsection*{Real Cycle}
+		Losses in real cycle:
+		\begin{enumerate}
+			\item Heat transfer : through combustion, expansion stroke (2-3, 3-4')
+			\item Finite combustion time: If there is no heat transfer, peak pressure would have high. But with overall effect, it's become low. 
+			\item Exhaust blowdown loss
+			\item Crevice leakage 
+			\item Incomplete combustion: Lean or rich, always there would be some incomplete combustion.
+			\item combustion occuring less than $P_max$ : limited pressure cycle.
+		\end{enumerate}
+
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[width=\linewidth]{img/real_cycle_loss.jpeg}
+			\end{center}
+		\end{figure}
+	\end{multicols}
+	\begin{center}
+		\fbox{\hspace*{0.33\linewidth} \textbf{Follow Heywood: 5.6, 5.8} \hspace*{0.33\linewidth}} 
+	\end{center}
+
 
 \end{document}
