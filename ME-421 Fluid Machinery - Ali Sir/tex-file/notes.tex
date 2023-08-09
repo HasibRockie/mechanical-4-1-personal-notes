@@ -1132,7 +1132,7 @@ Here, $V_{f1} = v$ and $V_{w1}=0$
 
 \end{multicols}
 
-\section{Lecture 11: Propeller Turbine}
+\section{Lecture 12: Propeller Turbine}
 \hfill Date: 24/07/2023
 
 \begin{multicols}{2}  
@@ -1214,6 +1214,87 @@ Here, $V_{f1} = v$ and $V_{w1}=0$
     \item The velocity of flow remains constant throughout.
   \end{enumerate}
 
+\end{multicols}
+
+\section{Lecture 13: Kaplan TUrbine}
+\hfill Date: 05/08/2023
+
+\begin{multicols}{2}
+  The propeller turbine is quite stable when the load of the turbine remain constant, but it has got very low efficiency at part load.
+
+  A kaplan turbine is fitted with adjustable blades. The blade angle changes automatically by air-pressure survo motor as the load changes. The kaplan turbine has a purely axial flow. There are usually 4-6 blades. 
+  \begin{itemize}
+    \item At kaplan turbine: $v_{w1}$ is always zero.
+  \end{itemize} 
+
+  \subsection*{Problem-01}
+  A kaplan turbine runner has outer diameter of 4.5 m, the diameter of central hald is 2m and it develops 28000 hp when running at 140 rpm. Under a head of 21.8m. The hydraulic efficiency is 94\% and the overall efficiency is 88\%. Determine the runner blade angles at inlet and exit at the hub, periphery and the mean diameter.
+  
+  \subsection*{Solution}
+  Given,
+  \begin{align*}
+    & D = 4.5 \, m \\
+    & D_1 = 2 \, m \\
+    & P = 28000 \, hp \\
+    & N = 140 \, rpm \\
+    & H = 21.8 \, m \\
+    & \eta_h = 0.94 \\
+    & \eta_o = 0.88
+  \end{align*}
+
+  \begin{align*}
+    \eta_o &= \frac{P}{\gamma Q H} \\
+    \Rightarrow 0.88 &= \frac{28000 \times 0.746}{1000 \times Q \times 9.81 \times 21.8} \\
+    \Rightarrow Q &= 111 \, m^3/s
+  \end{align*}
+
+  Again,
+  \begin{align*}
+    Q &= \frac{\pi}{4} \times (D^2 - D_1^2) \times V_f \\
+    \Rightarrow V_f &= 8.7 \, m/s
+  \end{align*}
+
+  At outer periphery,
+  \begin{align*}
+    u &= \frac{\pi D N}{60} \\
+    \Rightarrow u &= 32.99 \, m/s
+  \end{align*}
+
+  Hydraulic efficiency,
+  \begin{align*}
+    \eta_h &= \frac{v_w u}{gH} \\
+    \Rightarrow v_w &= 6.094 \, m/s
+  \end{align*}
+
+  Now,
+  \begin{align*}
+    \tan (180 - \theta) &= \frac{v_f}{u - v_w} \\
+    \Rightarrow \theta &= 162.1^{\circ}
+  \end{align*}
+  and,
+  \begin{align*}
+    \tan \phi &= \frac{v_{f1}}{u_1} \\
+    \Rightarrow \phi &= 14.77^{\circ}
+  \end{align*}
+
+  At the middle,
+  $$D_m = \frac{4.5 + 2}{2} = 3.25 \, m$$
+  $$u = \frac{\pi D_m N}{60} = 23.8 \, m/s$$
+
+  \begin{align*}
+    \eta_h &= \frac{v_w u}{gH} \\
+    \Rightarrow v_w &= 8.45 \, m/s
+  \end{align*}
+  
+  \begin{align*}
+    \tan (180 - \theta) &= \frac{v_f}{u - v_w} \\
+    \Rightarrow \theta &= 150.46^{\circ}
+  \end{align*}
+
+  \begin{align*}
+    \tan \phi &= \frac{v_{f}}{u} \\
+    \Rightarrow \phi &= 20.1^{\circ}
+  \end{align*}
 \end{multicols}
   
 \end{document}
