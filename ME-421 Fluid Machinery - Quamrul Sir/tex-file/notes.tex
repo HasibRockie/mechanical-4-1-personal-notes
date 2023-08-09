@@ -611,5 +611,119 @@ $$H_s + H_a = 7.9 m$$
     \vspace*{1cm}
     \textbf{End of lecture with a class test!! }
     \hrulefill
+    \vspace*{1.5cm} 
 
+    \section{Lecture 7: Work Done against Friction in Pipe}
+    \hfill Date: 06/08/2023
+
+    \begin{figure}[h]
+      \begin{center}
+        \includegraphics[width=0.7\linewidth]{img/acceleration_piston.jpg}
+        \caption{Work Done against Friction in Pipe}
+      \end{center}
+    \end{figure}
+
+    \begin{multicols}{2}
+      \subsection*{Assumptions}
+      \begin{itemize}
+        \item Rotation of crank is uniform
+        \item Connecting rod is very large
+        \item The piston has simple harmonic motion
+      \end{itemize}
+
+      \subsection*{Nomenclature}
+      \begin{itemize}
+        \item $r$ = crank radius
+        \item $l$ = Length of pipe  
+        \item $d$ = diameter of pipe 
+        \item $A$ = cross sectional area of piston
+        \item $a$ = cross sectional area of pipe
+        \item $h_f$ = frictional head loss in pipe
+        \item $\omega$ = angular velocity of rotating crank
+        \item $f$ = friction factor for the pipe 
+        \item $v$ = velocity of water in the pipe 
+        \item $Q$ = discharge of the pump
+      \end{itemize}
+
+      \subsection*{Derivation of Equation}
+      Let, $\theta$ = angular distance of crank from zero position at time t = $\omega t$ \\
+      Displacement of piston, $x = r - r \cos \theta = r - r\cos (\omega t)$ \\
+      Velocity of piston, $v = \frac{dx}{dt} = r \omega \sin (\omega t)$ \\
+      Flow of water in pipe = Flow of water in cylinder \\
+      \begin{align*}
+        &\Rightarrow a \times v = A \times V \\
+        & v = \frac{A}{a} \times v \\
+        & v = \frac{A}{a} \times r \omega \sin (\omega t) \\
+        & v = \frac{A}{a} \times r \omega \sin \theta \\
+      \end{align*}
+
+      Head loss due to friction,
+      \begin{equation}
+        h_f = \frac{f l v^2}{2  g d} = \frac{f l}{2 g d} \left( \frac{A}{a} \times r \omega \sin \theta \right)^2
+      \end{equation}
+
+      From eqn (3),\\ 
+      \textbf{i)} At the beginning of stroke, $\theta = 0^{\circ}$, $\sin \theta = 0$, $h_f = 0$ \\
+      \textbf{ii)} At the end of stroke, $\theta = 180^{\circ}$, $\sin \theta = 0$, $h_f = 0$ \\
+      \textbf{iii)} At the middle of stroke, $\theta = 90^{\circ}$, $\sin \theta = 1$, $h_f = \frac{f l}{2 g d} \left( \frac{A}{a} \times r \omega \right)^2$, which is the eqn of a parabola. \\
+
+      \subsection*{During Suction Stroke}
+      \begin{itemize}
+        \item At the beginning, $h_f = 0$, \\pressure head = $H_{atm} - \left(H_s + H_a\right)$
+        \item At the middle, $H_a = 0$, \\pressure head = $H_{atm} - \left(H_s + h_f\right)$
+        \item At the end, $h_f = 0$, \\pressure head = $H_{atm} - \left(H_s - H_a\right)$
+      \end{itemize}
+
+      \subsection*{During Delivery Stroke}
+      \begin{itemize}
+        \item At the beginning, $h_f = 0$, \\pressure head = $H_{atm} + \left(H_d + H_a\right)$
+        \item At the middle, $H_a = 0$, \\pressure head = $H_{atm} - \left(H_d + h_f\right)$
+        \item At the end, $h_f = 0$, \\pressure head = $H_{atm} - \left(H_d - H_a\right)$
+      \end{itemize}
+
+      \subsection*{Modified indicator diagram}
+      The combined indicator diagram in shown in the above figure: \\
+
+      \begin{figure}[H]
+        \begin{center}
+          \includegraphics*[width=0.99\columnwidth]{img/modified_indicator_diagram.jpg}
+          \caption{Modified indicator diagram}
+        \end{center}
+      \end{figure}
+
+      Let,\\
+      $h_{fs}$ = head loss in suction pipe \\
+      $h_{fd}$ = head loss in delivery pipe \\
+      $d_s$ = diameter of suction pipe \\
+      $d_d$ = diameter of delivery pipe \\
+      $l_s$ = length of suction pipe \\
+      $l_d$ = length of delivery pipe \\
+      $W$ = Weight of water pumped per second. \\
+
+      Now, mean ordinate of a parabola = $\frac{2}{3} \times $ maximum ordinate \\
+      Mean ordinate of suction pipe parabola = $\frac{2}{3} h_{fs}$  $$= \frac{2}{3} \frac{f l_s}{2 g d_s} \left(\frac{A}{a_s} r \omega \right)^2$$\\ 
+
+      Total work done during suction stroke \\= area $EFB'A'$ \\= area $EFBA$ + area $A'GB'$ \\
+
+      Total work done during delivery stroke \\= area $EFC'D'$ \\= area $EFCD$ + area $C'HD'$ \\
+
+      Now, work done against friction during suction stroke = area of parabola $A'GB'$\\
+
+
+      Work done against friction per second during suction stroke,
+      \begin{align*}
+        &= \frac{2}{3} h_{fs} W \\
+        &= \frac{2}{3} \frac{f l_s}{2 g d_s} \left(\frac{A}{a_s} r \omega \right)^2 W \\
+      \end{align*}
+
+      Work done against friction per second during delivery stroke,
+      \begin{align*}
+        &= \frac{2}{3} h_{fd} W \\
+        &= \frac{2}{3} \frac{f l_d}{2 g d_d} \left(\frac{A}{a_d} r \omega \right)^2 W \\
+      \end{align*}
+
+      Total work done per second per revolution of crank of a single acting pump\\
+      $$= \left( H_s + H_d + \frac{2}{3} h_{fs} + \frac{2}{3} h_{fd} \right) W $$
+
+    \end{multicols}
 \end{document}
