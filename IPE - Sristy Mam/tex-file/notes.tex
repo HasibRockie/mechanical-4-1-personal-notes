@@ -634,4 +634,48 @@ Therefore, we've to find the optimum of $\phi$.
   \end{enumerate}
 
 \end{multicols*}
+
+\section{Lecture 6: Transmission of motion \& Torque}
+\hfill Date: 08/08/2023
+
+\begin{multicols}{2}
+  
+  \subsection*{Cone Pulley drive}
+  \begin{itemize}
+    \item Flat belt: Slip is more 
+    \item V belt: Slip is less and effective for reducing loss 
+    \item Norton gear box: When in small space we need multiple speed, then we use this.
+  \end{itemize}
+  
+  
+  \subsection*{Basic Principles for designing Sliding type claster gear}
+  Let, In a triple claster gear, the number of teeth are $T_1, T_2, T_3$ respectively. 
+  
+  Here, $$T_2 - T_1 \geq 4$$ 
+
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics[width=\columnwidth]{img/claster_gear.png}
+    \end{center}
+  \end{figure}
+
+  \begin{itemize}
+    \item R $\rightarrow$ Addendum circle radius
+    \item r $\rightarrow$ Pitch circle radius
+    \item $m = \frac{d}{T}$
+    \item $R = r + a = r + m$ [$\therefore a = m$]
+  \end{itemize}
+
+  \begin{align*}
+    & R_{I3} + R_{II2} \leq r_{I2} + r_{II2}\\
+    \Rightarrow& r_{I3} + m + r_{II2} + m \leq r_{I2} + r_{II2}\\
+    \Rightarrow& r_{I3} + 2m \leq r_{I2}\\
+    \Rightarrow& \frac{mT_{I3}}{2} + 2m \leq \frac{mT_{I2}}{2}\\
+    \Rightarrow& T_{I3} + 4 \leq T_{I2}\\
+    \Rightarrow& T_{I2} - T_{I3} \geq 4\\
+  \end{align*}
+\end{multicols}
+
+\hrulefill
+
 \end{document}
