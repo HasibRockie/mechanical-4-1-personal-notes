@@ -12,6 +12,8 @@
 \usepackage{amssymb}
 \usepackage{multicol}
 \usepackage{float}
+\usepackage{tabularx}
+\usepackage{array}
 
 
 \forestset{
@@ -460,4 +462,176 @@ $$C.O.P. = \frac{R.E.}{W_{1-2} + W_{3-4}} = 5.326 $$
   \item $$ EER \times kW/ton = 12 $$
 \end{itemize}
 
+\pagebreak
+
+\section{Lecture 5: Cooling Load Estimation Using CLTD/CLF Method}
+\hfill Date: 24/07/2023
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=\columnwidth]{img/cooling_load.jpeg}
+    \caption{CAD model of room for cooling load estimation}
+  \end{center}
+\end{figure}
+
+\begin{multicols}{2}
+  \begin{enumerate}
+    \item Normally at 5-6 pm, temperatures are high. Also in April/May, temperatures are high. So, we have to design for the worst case scenario.
+    \item Room height: 3.0 m
+    \item West \& South Walls: Metal curtain wall, construction type G with 75 mm insulation, sunlit, dark color. 
+    \item Partition walls (North \& East): 127 mm brick with 25 mm plaster on both sides. 
+    \item Roof: Type 4, 50 mm insulation without suspended ceiling 
+    \item Window: 6 $m^2$ on west \& east side.\\U = 2.86 $W/m^2-k$\\- 13 mm thickness\\- Light construction  
+    \item No heat transfer through floor
+    \item Air exchange rate: 1.0 / h \\- ($10 \times 10 \times 3 = 300 \, m^3/h$)
+    \item Light \& Occupants from 8 am to 6 pm. 
+    \item Average light density: 25 $W/m^2$, flouroscent light\\- $25 \times \text{Area of Base} = 2500$
+    \item 5 Occupants seated, using 1 computer. 
+    \item Door in North wall: Door size: $2 m \times 1 m$, 25 mm thick, hard wood. 
+  \end{enumerate}
+
+  \subsection*{Heat Conduction through Surface}
+  \begin{enumerate}
+    \item Conduction Through Shaded Partition/Surface:\\
+    $$Q = U.A.TD$$ 
+    \item Conduction Through Sunlit Surface:\\
+    $$Q = U.A.CLTD$$
+  \end{enumerate}
+  \begin{itemize}
+    \item $U \rightarrow$ Overall heat conductance ($W/m^2-k$)
+    \item $TD \rightarrow$ Temperature difference accross the surface ($^\circ C$)
+    \item $CLTD \rightarrow$  Cooling load temperature difference ($^\circ C$)
+    \item $U = 1/R_{th}$ 
+    \item $R_{th} = R_{o} + R + R_{i}$
+  \end{itemize}
+\end{multicols}
+
+\vspace*{1cm}
+  \subsection*{\# Roof}
+  \begin{itemize}
+    \item Type: Type 4, 50 mm insulation without suspended ceiling
+    \item Read data from \textbf{Table 12(a)} 
+    \item Layers for type-4 : $A0 - E2 - E3 - B5 - C12 - E0$
+    \item Here, 50 mm insulation not available on type 4. That's why we have to switch from $B5$ to $B6$. 
+    \item So, we have to calculate for: $A0 - E2 - E3 - B6 - C12 - E0$
+    \item Read the resistance of the layers from \textbf{Table-16}
+  \end{itemize}
+
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics[width=\columnwidth]{img/roof.jpeg}
+      \caption{Table 12(a) : Type 4}
+    \end{center}
+  \end{figure}
+
+  \subsubsection*{Calculation for Roof:}
+  \begin{table}[H]
+    
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}|c|c|c|c|c|c|c|c|}
+        \hline
+        Layer & A0 & E2 & E3 & B6 & C12 & E0 & Total \\
+        \hline
+        $R_{th}$ & 0.059 & 0.099 & 0.050 & 1.173 & 0.029 & 0.121 & 1.581 \\
+        \hline
+    \end{tabular*}
+    \caption{Resistance of all layers for roof.}
+    \label{tab:roof}
+\end{table}
+Now, $R_{th} = 1.581$, \\so, $U = 1/R_{th} = 0.653$
+
+\vspace*{1cm}
+\subsection*{\# South \& West Wall}
+\begin{itemize}
+  \item Type: Metal curtain wall, construction type G with 75 mm insulation, sunlit, dark color.
+  \item Read data from \textbf{Table-14}
+  \item Layers: $A0 - A3 - B12 - A3 - E0$
+  \item Read resistance value from \textbf{Table-16}
+\end{itemize}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=\columnwidth]{img/sw_walls.jpeg}
+    \caption{Table 14 : Type G}
+  \end{center}
+\end{figure}
+\subsubsection*{Calculation for South \& West Walls:}
+\begin{table}[H]    
+  \renewcommand{\arraystretch}{1.5}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}|c|c|c|c|c|c|c|}
+      \hline
+      Layer & A0 & A3 & B12 & A3 &  E0 & Total \\
+      \hline
+      $R_{th}$ & 0.059 & 0 & 1.76 & 0 & 0.121 & 1.94 \\
+      \hline
+  \end{tabular*}
+  \caption{West and South walls.}
+  \label{tab:west-south-walls}
+\end{table}
+Now, $R_{th} = 1.94$, \\so, $U = 1/R_{th} = 0.52$
+
+\vspace*{1cm}
+\subsection*{\# North \& East Wall (Partition Wall)}
+\begin{itemize}
+  \item 127 mm brick with 25 mm plaster on both sides.
+  \item Read resistance from \textbf{Table-16}
+  \item Here, 127 mm brick not available. So, we will take $C4: 100 $ mm brick to calculate $k = 0.727$, then calculate the resistance for 127 mm brick with the same $K$ values. 
+  \item Also 25 mm plaster not availble. We will take $E1 : 20 mm$, then by the value of $k=0.7277$, will calculate resistance for 25 mm plaster.
+\end{itemize}
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=\columnwidth]{img/partition.jpeg}
+    \caption{Table 16 : For partition walls}
+  \end{center}
+\end{figure}
+
+\subsubsection*{Calculation for North \& East Wall:}
+\begin{itemize}
+  \item $R_{th} = R_o + R_1 + R_2 + R_3 + R_i $
+  \item Outside ($R_0$) : A0 = 0.059 
+  \item 25 mm Plaster ($R_1, R_3$) : For E1 20 mm plaster, k = 0.7277, now $R_1 = R_3 = L/k = 0.025/0.7277 = 0.0343$ 
+  \item 127 mm Brick ($R_2$) : For C4 100 mm brick, k = 0.727, now $R_2 = L/k = 0.127/0.727 = 0.175$
+  \item Inside ($R_i$) : E0 = 0.121
+  \item Total ($R_{th}$) = 0.059 + 0.0343 + 0.175 + 0.0343 + 0.121 = 0.4236
+  \item $U = 1/R_{th} = 2.36$ 
+\end{itemize}
+
+\vspace*{1cm}
+\subsection*{\# Door}
+\begin{itemize}
+  \item Door size: $2 m \times 1 m$, 25 mm thick, hard wood
+  \item Read data from \textbf{Table-17.6}
+  \item Hard wood, Oak, k= 0.16. $R_d = L/k = 0.025/0.16 = 0.156$
+  \item $R_{th} = R_o + R_d + R_i = 0.059 + 0.156 + 0.121 = 0.336$
+  \item $U = 2.98$
+\end{itemize}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=\columnwidth]{img/door.jpeg}
+    \caption{Table 17.6 : For door (hardwood, i.e.: Oak)}
+  \end{center}
+\end{figure}
+\vspace*{1cm}
+
+\subsection*{Heat Conduction through Partition walls/glasses}
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=\columnwidth]{img/head_conduction.jpeg}
+    \caption{Heat Conduction through Partition walls/glasses}
+  \end{center}
+\end{figure}
+
+\begin{itemize}
+  \item For 1 \& 2: $TD = T_o - T_i = 30 - 25.5 = 4.5$
+  \item For 3 \& 4: $TD = T_{o,max} - T_i = 33 - 25.5 = 7.5$ [From table-9: $T_{o,max} = 33$ for BD]
+  \item For 1: A = Northern wall - Door = $(10 \times 3) - (2 \times 1) = 28$ 
+  \item For 3: A = Eastern wall - Window = $30 - 6 = 24$
+\end{itemize}
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=\columnwidth]{img/t_o_max.jpeg}
+    \caption{$T_{o,max}$ from table-9 (design dry bulb - 2.5\%)}
+  \end{center}
+\end{figure}
 \end{document}
