@@ -1428,6 +1428,7 @@ The pressure increases with the increasing radial distance due to the centrifuga
   \begin{center}
     \includegraphics[width = \columnwidth]{img/centrifugal_work_done.jpg}
   \end{center}
+\end{figure}
   
   \begin{multicols}{2}
     \subsection*{Expression of Work done}
@@ -1436,6 +1437,66 @@ The pressure increases with the increasing radial distance due to the centrifuga
     $\omega \rightarrow$ Angular velocity of the impeller \\
     $r \rightarrow$ Radius of the impeller at the inlet \\ 
     $r_1 \rightarrow$ Radius of the impeller at the outlet \\ 
+    $u = \omega r$ \\
+    $u_1 = \omega r_1$ \\
+
+    While passing through the impeller, the velocity of whirl changes and there is a change of angular momentum. \\
+
+    Moment of momentum at inlet = 0 \\
+    Moment of momentum at outlet = $\frac{W}{g} \left(v_{w_{1}} r_1\right) $ \\
+
+    \begin{align*}
+      \text{Torque} &= \text{Outlet} - \text{Inlet} \\
+      &= \frac{W}{g}\left(v_{w_{1}} r_1\right) - 0 \\
+      &= \frac{W}{g}\left(v_{w_{1}} r_1\right) \\
+    \end{align*}
+
+    \begin{align*}
+      \text{Work done per second} &= \text{Torque} \times \omega \\
+      &= \frac{W}{g}\left(v_{w_{1}} r_1\right) \omega \\
+      &= \frac{W}{g}\left(v_{w_{1}} u_1\right) \\
+    \end{align*}
+
+    \begin{equation}
+      \therefore \text{work done per unit weight of liquid} = \frac{v_{w_{1}} u_1}{g} \label{eq:eq55}
+    \end{equation}
+
+    If the flow is not radial, the power : -
+    \begin{align*}
+      P &= \frac{W}{g}\left(v_{w_{1}} u_1 - v_w u\right) \\
+    \end{align*}
+
+    \begin{equation}
+      \therefore \text{work done per unit weight of liquid} = \frac{1}{g} \left(v_{w_{1}} u_1 - v_w u\right) \label{eq:eq56}
+    \end{equation}
+
+    eqn (56) is known as \textbf{Euler's equation} for centrifugal pump. \\
+
+    \begin{align*}
+      v^2 &= v_w^2 + v_f^2 \\
+      &= v_w^2 + v_r^2 - (u - v_w)^2 \\
+      &= v_w^2 + v_r^2 - u^2 + 2uv_w - v_w^2 \\
+      v_w u &= \frac{1}{2} \left(v^2 - v_r^2 + u^2 \right) 
+    \end{align*}
+
+    \begin{equation}
+      \therefore v_w u = \frac{1}{2} \left(v^2 - v_r^2 + u^2 \right)  \label{eq:eq57}
+    \end{equation}
+
+    Similarly, 
+    \begin{equation}
+      \therefore v_{w_1} u_1 = \frac{1}{2} \left(v_1^2 - v_{r_1}^2 + u_1^2 \right)  \label{eq:eq58}
+    \end{equation}
+
+    Substituting the values of eqn (57) and (58) in eqn (56),\\
+    Work done per unit weight of liquid per second
+    % $$\frac{1}{g} \left[\frac{1}{2} \left(v_1^2 - v_{r_1}^2 + u_1^2\right) - \frac{1}{2} \left(v^2 - v_r^2 + u^2\right)\right]$$
+
+    \begin{align*}
+      &= \frac{1}{g} \left[\frac{1}{2} \left(v_1^2 - v_{r_1}^2 + u_1^2\right) - \frac{1}{2} \left(v^2 - v_r^2 + u^2\right)\right] \\
+      &= \frac{1}{2g} \left[\left(v_1^2 - v^2\right) + \left(u_1^2 - u^2\right) + \left(v_r^2 - v_{r_1}^2\right)\right] \\
+      &= \frac{v_1^2 - v^2}{2g} + \frac{u_1^2 - u^2}{2g} + \frac{v_r^2 - v_{r_1}^2}{2g} \\
+    \end{align*} 
     \end{multicols}
-  \end{figure}
+  
 \end{document}

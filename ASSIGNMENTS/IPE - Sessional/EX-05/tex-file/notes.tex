@@ -1,0 +1,120 @@
+\documentclass{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage[pages=some]{background}
+\usepackage{titling}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{subfigure}
+\usepackage{multicol}
+\usepackage{caption}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\geometry{a4paper}
+
+\backgroundsetup{
+    scale=1,
+    angle=0,
+    opacity=1,
+    contents={%
+        \includegraphics[width=\paperwidth,height=\paperheight]{institution_logo.jpg}
+    }
+}
+
+\newcommand{\subtitle}[1]{
+    \posttitle{
+        \par\end{center}
+        \begin{center}\large#1\end{center}
+        \vskip0.5em}
+}
+
+\title{IPE-432}
+\author{Md. Hasibul Islam}
+\subtitle{MACHINE TOOLS SESSONAL}
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    
+    {\Huge\bfseries\maketitle}
+    \vspace{2cm}
+    \includegraphics[width=8cm]{institution_logo.jpg}
+    \vfill
+    \vspace*{2cm}
+\end{titlepage}
+
+\tableofcontents 
+\hrulefill
+
+\section{Experiment 05: Study of Gear Shaper\\ (Kaniz Maam)} 
+\hfill Date: 19/08/2023
+
+\begin{multicols}{2}
+  There are two methods: \\
+  \begin{enumerate}
+    \item Forming
+    \item Generating (in this experiment)
+  \end{enumerate}
+  \subsection{Advantages of Generating}
+  \begin{itemize}
+    \item Involute profile 
+    \item speed \& motion control 
+    \item ex - gear shaper, gear hober 
+  \end{itemize}
+  \subsection{Important Points}
+  \begin{itemize}
+    \item in this experiment: cutter $\rightarrow$ gear , work piece $\rightarrow$ Gearblank 
+    \item Indexing: dividing equally any cylindrical or circular objects 
+    \item Automatic indexing is used in this experiment. That means, for 1 revolution of cutter, there will be 1 revolution of gear blank. 
+    \item Motion is maintained through change gear. 
+    \item Cutter: $Z_c$ and work : $Z$ 
+    \item $\frac{1}{Z_c} \times$ gear cutter = $\frac{1}{Z} \times$ gear blank 
+  \end{itemize}
+
+  \subsection{Depth of Cut}
+  \begin{itemize}
+    \item one pass : cut a single teeth at a time. More friction, heat generation \& gear cutter may break 
+    \item multi pass : cutting teeth by step by step in multiple pass. Time consuming. 
+  \end{itemize}
+
+  \subsection{Motions : 5 motions} 
+  \begin{itemize}
+    \item Principle motion : Reciprocating motion 
+    \item Auxiliary motion : Rotating motion of gear cutter
+    \item Auxiliary motion : Rotating motion of gear blank 
+    \item Auxiliary motion : Radial in feed motion 
+    \item Auxiliary motion : Withdrawal motion 
+  \end{itemize}
+  
+  \subsubsection{Reciprocating Motion}
+  Fly wheel $\rightarrow$ Rack \& pinion $\rightarrow$ Shaft (Horizontal spline shaft) $\rightarrow$ Shaft (vertical spline shaft) $\rightarrow$ Reciprocating motion 
+  
+  \begin{itemize}
+    \item Motion in cutter.
+    \item Cutting stroke : material will remove.
+    \item Return stroke : no material will remove.
+    \item Withdrawal motions helps not to cut in return stroke. 
+  \end{itemize}
+  
+  \subsubsection{Rotating Motion of Gear Cutter}
+  Motor $\rightarrow$ Pulley $\rightarrow$ Sprocket $\rightarrow$ Worm screw $\rightarrow$ Worm wheel $\rightarrow$ Bevel gear $\rightarrow$ Change gear $\rightarrow$ worm wheel $\rightarrow$ Cutter spindle $\rightarrow$ Cutter
+  
+  \subsubsection{Rotating Motion of Gear Blank}
+  ( Motor $\rightarrow$ Pulley $\rightarrow$ Sprocket $\rightarrow$ Worm screw $\rightarrow$ Worm wheel $\rightarrow$ Bevel gear $\rightarrow$ Change gear ) $\rightarrow$ Worm screw $\rightarrow$ Worm wheel $\rightarrow$ gear blank 
+  
+  \begin{itemize}
+    \item Change gear : A, B, C, D 
+    \item C : $Z_c$ (teeth of cutting gear) 
+  \end{itemize}
+  
+  \subsubsection{Radial In feed Motion}
+  Change gear $\rightarrow$ cam $\rightarrow$ in feed motion. 
+
+  \begin{itemize}
+    \item From table: A, B : find out feed per stroke 
+  \end{itemize}
+
+  \textbf{Follow Lab sheet also.}\\
+\end{multicols}
+\end{document}
