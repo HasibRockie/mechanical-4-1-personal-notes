@@ -1497,6 +1497,35 @@ The pressure increases with the increasing radial distance due to the centrifuga
       &= \frac{1}{2g} \left[\left(v_1^2 - v^2\right) + \left(u_1^2 - u^2\right) + \left(v_r^2 - v_{r_1}^2\right)\right] \\
       &= \frac{v_1^2 - v^2}{2g} + \frac{u_1^2 - u^2}{2g} + \frac{v_r^2 - v_{r_1}^2}{2g} \\
     \end{align*} 
+
+    \subsection*{Head developed and power required}
+    \subsubsection*{Static Head}
+    It is the difference of elevation between the liquid surface in the sump and that in the reservoir to which the liquid is delivered. \\
+    $h_s \rightarrow$ Suction head \\
+    $h_d \rightarrow$ Delivery head \\
+    \begin{equation}
+      H_s = h_s + h_d \label{eq:eq59}
+    \end{equation}
+
+    \subsubsection*{Manometric Head ($H_m$)}
+    The manometric head is the head developed in the pump. It is equal to the energy given to the liquid by the impeller subtracting the losses in the pump. 
+
+    \begin{equation}
+      H_m = \frac{v_{w_1} u_1}{g} - \left(h_{li} + h_{lc}\right) \label{eq:eq60}
+    \end{equation}
+    
+    Here,\\
+    $h_{li} \rightarrow$ Loss of head in the impeller \\
+    $h_{lc} \rightarrow$ Loss of head in the casing \\
+
+    alternatively,\\
+    \begin{align*}
+      H_m &= H_s + \text{losses in the pipe} + \frac{v^2}{2g}
+    \end{align*}
+    \begin{equation}
+      \therefore H_m = h_s + h_d + h_{fs} + h_{fd} + \frac{v^2}{2g} \label{eq:eq61}
+    \end{equation}
+
     \end{multicols}
   
 \end{document}

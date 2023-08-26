@@ -1,0 +1,83 @@
+\documentclass[14pt]{article} 
+\usepackage[margin=3cm]{geometry}
+\usepackage{graphicx}
+\usepackage[pages=some]{background}
+\usepackage{titling}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{subfigure}
+\usepackage{textcase} % for text capitalization
+\usepackage{newtxtext} % for Times New Roman font
+\usepackage{multicol}
+
+\geometry{a4paper}
+
+\backgroundsetup{
+    scale=1,
+    angle=0,
+    opacity=1,
+    contents={%
+        \includegraphics[width=\paperwidth,height=\paperheight]{institution_logo.jpg}
+    }
+}
+
+\newcommand{\subtitle}[1]{
+    \posttitle{
+        \par\end{center}
+        \begin{center}\large\MakeTextUppercase{#1}\end{center} % capitalize subtitle
+        \vskip0.5em}
+}
+
+\title{IPE-431}
+\author{Md. Hasibul Islam}
+\subtitle{Machine Tools}
+\date{}
+
+\begin{document}
+    \section{Ex-01 (a) : Study and performance test of a Pelton wheel}
+    \subsection{Imrul Kayes Sir (20-08-2023)}
+
+    \begin{multicols}{2}
+        \subsubsection*{Pelton Wheel}
+        \begin{itemize}
+            \item Impulse turbine 
+            \item High head, low discharge 
+            \item axial flow 
+            \item low specific speed 
+            \item head : 150m + 
+            \item specific speed ( 8 $\sim$ 27)
+        \end{itemize}
+    
+    \subsubsection{Why specific speed?}
+    Can compared with all turbines in a generalized way.
+    
+    \subsection{Important Points}
+    \begin{itemize}
+        \item Survo mechanism : automatic control 
+        \item delfector 
+        \item Operating curve : Q will vary, N will be constant 
+        \item Characteristic curve : N will vary, Q will be constant
+        \item Mechanical power = Torque $\times \omega$ 
+        \item Torque: measured by hydraulic dynamometer 
+        \item angular velocity: measured by tachometer 
+        \item Input power = $Q \gamma H$ 
+        \item Q is measured by orifice meter (manometer height difference) 
+        \item H is measured by pressure gauge (with pump by bernoulli eqn, where v = 0, Z = 0) and psi to m conversion is needed.
+        \item Pressure head = $\frac{P}{\gamma} + Z$ , where Z is the height difference of the gauge from the ammeter readings.  
+    \end{itemize}
+
+    \section{Ex-01 (b) : Dismantling of hermatically sealed compressor}
+    \begin{itemize}
+        \item Spring: Vibration absorb 
+        \item Stator + rotor 
+        \item stator : create magnetic field intensity 
+        \item coil pickup tube : shaft like parts 
+        \item Rotor $\rightarrow$ Crank $\rightarrow$ piston
+        \item a chargin port
+        \item 1 suction chamber, 2 delivery chamber : backup refrigerant 
+        \item Suction chamber is only one, as pressure is less. so less space required 
+        \item Delivery chamber is two, as pressure is high. so more space required
+    \end{itemize}
+
+    \end{multicols}
+\end{document}
